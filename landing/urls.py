@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from landing import views
+from . import views
 
 urlpatterns = [
     url(r'^landing/', views.landing, name='landing'),
+    url(r'^$', views.home, name='home'),
 ]

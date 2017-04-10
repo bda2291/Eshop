@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<p>TestAAA</p>
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for image_itom in product.productimage_set.all %}
+                    <div class="product-image-item">
+                        <img src="{{ image_itom.image.url }}" class="img-responsive">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">
+                    {{ product.name }}
+                </h1>
+                <div class="">
+                    Price: {{ product.price }} RUB
+                </div>
+                <div class="">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                          <a href="#description" data-toggle="tab">
+                              Description
+                          </a>
+                      </li>
+                      <li role="presentation">
+                          <a href="#dellivery" data-toggle="tab">
+                              Delivery
+                          </a>
+                      </li>
+                      <li role="presentation"><a href="#messages" data-toggle="tab">Сообщения</a></li>
+                      <li role="presentation"><a href="#settings" data-toggle="tab">Настройки</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content product-description-tabs">
+                      <div role="tabpanel" class="tab-pane active" id="description">
+                          {{ product.description }}
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="dellivery">
+                          <h3>How we're make delivery!</h3>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                      <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                    </div>
+                </div>
+                <div>
+                    <form id="form-buying-product" class="form-inline">
+                        <input type="number" class="form-control" name="number" id="number">
+                        <button type="submit" id="submit-btn" class="btn btn-success btn-buy"
+                                data-product-id = "{{ product.id }}"
+                                data-product-name = "{{ product.name }}"
+                                data-product-price = "{{ product.price }}"
+                        >
+                            ADD TO CART
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
