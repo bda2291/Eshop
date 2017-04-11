@@ -63,6 +63,29 @@ class ProductsInOrder(models.Model):
         self.total_price = self.number * self.price_per_itom
         super(ProductsInOrder, self).save(*args, **kwargs)
 
+class ProductsInBasket(models.Model):
+    session_key = models.CharField(max_length=128, blank=True, null=True, default=None)
+    order = models.ForeignKey(Order, blank=True, null=True, default=None)
+    product = models.ForeignKey(Product, blank=True, null=True, default=None)
+    number = models.IntegerField(default=1)
+    price_per_itom = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    is_active = models.BooleanField(default=True)
+    created = models.DateField(auto_now_add=True, auto_now=False)
+    updated = models.DateField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.product.name
+
+    class Meta:
+        verbose_name = 'Product in Cart'
+        verbose_name_plural = 'Products in Cart'
+
+    def save(self, *args, **kwargs):
+        self.price_per_itom = self.product.price
+        self.total_price = int(self.number) * self.price_per_itom
+        super(ProductsInBasket, self).save(*args, **kwargs)
+
 @receiver(post_save, sender=ProductsInOrder)
 def product_in_order_post_save(instance,**kwargs):
     order = instance.order
