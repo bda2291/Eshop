@@ -34,7 +34,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="basket-container">
-                <a href="">CART <span id="basket_total_nmb">
+                <a href="">CART<span id="basket_total_nmb">
                   {% if products_total_nmb %}
                     ({{ products_total_nmb }})
                   {% else %}
@@ -48,6 +48,17 @@
                     {% endfor %}
                   </ul>
                 </div>
+              </div>
+            </li>
+            <li>
+              <div class="">
+                <ul class="">
+                  {% if username %}
+                    <li><a href="/auth/logout/" class="btn btn-success" role="button" >Logout ({{ username }})</a></li>
+                  {% else %}
+                    <li><a href="/auth/login/" class="btn btn-success" role="button">Login</a></li>
+                  {% endif %}
+                </ul>
               </div>
             </li>
           </ul>
