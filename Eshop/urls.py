@@ -23,6 +23,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('loginsys.urls')),
+    url(r'^accounts/', include('userprofile.urls')),
     url(r'^', include('landing.urls')),
     url(r'^', include('orders.urls')),
     url(r'^', include('products.urls')),
