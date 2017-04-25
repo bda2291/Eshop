@@ -6,7 +6,6 @@ def basket_adding(request):
     return_dict = {}
     session_key = request.session.session_key
     data = request.POST
-    print(data)
     product_id = data.get("product_id")
     nmb = data.get("nmb")
 
@@ -29,3 +28,9 @@ def basket_adding(request):
         return_dict["products"].append(product_dict)
 
     return JsonResponse(return_dict)
+
+def basket_remove(request):
+    return_dict = {}
+    session_key = request.session.session_key
+    data = request.POST
+    product_id = data.get("product_id")

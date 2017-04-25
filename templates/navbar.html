@@ -34,13 +34,16 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="basket-container">
-                <a href="">CART<span id="basket_total_nmb">
-                  {% if products_total_nmb %}
-                    ({{ products_total_nmb }})
+                {% with total_items=cart|length %}
+                  {% if cart|length > 0 %}
+                    Your Cart:
+                    <a href="{% url 'cart:CartDetail' %}">
+                      {{ total_items }} pc. {{ cart.get_total_price }} rub.
+                    </a>
                   {% else %}
-                    (0)
+                    Cart is empty
                   {% endif %}
-                </span></a>
+                {% endwith %}
                 <div class="basket-items hidden">
                   <ul class="">
                     {% for product_in_basket in products_in_basket %}
@@ -54,7 +57,10 @@
               <div class="">
                 <ul class="">
                   {% if username %}
-                    <li><a href="/auth/logout/" class="btn btn-success" role="button" >Logout ({{ username }})</a></li>
+                    <li>
+                      <a href="/auth/logout/" class="btn btn-success" role="button" >Logout ({{ username }})</a>
+                      <a href="/accounts/profile/" class="btn btn-success" role="button" >Profile</a>
+                    </li>
                   {% else %}
                     <li><a href="/auth/login/" class="btn btn-success" role="button">Login</a></li>
                   {% endif %}

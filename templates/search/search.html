@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% if products_images.count > 0 %}
+        <div>
+        {% for product_image in products_images %}
+            {{ product_image.name }}
+            {% include 'landing/product_item.html' %}
+        {% endfor %}
+        </div>
+    {% else %}
+        <li>None to show!</li>
+    {% endif %}
+
+{% endblock %}

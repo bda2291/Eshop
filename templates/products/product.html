@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<p>TestAAA</p>
+{% block title %}
+  {{ product.name }}
+{% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                {% for image_itom in product.productimage_set.all %}
-                    <div class="product-image-item">
-                        <img src="{{ image_itom.image.url }}" class="img-responsive">
-                    </div>
-                {% endfor %}
+
+            <div class="col-lg-4">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no-image.jpg'%}{% endif %}" class="img-responsive">
             </div>
-            <div class="col-lg-6">
-                <h1 class="text-center">
-                    {{ product.name }}
-                </h1>
-                <div class="">
-                    Price: {{ product.price }} RUB
-                </div>
+
+            <div class="col-lg-8">
+                <h1>{{ product.name }}</h1>
+                <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+                <p class="price">
+                    Price: {{ product.price }} rub.
+                </p>
+
                 <div class="">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
@@ -49,18 +49,15 @@
                       <div role="tabpanel" class="tab-pane" id="settings">...</div>
                     </div>
                 </div>
+
                 <div>
-                    <form id="form-buying-product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
-                        <input type="number" class="form-control" name="number" id="number">
-                        <button type="submit" id="submit-btn" class="btn btn-success btn-buy"
-                                data-product-id = "{{ product.id }}"
-                                data-product-name = "{{ product.name }}"
-                                data-product-price = "{{ product.price }}"
-                        >
-                            ADD TO CART
-                        </button>
+                    <form class="add" action="{% url 'cart:CartAdd' product.id %}" method="post">
+                        {% csrf_token %}
+                        {{ cart_product_form }}
+                        <input type="submit" value="Add to cart">
                     </form>
                 </div>
+
             </div>
         </div>
     </div>

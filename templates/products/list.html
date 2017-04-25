@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  {% if category %} {{ category.name }} {% else %} Products Page {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div id="sidebar" class="col-sm-3">
+    <h3>Catigories</h3>
+    <ul>
+      <li {% if not category %} class="selected" {% endif %}>
+        <a href="{% url 'products:ProductList' %}">All</a>
+      </li>
+      {% for cat in categories %}
+        <li {% if category.slug == cat.slug %} class="selected" {% endif %}>
+          <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="main" class="product_list col-sm-9">
+    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
+    <div class="items row">
+      {% for product in products %}
+        <div class="item col-sm-4">
+          <a href="{{ product.get_absolute_url }}">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'static_dev/no-image.jpg' %} {% endif %}" class="img-responsive">
+          </a>
+          <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+          {{ product.price }} rub.
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
     <div class="section-top">
         <img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
-        <form id="form-searching-product" class="form-inline" action="{% url 'search' %}" method="post">{% csrf_token %}
+        <form id="form-searching-product" class="form-inline" action="/search/" method="post">{% csrf_token %}
             <input type="text" id="search" name="search_text" placeholder="Search">
             <button type="submit" id="search-btn" class="btn btn-success">
-                Search
+            Search
             </button>
         </form>
     </div>

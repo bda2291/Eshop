@@ -24,9 +24,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('loginsys.urls')),
     url(r'^accounts/', include('userprofile.urls')),
+    url(r'^cart/', include('cart.urls', namespace='cart')),
+    # url(r'^search/', include('haystack.urls')),
+    url(r'^', include('products.urls', namespace='products')),
     url(r'^', include('landing.urls')),
     url(r'^', include('orders.urls')),
-    url(r'^', include('products.urls')),
 ]\
         + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
         + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

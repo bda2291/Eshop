@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'mptt',
     'landing',
     'orders',
-    'products',
     'loginsys',
     'userprofile',
+    'products',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +79,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Eshop.wsgi.application'
 
-
+MPTT_ADMIN_LEVEL_INDENT = 20
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -138,3 +140,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
+
+CART_SESSION_ID = 'cart'
+# WHOOSH_INDEX = os.path.join(os.path.dirname(__file__), "whoosh/")
+
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         # 'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+#         # 'PATH': WHOOSH_INDEX,
+#         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#         'URL': 'http://127.0.0.1:8983/solr',
+#         # 'INCLUDE_SPELLING': True,
+#     },
+# }
