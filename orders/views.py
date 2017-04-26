@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import ProductsInBasket
+from .models import ProductsInOrder
+from .forms import OrderCreateForm
+from cart.cart import Cart
 
 def basket_adding(request):
     return_dict = {}
@@ -34,3 +37,20 @@ def basket_remove(request):
     session_key = request.session.session_key
     data = request.POST
     product_id = data.get("product_id")
+
+def OrderCreate(request):
+    cart = Cart(request)
+    if request.method == 'POST':
+        form = OrderCreateForm(request.POST)
+        if form.is_valid():
+            order = form.save()
+            for item in cart:
+                ProductsInOrder.objects.create(order=order, product=item['product'],
+                                         price_per_itom=item['price'],
+                                         number=item['quantity'])
+            cart.clear()
+            return render(request, 'orders/created.html', {'order': order})
+
+    form = OrderCreateForm()
+    return render(request, 'orders/create.html', {'cart': cart,
+                                                        'form': form})

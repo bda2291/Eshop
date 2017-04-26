@@ -15,7 +15,9 @@ class StatusAdmin(admin.ModelAdmin):
 
 class OrderAdmin (admin.ModelAdmin):
     list_display = [field.name for field in Order._meta.fields]
+    list_filter = ['paid', 'created', 'updated']
     inlines = [ProductsInOrderInline]
+
     class Meta:
         model = Order
 

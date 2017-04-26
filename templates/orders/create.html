@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Ordering
+{% endblock %}
+
+{% block content %}
+  <h1>Ordering</h1>
+  <div class="col-sm-4">
+    <h2>Fill the form</h2>
+    <form class="order-form" action="." method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="order-info col-sm-8">
+    <h2>Your Order</h2>
+    <ul>
+      {% for item in cart  %}
+        <li>
+          {{ item.product.name }} | Quantity: {{ item.quantity }} | Total price: {{ item.total_price }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

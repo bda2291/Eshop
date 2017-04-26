@@ -23,28 +23,30 @@ class Order(models.Model):
     customer_name = models.CharField(max_length=64, blank=True, null=True, default=None)
     customer_email = models.EmailField(blank=True, null=True, default=None)
     customer_phone = models.CharField(max_length=64, blank=True, null=True, default=None)
+    city = models.CharField(max_length=100, blank=True, null=True, default=None)
     customer_address = models.CharField(max_length=128, blank=True, null=True, default=None)
     comment = models.TextField(blank=True, null=True, default=None)
-    status = models.ForeignKey(Status)
+    status = models.ForeignKey(Status, blank=True, null=True, default=None)
     created = models.DateField(auto_now_add=True, auto_now=False)
     updated = models.DateField(auto_now_add=False, auto_now=True)
+    paid = models.BooleanField(default=False)
 
     def __str__(self):
         return "Order {!s} has status {}: ".format(self.id, self.status)
 
     class Meta:
+        ordering = ('-created',)
         verbose_name = 'Order'
         verbose_name_plural = 'Orders'
 
     def save(self, *args, **kwargs):
-
         super(Order, self).save(*args, **kwargs)
 
 
 class ProductsInOrder(models.Model):
     order = models.ForeignKey(Order, blank=True, null=True, default=None)
     product = models.ForeignKey(Product, blank=True, null=True, default=None)
-    number = models.IntegerField(default=1)
+    number = models.PositiveIntegerField(default=1)
     price_per_itom = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     is_active = models.BooleanField(default=True)
