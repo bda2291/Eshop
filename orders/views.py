@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.urlresolvers import reverse
 from django.http import JsonResponse
 from .models import ProductsInBasket
 from .models import ProductsInOrder
 from .forms import OrderCreateForm
+from .tasks import OrderCreated
 from cart.cart import Cart
 
 def basket_adding(request):
@@ -49,7 +51,13 @@ def OrderCreate(request):
                                          price_per_itom=item['price'],
                                          number=item['quantity'])
             cart.clear()
-            return render(request, 'orders/created.html', {'order': order})
+
+            # Asinc mail sending
+            OrderCreated.delay(order.id)
+            request.session['order_id'] = order.id
+
+            return redirect(reverse('payment:process'))
+            #return render(request, 'orders/created.html', {'order': order})
 
     form = OrderCreateForm()
     return render(request, 'orders/create.html', {'cart': cart,

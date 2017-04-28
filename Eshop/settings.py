@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'loginsys',
     'userprofile',
     'products',
-    'cart'
+    'cart',
+    'paypal.standard.ipn',
+    'payment',
+
 ]
 
 MIDDLEWARE = [
@@ -143,6 +146,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 
 CART_SESSION_ID = 'cart'
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Paypal
+
+PAYPAL_RECEIVER_EMAIL = 'bda2291@mail.ru'
+PAYPAL_TEST = True
+
 # WHOOSH_INDEX = os.path.join(os.path.dirname(__file__), "whoosh/")
 
 # HAYSTACK_CONNECTIONS = {
