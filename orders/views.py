@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.http import JsonResponse
-from .models import ProductsInBasket
-from .models import ProductsInOrder
+from django.contrib.admin.views.decorators import staff_member_required
+from .models import ProductsInBasket, ProductsInOrder, Order
 from .forms import OrderCreateForm
 from .tasks import OrderCreated
 from cart.cart import Cart
@@ -60,5 +60,10 @@ def OrderCreate(request):
             #return render(request, 'orders/created.html', {'order': order})
 
     form = OrderCreateForm()
-    return render(request, 'orders/create.html', {'cart': cart,
-                                                        'form': form})
+    return render(request, 'orders/create.html', {'cart': cart, 'form': form})
+
+@staff_member_required
+def AdminOrderDetail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    print(order)
+    return render(request, 'admin/orders/detail.html', {'order': order})

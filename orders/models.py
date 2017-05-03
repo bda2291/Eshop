@@ -44,7 +44,7 @@ class Order(models.Model):
 
 
 class ProductsInOrder(models.Model):
-    order = models.ForeignKey(Order, blank=True, null=True, default=None)
+    order = models.ForeignKey(Order, blank=True, null=True, default=None, related_name='items')
     product = models.ForeignKey(Product, blank=True, null=True, default=None)
     number = models.PositiveIntegerField(default=1)
     price_per_itom = models.DecimalField(max_digits=10, decimal_places=2, default=0)

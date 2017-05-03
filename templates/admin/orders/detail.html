@@ -1,0 +1,81 @@
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block title %}
+  Order {{ order.id }} {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Main</a> ›
+  <a href="{% url 'admin:orders_order_changelist' %}">Orders</a> ›
+  <a href="{% url 'admin:orders_order_change' order.id %}">Order {{ order.id }}</a> ›
+  Details
+</div>
+{% endblock %}
+
+{% block content %}
+  <h1>Order {{ order.id }}</h1>
+  <ul class="object-tools">
+    <li>
+      <a href="#" onclick="window.print()">Print order</a>
+    </li>
+  </ul>
+  <table width="100%">
+    <tr>
+      <th>Create</th>
+      <td>{{ order.created }}</td>
+    </tr>
+    <tr>
+      <th>Customer</th>
+      <td>{{ order.customer_name }}</td>
+    </tr>
+    <tr>
+      <th>E-mail</th>
+      <td><a href="mailto:{{ order.customer_email }}">{{ order.customer_email }}</a></td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td>{{ order.customer_address }}</td>
+    </tr>
+    <tr>
+      <th>Total cost</th>
+      <td>{{ order.total_price }} RUB.</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>{% if order.paid %}Paid{% else %}NOT Paid{% endif %}</td>
+    </tr>
+  </table>
+
+  <div class="module">
+    <div class="tabular inline-related list-related">
+      <table>
+        <h2>Ordered soft</h2>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in order.items.all  %}
+            <tr class="row{% cycle '1' '2' %}">
+              <td>{{ item.product.name }}</td>
+              <td>{{ item.price_per_itom }} RUB.</td>
+              <td>{{ item.number }}</td>
+              <td>{{ item.total_price }} RUB.</td>
+            </tr>
+          {% endfor %}
+          <tr class="total">
+            <td colspan="3">All Total Cost</td>
+            <td class="num">{{ order.total_price }} RUB.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
