@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <h1>E-shop</h1>
+    <p>
+      Order's number: <b>{{ order.id }}</b> <br>
+      <span class="secondary">
+        {{ order.created }}
+      </span>
+    </p>
+    <h3>Customer</h3>
+    <p>
+      {{ order.customer_name }}<br>
+      {{ order.customer_email }} <br>
+      {{ order.customer_phone }} <br>
+      {{ order.city }}, {{ order.customer_address }}
+    </p>
+    <h3>Buying products</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in order.items.all %}
+          <tr class="row{% cycle '1' '2' %}">
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.price_per_itom }}</td>
+            <td>{{ item.number }}</td>
+            <td>{{ item.total_price }}</td>
+          </tr>
+        {% endfor %}
+        <tr class="total">
+          <td colspan="3">Total:</td>
+          <td class="num">{{ order.total_price }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
+      {% if order.paid %}Paid{% else %}Not Paid{% endif %}
+    </span>
+  </body>
+</html>

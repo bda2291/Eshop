@@ -1,0 +1,101 @@
+html, body{
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeef0;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px; /* must be same height as the footer */
+}
+
+.section-top{
+    margin-bottom: 20px
+}
+
+.footer{
+    position: relative;
+    margin-top: -180px; /* negative value of footer height */
+    height: 180px;
+    clear: both;
+    background-color: white;
+}
+
+.product-item{
+    height: 360px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    position: relative;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: #fb4545;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.add-to-card-btn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color: #2A3342;
+    text-align: center;
+    color: white;
+}
+
+.product-description-tabs{
+    padding: 10px;
+}
+
+.product-image-item{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 0;
+}
+.navbar-main{
+    background-color: #c7db03;
+    border: none;
+    border-radius: 0;
+}
+
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: #edfc05;
+    z-index: 10;
+    padding: 10px;
+}
