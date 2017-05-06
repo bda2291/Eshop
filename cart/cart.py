@@ -1,10 +1,12 @@
 from decimal import Decimal
 from django.conf import settings
 from products.models import Product
+from discount.models import Discount
 
 class Cart(object):
     def __init__(self, request):
         self.session = request.session
+        self.discount_id = self.session.get('discount_id')
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
@@ -52,4 +54,18 @@ class Cart(object):
     def clear(self):
         del self.session[settings.CART_SESSION_ID]
         self.session.modified = True
+
+    @property
+    def discount(self):
+        if self.discount_id:
+            return Discount.objects.get(id=self.discount_id)
+        return None
+
+    def get_discount(self):
+        if self.discount:
+            return (self.discount.discount / Decimal('100')) * self.get_total_price()
+        return Decimal('0')
+
+    def get_total_price_after_discount(self):
+        return self.get_total_price() - self.get_discount()
 

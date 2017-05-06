@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^order/', include('orders.urls', namespace='orders')),
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
     url(r'^payment/', include('payment.urls', namespace='payment')),
+    url(r'^discount/', include('discount.urls', namespace='discount')),
     # url(r'^search/', include('haystack.urls')),
     url(r'^', include('products.urls', namespace='products')),
     url(r'^', include('landing.urls')),
