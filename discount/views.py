@@ -1,13 +1,18 @@
+import uuid
+from datetime import datetime
 from django.shortcuts import render, redirect
-from django.utils import timezone
+from django.views.decorators.csrf import csrf_exempt
+from datetime import datetime, timedelta
+from django.contrib import auth
 from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 from .models import Discount
 from .forms import DiscountApllyForm
 
 
 @require_POST
 def DiscountApply(request):
-    now = timezone.now()
+    now = datetime.now()
     form = DiscountApllyForm(request.POST)
     if form.is_valid():
         code = form.cleaned_data['code']
@@ -21,5 +26,16 @@ def DiscountApply(request):
             request.session['discount_id'] = None
             
     return redirect('cart:CartDetail')
+
+@require_POST
+@login_required
+@csrf_exempt
+def CreateDiscount(request):
+    user = auth.get_user(request)
+    Discount.objects.update_or_create(user=user, defaults={'code': str(uuid.uuid4()), 'valid_from': datetime.now(),
+                                                           'valid_to': datetime.now()+timedelta(days=7), 'active': True})
+    return redirect('profile:user_profile')
+
+
 
 

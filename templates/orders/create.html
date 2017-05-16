@@ -23,6 +23,13 @@
           {{ item.product.name }} | Quantity: {{ item.quantity }} | Total price: {{ item.total_price }}
         </li>
       {% endfor %}
+      {% if cart.discount %}
+        <li>
+          "{{ cart.discount.code }}" ({{ cart.discount.discount }}% less)
+          <span> - {{ cart.get_discount|floatformat:"2"}} RUB.</span>
+        </li>
+      {% endif %}
     </ul>
+    <p><strong>Total:</strong> {{ cart.get_total_price_after_discount|floatformat:"2"}} RUB.</p>
   </div>
 {% endblock %}
