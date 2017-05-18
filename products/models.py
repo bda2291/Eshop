@@ -27,13 +27,13 @@ mptt.register(ProductCategory, order_insertion_py=['name'])
 
 class Product(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True, default=None)
-    slug = models.SlugField(max_length=64, db_index=True, unique=True, default=None)
+    slug = models.SlugField(max_length=64, blank=True, null=True, default=None) #(max_length=64, db_index=True, unique=True, default=None)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     description = models.TextField(blank=True, null=True, default=None)
     short_description = models.TextField(blank=True, null=True, default=None)
     image = models.ImageField(upload_to='products/%Y/%m/%d/', blank=True, verbose_name="image of product")
-    discount = models.IntegerField(blank=True, null=True, default=0.0)
-    stock = models.PositiveIntegerField(blank=True, null=True, default=None, verbose_name="In stock")
+    discount = models.IntegerField(blank=True, null=True, default=0)
+    stock = models.PositiveIntegerField(blank=True, null=True, default=0, verbose_name="In stock")
     category = TreeForeignKey(ProductCategory, blank=True, null=True, default=None, related_name='products')
     is_active = models.BooleanField(default=True)
     created = models.DateField(auto_now_add=True, auto_now=False)
@@ -43,7 +43,7 @@ class Product(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['name']
+        ordering = ['id']
         index_together = [
             ['id', 'slug']
         ]

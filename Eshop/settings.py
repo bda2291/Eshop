@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'import_export',
     'mptt',
     'landing',
     'orders',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'payment',
     'discount',
+
 
 ]
 
@@ -155,6 +157,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 PAYPAL_RECEIVER_EMAIL = 'bda2291@mail.ru'
 PAYPAL_TEST = True
+
+# for import-export excel data
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # WHOOSH_INDEX = os.path.join(os.path.dirname(__file__), "whoosh/")
 
