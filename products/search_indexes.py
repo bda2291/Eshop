@@ -3,11 +3,15 @@ from haystack import indexes
 from .models import *
 
 class ProductIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True)
+    text = indexes.EdgeNgramField(document=True, use_template=True, template_name="search/product_text.txt")
+    name = indexes.EdgeNgramField(model_attr='name')
+    description = indexes.EdgeNgramField(model_attr='description')
+    category = indexes.CharField(model_attr='category', faceted=True)
+    producer = indexes.CharField(model_attr='producer', faceted=True)
 
-    #content_auto = indexes.EdgeNgramField(model_attr='product.name')
+    content_auto = indexes.EdgeNgramField(model_attr='name')
 
-    # suggestions = indexes.FacetCharField()
+    suggestions = indexes.FacetCharField()
 
     def get_model(self):
         return Product

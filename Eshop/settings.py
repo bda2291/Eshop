@@ -44,11 +44,13 @@ INSTALLED_APPS = [
     'orders',
     'loginsys',
     'userprofile',
+    'haystack',
     'products',
     'cart',
     'paypal.standard.ipn',
     'payment',
     'discount',
+
 
 
 ]
@@ -162,13 +164,13 @@ PAYPAL_TEST = True
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # WHOOSH_INDEX = os.path.join(os.path.dirname(__file__), "whoosh/")
-
-# HAYSTACK_CONNECTIONS = {
-#     'default': {
-#         # 'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-#         # 'PATH': WHOOSH_INDEX,
-#         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-#         'URL': 'http://127.0.0.1:8983/solr',
-#         # 'INCLUDE_SPELLING': True,
-#     },
-# }
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 12
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200',
+        'INDEX_NAME': 'haystack',
+        # 'INCLUDE_SPELLING': True,
+    },
+}

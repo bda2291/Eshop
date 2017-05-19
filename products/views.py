@@ -1,7 +1,11 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
 from django.contrib import auth
+from django.http import JsonResponse
 from cart.forms import CartAddProductForm
 from .models import *
+from .forms import FacetedProductSearchForm
+from haystack.generic_views import FacetedSearchView as BaseFacetedSearchView
+from haystack.query import SearchQuerySet
 
 def productlist(request, category_slug=None):
     category = None
@@ -22,11 +26,19 @@ def product(request, id, slug):
 
     return render(request, 'products/product.html', locals())
 
-def search(request):
-    search_text = request.POST.get('search_text', '')
-    products_images = ProductImage.objects.filter(is_active=True, is_main=True, product__name__contains=search_text)
-    # products_images = SearchQuerySet().auto_query(search_text)
-    # q_spell = products_images.spelling_suggestion()
-    # results = SearchQuerySet().filter(content=search_text)
+def autocomplete(request):
+    sqs = SearchQuerySet().autocomplete(content_auto=request.GET.get('query', ''))[:5]
+    s = []
+    for result in sqs:
+        print(result)
+        d = {"value": result.name, "data": result.object.slug}
+        s.append(d)
+    output = {'suggestions': s}
+    return JsonResponse(output)
 
-    return render_to_response('products/search.html', {'products_images': products_images})
+class FacetedSearchView(BaseFacetedSearchView):
+    form_class = FacetedProductSearchForm
+    facet_fields = ['category', 'producer']
+    template_name = 'search/search.html'
+    paginate_by = 3
+    context_object_name = 'object_list'

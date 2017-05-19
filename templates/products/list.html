@@ -7,7 +7,7 @@
 
 {% block content %}
   <div id="sidebar" class="col-sm-3">
-    <h3>Catigories</h3>
+    <h3>Categories</h3>
     <ul>
       <li {% if not category %} class="selected" {% endif %}>
         <a href="{% url 'products:ProductList' %}">All</a>
@@ -20,6 +20,14 @@
     </ul>
   </div>
   <div id="main" class="product_list col-sm-9">
+      <form class="search-form-container" action="/find/" method="get" >
+          <div class="form-group">
+              <div class="icon-addon addon-lg">
+                  <input type="text" placeholder="what are you looking for ?" class="form-control" name="q" id="q" autocomplete="on">
+                  <div id="selction-ajax"></div>
+              </div>
+          </div>
+      </form>
     <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
     <div class="items row">
       {% for product in products %}
@@ -28,7 +36,7 @@
             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'static_dev/no-image.jpg' %} {% endif %}" class="img-responsive">
           </a>
           <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-          {{ product.price }} rub.
+          <h4 class="text-center"><span class="label label-info">{{ product.price }} rub.</span></h4>
         </div>
       {% endfor %}
     </div>
