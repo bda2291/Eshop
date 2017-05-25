@@ -1,9 +1,16 @@
-{% block login %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block content %}
     <div class="large-offset-3 large-6 columns">
         <form action="/auth/register/" method="post">
             {% csrf_token %}
-            {{ form }}
+            {{ form.as_p }}
             <input class="button" type="submit" value="Register">
         </form>
     </div>
-{% endblock %}
+{% endblock content %}

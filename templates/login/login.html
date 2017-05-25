@@ -1,4 +1,12 @@
-{% block login %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+
+{% block content %}
     <div class="large-offset-3 large-6 columns">
         <form action="/auth/login/" method="post">
             {% csrf_token %}
@@ -13,4 +21,4 @@
             <div class="label round secondary"><a href="/auth/register/">Register</a></div>
         </form>
     </div>
-{% endblock %}
+{% endblock content %}

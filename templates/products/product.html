@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+
+{% load staticfiles %}
+
 
 {% block title %}
   {{ product.name }}
@@ -16,9 +18,44 @@
             <div class="col-lg-8">
                 <h1>{{ product.name }}</h1>
                 <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
-                <p class="price">
+
+                <div class="ishopProdBlockAttrsList" style="min-height: 0px;">
+                    <ul class="prodAttrsList">
+                        <li id="attrBlock_form">
+                            <div>
+                                {% for atribute in variant_picker_data.variantAttributes %}
+                                    <label> {{ atribute.name }} </label>
+                                    <select name="" onchange="javascript:ishopButtonRequest('ishopBasketAddRefresh', '', '', '')">
+                                        {% for value in atribute.values %}
+                                            <option> {{ value.name }} </option>
+                                        {% endfor %}
+                                    </select>
+                                {% endfor %}
+                            </div>
+                            <!--<ul class="prodAttrsList">-->
+                                <!--<li id="attrBlock_form">-->
+                                    <!--<div>-->
+                                        <!--<label for=""> License_term </label>-->
+                                        <!--<select name="" onchange="javascript:ishopButtonRequest('ishopBasketAddRefresh', '', '', '')">-->
+                                            <!--<option></option>-->
+                                            <!--<option></option>-->
+                                            <!--<option></option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ishopProdInfoBlock" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <span class="ishopProdInfoLabel"></span>
+                    <span id="" class="ishopProdInfoParam ishopProductPrice" itemprop="price"></span>
+                </div>
+
+                <h4 class="price">
                     Price: {{ product.price }} rub.
-                </p>
+                </h4>
 
                 <div class="">
                     <!-- Nav tabs -->
@@ -53,7 +90,7 @@
                 <div>
                     <form class="add" action="{% url 'cart:CartAdd' product.id %}" method="post">
                         {% csrf_token %}
-                        {{ cart_product_form }}
+                        {{ form }}
                         <input type="submit" value="Add to cart">
                     </form>
                 </div>

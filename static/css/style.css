@@ -99,3 +99,55 @@ html, body{
     z-index: 10;
     padding: 10px;
 }
+
+
+
+
+
+form.add{
+   margin-bottom: 10px;
+}
+
+form.add label{
+   margin-right: 10px;
+}
+
+#id_quantity{
+   padding: 5px 10px;
+   border-radius: 3px;
+}
+
+form.add input[type="submit"]{
+   background: #2a6496;
+   border-radius: 3px;
+   border: 0;
+   padding: 5px 10px;
+   color: white;
+}
+
+.table-cart{
+   width: 100%;
+   margin: 10px 0;
+}
+
+.cart-img{
+   width: 10%;
+}
+
+th, td{
+   padding: 5px;
+}
+
+thead{
+   background: #2a6496;
+   color: white;
+}
+
+.btn{
+   background: #2a6496;
+   color: white;
+}
+
+.btn-light{
+   background: #808080;
+}

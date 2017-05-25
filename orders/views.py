@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
+from django.contrib import auth
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 import weasyprint
@@ -46,6 +47,9 @@ def basket_remove(request):
 
 def OrderCreate(request):
     cart = Cart(request)
+    username = auth.get_user(request).username
+    if not username:
+        return redirect('auth:login')
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -70,7 +74,7 @@ def OrderCreate(request):
             #return render(request, 'orders/created.html', {'order': order})
 
     form = OrderCreateForm()
-    return render(request, 'orders/create.html', {'cart': cart, 'form': form})
+    return render(request, 'orders/create.html', {'username': username, 'cart': cart, 'form': form})
 
 @staff_member_required
 def AdminOrderDetail(request, order_id):

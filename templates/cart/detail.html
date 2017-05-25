@@ -6,33 +6,36 @@
 {% endblock %}
 
 {% block content %}
-  <table class="cart">
+  <h1>Your Cart</h1>
+  <table class="table-cart" border="1px">
     <thead>
       <tr>
         <th>Image</th>
         <th>Product</th>
         <th>Quantity</th>
         <th>Delete</th>
-        <th>Full price</th>
         <th>Price per item</th>
+        <th>Full price</th>
       </tr>
     </thead>
     <tbody>
       {% for item in cart %}
         {% with product=item.product %}
           <tr>
-            <td>
+            <td class="cart-img">
               <a href="{{ product.get_absolute_url }}">
                 <img src="{{ product.image.url }}" alt="" />
               </a>
             </td>
             <td>{{ product.name }}</td>
+            <td>
             <form action="{% url 'cart:CartAdd' product.id %}" method="post" class="add">
               {{ item.update_quantity_form.quantity }}
               {{ item.update_quantity_form.update }}
               {% csrf_token %}
               <input type="submit" value="Update">
             </form>
+            </td>
             <td><a href="{% url 'cart:CartRemove' product.id %}">Delete</a></td>
             <td class="num">{{ item.price }} rub.</td>
             <td class="num">{{ item.total_price }} rub.</td>
@@ -70,7 +73,7 @@
   </form>
 
   <p class="text-right">
-    <a href="{% url 'products:ProductList'%}" class="btn">Continue shopping</a>
-    <a href="{% url 'orders:OrderCreate' %}" class="btn">Place an order</a>
+    <a href="{% url 'products:ProductList'%}" class="btn btn-success">Continue shopping</a>
+    <a href="{% url 'orders:OrderCreate' %}" class="btn btn-success">Place an order</a>
   </p>
 {% endblock %}
