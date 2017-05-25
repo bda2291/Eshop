@@ -19,6 +19,7 @@ cycler==0.10.0
 decorator==4.0.11
 defer==1.0.6
 diff-match-patch==20121119
+dj-database-url==0.4.2
 Django==1.10.6
 django-haystack==2.5.1
 django-import-export==0.5.1
@@ -131,6 +132,7 @@ virtualenvwrapper==4.7.2
 wcwidth==0.1.7
 WeasyPrint==0.36
 webencodings==0.5
+whitenoise==3.3.0
 Whoosh==2.7.4
 widgetsnbextension==2.0.0
 xdiagnose==3.8.4.1
