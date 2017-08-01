@@ -9,8 +9,8 @@
   <div class="col-sm-4">
     <h2>Fill the form</h2>
     <form class="order-form" action="." method="post">
-      {{ form.as_p }}
       {% csrf_token %}
+      {{ form.as_p }}
       <input type="submit" value="Submit">
     </form>
   </div>
@@ -30,6 +30,10 @@
         </li>
       {% endif %}
     </ul>
-    <p><strong>Total:</strong> {{ cart.get_total_price_after_discount|floatformat:"2"}} RUB.</p>
+    {% if cart.points %}
+      <p><strong>Total:</strong> {{ cart.get_total_deduct_points|floatformat:"2"}} RUB.</p>
+    {% else %}
+      <p><strong>Total:</strong> {{ cart.get_total_price_after_discount|floatformat:"2"}} RUB.</p>
+    {% endif %}
   </div>
 {% endblock %}

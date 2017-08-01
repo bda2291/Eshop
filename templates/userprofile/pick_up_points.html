@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="general-container">
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1 class="title">To execute the transaction, we need to know your bank account!<br>
+                    Leave your requisites in the form</h1>
+                    <form action="" method="post" class="form-inline text-center"> {% csrf_token %}
+                        <div class="form-group">
+                            <label>Your requisites: </label>
+                            <input name="{{ form.requisites.name }}" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-orange">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,14 +1,15 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.contrib.postgres.fields import HStoreField
 import mptt
-from jsonfield import JSONField
+import decimal
 from mptt.models import MPTTModel, TreeForeignKey
 
 class ProductCategory(MPTTModel):
     name = models.CharField(db_index=True, unique=True, max_length=64, blank=True, null=True, default=None)
     slug = models.SlugField(max_length=64, db_index=True, unique=True, default=None)
     is_active = models.BooleanField(default=True)
-    parent = TreeForeignKey('self', null=True, blank=True, related_name='categories')
+    parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
 
     def __str__(self):
         return self.name
@@ -68,7 +69,8 @@ class ProductClass(models.Model):
 class Product(models.Model):
     name = models.CharField(unique=True, max_length=255, db_index=True, blank=True, null=True, default=None)
     slug = models.SlugField(max_length=64, blank=True, null=True, default=None) #(max_length=64, db_index=True, unique=True, default=None)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    points = models.DecimalField(max_digits=8, decimal_places=2, null=True, default=0.00)
     description = models.TextField(db_index=True, blank=True, null=True, default=None)
     short_description = models.TextField(blank=True, null=True, default=None)
     producer = models.CharField(db_index=True, max_length=255, blank=True, null=True, default=None)
@@ -97,6 +99,9 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('products:Product', args=[self.id, self.slug])
 
+    def save(self, *args, **kwargs):
+        self.points = self.price * decimal.Decimal('0.1')
+        super(Product, self).save(*args, **kwargs)
     # def save(self, *args, **kwargs):
     #     if self.category:
     #         super(Product, self).save(*args, **kwargs)
@@ -127,7 +132,8 @@ class Offer(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=True, null=True, default=None, related_name='variants')
     name = models.CharField(max_length=64, blank=True, null=True, default=None)
     price = models.DecimalField(max_digits=8, decimal_places=2, null=True, default=0.00)
-    attributes = JSONField(default={})
+    points = models.DecimalField(max_digits=8, decimal_places=2, null=True, default=0.00)
+    attributes = HStoreField(default={})
 
     def __str__(self):
         return self.name
@@ -135,3 +141,7 @@ class Offer(models.Model):
     class Meta:
         verbose_name = 'Offer'
         verbose_name_plural = 'Offers'
+
+    def save(self, *args, **kwargs):
+        self.points = self.price * decimal.Decimal('0.1')
+        super(Offer, self).save(*args, **kwargs)

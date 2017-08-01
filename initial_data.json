@@ -1,0 +1,3049 @@
+[
+{
+   "model": "contenttypes.contenttype",
+   "pk": 1,
+   "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 2,
+   "fields": {
+      "app_label": "auth",
+      "model": "group"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 3,
+   "fields": {
+      "app_label": "auth",
+      "model": "permission"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 4,
+   "fields": {
+      "app_label": "auth",
+      "model": "user"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 5,
+   "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 6,
+   "fields": {
+      "app_label": "sessions",
+      "model": "session"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 7,
+   "fields": {
+      "app_label": "landing",
+      "model": "subscriber"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 8,
+   "fields": {
+      "app_label": "orders",
+      "model": "order"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 9,
+   "fields": {
+      "app_label": "orders",
+      "model": "productsinbasket"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 10,
+   "fields": {
+      "app_label": "orders",
+      "model": "status"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 11,
+   "fields": {
+      "app_label": "orders",
+      "model": "productsinorder"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 12,
+   "fields": {
+      "app_label": "userprofile",
+      "model": "userprofile"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 13,
+   "fields": {
+      "app_label": "products",
+      "model": "productclass"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 14,
+   "fields": {
+      "app_label": "products",
+      "model": "productcategory"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 15,
+   "fields": {
+      "app_label": "products",
+      "model": "product"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 16,
+   "fields": {
+      "app_label": "products",
+      "model": "productimage"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 17,
+   "fields": {
+      "app_label": "products",
+      "model": "productattribute"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 18,
+   "fields": {
+      "app_label": "products",
+      "model": "offer"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 19,
+   "fields": {
+      "app_label": "products",
+      "model": "attributechoicevalue"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 20,
+   "fields": {
+      "app_label": "ipn",
+      "model": "paypalipn"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 21,
+   "fields": {
+      "app_label": "discount",
+      "model": "discount"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 22,
+   "fields": {
+      "app_label": "userprofile",
+      "model": "pickuprequest"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "063ey0w5az1fjuypx5jbh1ydim3mdwb6",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T11:54:11.258Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "06y4p54ygrhn38k7lz3ypszddfs84lws",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T12:18:18.279Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "0r92tzipxxbt0tfjwwk46yjd92vpjehf",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-21T08:19:38.623Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "1wnvppnj4e35fmd3vopiq4e9tlb8xcof",
+   "fields": {
+      "session_data": "MDYzN2U2YjYyMzYzNWFjYTI3ZWU0OTA4YjY2MmQ0MGRkMGVjMWYzOTp7fQ==",
+      "expire_date": "2017-07-19T12:58:18.261Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "7ft90w0kgbcwgk102syng168rn290a4u",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T13:05:37.447Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "aaq2aw999ecxz5wo9pk3ffwesh2jw79h",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T12:56:31.003Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "ieri4ourpmlgbvjexo25wyo59fv442st",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T11:53:35.792Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "inlddywd0g1m1vilflojgzegsns46574",
+   "fields": {
+      "session_data": "YTI0MDgxYWZmZWI5MmExOGEyZjY1MmE3OGIwNWZiMjU2ZDdmMTdjZjp7ImNhcnQiOnt9LCJfYXV0aF91c2VyX2hhc2giOiJhMTRhZTM0YmIxZWRhOTI5NzQxMTU1OGMxZGUwMGVlYzA0YzMyOTMwIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMzMifQ==",
+      "expire_date": "2017-08-02T12:57:14.247Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "la83kxf4z1precuh0wjup6rzpaazlhzk",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T11:46:07.405Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "mdogjb3qh8oj8hbs6m067olqtlgeh30k",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T11:52:12.475Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "pyy7sbff9jtob5y0nij126d7xs94hfty",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T13:00:12.610Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "s3i511xzmywc520quuiljd7b16b83ydt",
+   "fields": {
+      "session_data": "ZGE0Mjg0NmYwMzM0ZDMyODBkYTk2Y2FlNDQ0MDM5YWE2NGFhNzcwMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjkxMjk2YmQyNDEwMTNmYzEzYWM1NWQ1ZTllNTJmZDc1YzNjMjlhOWYiLCJfYXV0aF91c2VyX2lkIjoiMiIsImNhcnQiOnt9LCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCJ9",
+      "expire_date": "2017-06-09T12:57:47.119Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "s4nz10rttkex8r5tobdb661r0u6v7ell",
+   "fields": {
+      "session_data": "ZmViZmEyN2E4ZjRlZDBkYTI0ZGMwOGJmMDc5NjcyNjY5YzE5YTRmODp7ImNhcnQiOnt9fQ==",
+      "expire_date": "2017-07-19T12:10:22.764Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "uqx9vs678eqhyhuysl80w9gl53bdrt7u",
+   "fields": {
+      "session_data": "OGRkZGE3ODAzZDNhMDYzNjMyYTQ1YTBiOTg4MDk3OTRlOTVkYmZkYTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJjZjdmNTJmYzBhZWM2MTgyOTgxMzk5MzYyODUzNDY2MTdlYjE1NDMwIiwiY2FydCI6eyI4NSI6eyJxdWFudGl0eSI6MiwicHJpY2UiOiIxNzMwLjAwIn19fQ==",
+      "expire_date": "2017-07-01T16:22:46.192Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "zi87qs272zaylwy8r5hyt0gdz5gf1qfi",
+   "fields": {
+      "session_data": "MDYzN2U2YjYyMzYzNWFjYTI3ZWU0OTA4YjY2MmQ0MGRkMGVjMWYzOTp7fQ==",
+      "expire_date": "2017-07-19T12:59:11.710Z"
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 1,
+   "fields": {
+      "name": "Information security",
+      "slug": "information-security",
+      "is_active": true,
+      "parent": null,
+      "lft": 1,
+      "rght": 6,
+      "tree_id": 2,
+      "level": 0
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 2,
+   "fields": {
+      "name": "Document manipulation",
+      "slug": "document-manipulation",
+      "is_active": true,
+      "parent": null,
+      "lft": 1,
+      "rght": 4,
+      "tree_id": 1,
+      "level": 0
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 3,
+   "fields": {
+      "name": "System software",
+      "slug": "system-software",
+      "is_active": true,
+      "parent": null,
+      "lft": 1,
+      "rght": 6,
+      "tree_id": 3,
+      "level": 0
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 4,
+   "fields": {
+      "name": "Anti-virus software",
+      "slug": "anti-virus-software",
+      "is_active": true,
+      "parent": 1,
+      "lft": 2,
+      "rght": 3,
+      "tree_id": 2,
+      "level": 1
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 5,
+   "fields": {
+      "name": "Data recovery",
+      "slug": "data-recovery",
+      "is_active": true,
+      "parent": 1,
+      "lft": 4,
+      "rght": 5,
+      "tree_id": 2,
+      "level": 1
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 6,
+   "fields": {
+      "name": "OS",
+      "slug": "os",
+      "is_active": true,
+      "parent": 3,
+      "lft": 4,
+      "rght": 5,
+      "tree_id": 3,
+      "level": 1
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 7,
+   "fields": {
+      "name": "DB",
+      "slug": "db",
+      "is_active": true,
+      "parent": 3,
+      "lft": 2,
+      "rght": 3,
+      "tree_id": 3,
+      "level": 1
+   }
+},
+{
+   "model": "products.productcategory",
+   "pk": 8,
+   "fields": {
+      "name": "Microsoft Office",
+      "slug": "microsoft-office",
+      "is_active": true,
+      "parent": 2,
+      "lft": 2,
+      "rght": 3,
+      "tree_id": 1,
+      "level": 1
+   }
+},
+{
+   "model": "products.productattribute",
+   "pk": 1,
+   "fields": {
+      "name": "License type",
+      "slug": "license-type"
+   }
+},
+{
+   "model": "products.productattribute",
+   "pk": 2,
+   "fields": {
+      "name": "License term",
+      "slug": "license-term"
+   }
+},
+{
+   "model": "products.productattribute",
+   "pk": 3,
+   "fields": {
+      "name": "Technical support",
+      "slug": "technical-support"
+   }
+},
+{
+   "model": "products.productattribute",
+   "pk": 4,
+   "fields": {
+      "name": "Number users",
+      "slug": "number-users"
+   }
+},
+{
+   "model": "products.productattribute",
+   "pk": 5,
+   "fields": {
+      "name": "Type of organization",
+      "slug": "type-organization"
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 1,
+   "fields": {
+      "name": "New",
+      "slug": "new",
+      "attribute": 1
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 2,
+   "fields": {
+      "name": "Prolongation",
+      "slug": "prolongation",
+      "attribute": 1
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 3,
+   "fields": {
+      "name": "Migration",
+      "slug": "migration",
+      "attribute": 1
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 4,
+   "fields": {
+      "name": "One year",
+      "slug": "one-year",
+      "attribute": 2
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 5,
+   "fields": {
+      "name": "Two years",
+      "slug": "two-years",
+      "attribute": 2
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 6,
+   "fields": {
+      "name": "Standard AAS",
+      "slug": "standard-aas",
+      "attribute": 3
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 7,
+   "fields": {
+      "name": "Extended AAP",
+      "slug": "extended-aap",
+      "attribute": 3
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 8,
+   "fields": {
+      "name": "from 1 to 49",
+      "slug": "1-49",
+      "attribute": 4
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 9,
+   "fields": {
+      "name": "from 50 to 99",
+      "slug": "50-99",
+      "attribute": 4
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 10,
+   "fields": {
+      "name": "from 100 to 299",
+      "slug": "100-299",
+      "attribute": 4
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 11,
+   "fields": {
+      "name": "Version Upgrade",
+      "slug": "version-upgrade",
+      "attribute": 1
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 12,
+   "fields": {
+      "name": "commercial",
+      "slug": "commercial",
+      "attribute": 5
+   }
+},
+{
+   "model": "products.attributechoicevalue",
+   "pk": 13,
+   "fields": {
+      "name": "educational",
+      "slug": "educational",
+      "attribute": 5
+   }
+},
+{
+   "model": "products.productclass",
+   "pk": 1,
+   "fields": {
+      "name": "Antivirus software class",
+      "has_variants": true,
+      "variant_attributes": [
+         2,
+         1,
+         5
+      ]
+   }
+},
+{
+   "model": "products.productclass",
+   "pk": 2,
+   "fields": {
+      "name": "Data recovery class",
+      "has_variants": true,
+      "variant_attributes": [
+         1,
+         3
+      ]
+   }
+},
+{
+   "model": "products.productclass",
+   "pk": 3,
+   "fields": {
+      "name": "Document manipulation class",
+      "has_variants": true,
+      "variant_attributes": []
+   }
+},
+{
+   "model": "products.productclass",
+   "pk": 4,
+   "fields": {
+      "name": "DB class",
+      "has_variants": true,
+      "variant_attributes": [
+         2,
+         4
+      ]
+   }
+},
+{
+   "model": "products.productclass",
+   "pk": 5,
+   "fields": {
+      "name": "OS class",
+      "has_variants": true,
+      "variant_attributes": [
+         5
+      ]
+   }
+},
+{
+   "model": "products.product",
+   "pk": 85,
+   "fields": {
+      "name": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "slug": "kaspersky-endpoint-security-dlya-biznesa-cloud",
+      "price": "1730.00",
+      "points": "173.00",
+      "description": "Kaspersky Endpoint Security Cloud \u2013 \u044d\u0442\u043e \u0440\u0435\u0448\u0435\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043e\u0442\u0432\u0435\u0447\u0430\u0435\u0442 \u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u044f\u043c \u043c\u0430\u043b\u043e\u0433\u043e \u0431\u0438\u0437\u043d\u0435\u0441\u0430 \u0438 \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u043d\u0430\u0434\u0435\u0436\u043d\u0443\u044e \u0437\u0430\u0449\u0438\u0442\u0443 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043e\u0432, \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0445 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432 \u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432 \u0438\u0437 \u043e\u0431\u043b\u0430\u0447\u043d\u043e\u0439 \u043a\u043e\u043d\u0441\u043e\u043b\u0438 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f. \u0420\u0435\u0448\u0435\u043d\u0438\u0435 \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043f\u043e\u043a\u0443\u043f\u043a\u0438 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0441\u0438\u0441\u0442\u0435\u043c\u043e\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0441 \u043b\u044e\u0431\u043e\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430, \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u043e\u0433\u043e \u043a \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443.",
+      "short_description": "",
+      "producer": "Kaspersky",
+      "image": "products/2017/05/26/thumb_1473758588.png",
+      "discount": 0,
+      "stock": 10,
+      "category": 4,
+      "product_class": 1,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 86,
+   "fields": {
+      "name": "ESET NOD32 Antivirus Business Edition",
+      "slug": "eset-nod32-antivirus-business-edition",
+      "price": "2400.00",
+      "points": "240.00",
+      "description": "ESET Endpoint Antivirus \u2013 \u043d\u043e\u0432\u043e\u0435 \u0441\u043b\u043e\u0432\u043e \u0432 \u043f\u0440\u043e\u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0439 \u0437\u0430\u0449\u0438\u0442\u0435 \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u0438\u0445 \u0440\u0430\u0431\u043e\u0447\u0438\u0445 \u0441\u0442\u0430\u043d\u0446\u0438\u0439 \u043e\u0442 \u043b\u044e\u0431\u043e\u0433\u043e \u0438\u0437 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u043d\u043e\u0433\u043e \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0435\u043d\u0438\u044f. \u041f\u0440\u043e\u0434\u0443\u043a\u0442 \u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u043d \u043d\u0430 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0443 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439, \u0437\u0430\u043f\u0440\u0435\u0449\u0435\u043d\u043d\u044b\u0445 \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438. \u0421\u043e\u0447\u0435\u0442\u0430\u043d\u0438\u0435 \u0437\u0430\u043f\u0430\u0442\u0435\u043d\u0442\u043e\u0432\u0430\u043d\u043d\u043e\u0433\u043e \u043c\u0435\u0442\u043e\u0434\u0430 \u044d\u0432\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0438 \u043d\u043e\u0432\u0435\u0439\u0448\u0438\u0445 \u0438\u043d\u0442\u0435\u043b\u043b\u0435\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0439 \u043e\u0431\u043b\u0430\u0447\u043d\u043e\u0433\u043e \u0442\u0438\u043f\u0430 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0438 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u0442\u044c \u0432\u0441\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u044b\u0435 \u0442\u0438\u043f\u044b \u0443\u0433\u0440\u043e\u0437, \u0442\u0430\u043a\u0438\u043c \u043e\u0431\u0440\u0430\u0437\u043e\u043c \u0434\u0435\u043c\u043e\u043d\u0441\u0442\u0440\u0438\u0440\u0443\u044f \u043c\u043e\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u043e\u0435 \u0440\u0435\u0430\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043d\u0430 \u043f\u043e\u043f\u044b\u0442\u043a\u0438 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u041f\u041e \u0432 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u0443\u044e \u0441\u0435\u0442\u044c.",
+      "short_description": "",
+      "producer": "Eset",
+      "image": "products/2017/05/26/thumb_1381486034.jpg",
+      "discount": 0,
+      "stock": 10,
+      "category": 4,
+      "product_class": 1,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 87,
+   "fields": {
+      "name": "Acronis Backup 12 Workstation License",
+      "slug": "acronis-backup-12-workstation-license",
+      "price": "3190.00",
+      "points": "319.00",
+      "description": "\u041e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438\r\n\r\n\u0411\u044b\u0441\u0442\u0440\u043e\u0435 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c, \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439, \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0434\u0430\u043d\u043d\u044b\u0445\r\n\r\n    \u0411\u044b\u0441\u0442\u0440\u043e\u0435 \u0438 \u043f\u0440\u043e\u0441\u0442\u043e\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u043e\u0431\u0440\u0430\u0437\u0430 \u0434\u0438\u0441\u043a\u0430\r\n    \u0423\u0434\u043e\u0431\u043d\u043e\u0435 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \"\u043d\u0430 \u0433\u043e\u043b\u043e\u0435 \u0436\u0435\u043b\u0435\u0437\u043e\" \u043d\u0430 \u0442\u043e\u043c \u0436\u0435 \u0438\u043b\u0438 \u043e\u0442\u043b\u0438\u0447\u0430\u044e\u0449\u0435\u043c\u0441\u044f \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0438, \u043b\u0438\u0431\u043e \u043d\u0430 \u0432\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u043e\u0439 \u043c\u0430\u0448\u0438\u043d\u0435\r\n    \u0420\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0445 \u043f\u0430\u043f\u043e\u043a \u043d\u0430 \u0434\u0438\u0441\u043a\u0435 \u0438\u043b\u0438 \u0441\u0435\u0442\u0435\u0432\u044b\u0445 \u043f\u0430\u043f\u043e\u043a \u043e\u0431\u0449\u0435\u0433\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f\r\n    \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u043f\u0430\u043f\u043e\u043a \u0438\u0437 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0439 \u043a\u043e\u043f\u0438\u0438 \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0435 \u043e\u0431\u0440\u0430\u0437\u0430\r\n    \u041f\u0440\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0445 \u043a\u043e\u043f\u0438\u0439 \u0432 \u0444\u043e\u0440\u043c\u0430\u0442 \u0432\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+      "short_description": "",
+      "producer": "Acronis",
+      "image": "products/2017/05/26/thumb_1384933473.jpg",
+      "discount": 0,
+      "stock": 10,
+      "category": 5,
+      "product_class": 2,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 88,
+   "fields": {
+      "name": "Symantec System Recovery Desktop",
+      "slug": "symantec-system-recovery-desktop",
+      "price": "3830.00",
+      "points": "383.00",
+      "description": "Symantec System Recovery 2013 \u2013 \u044d\u0442\u043e \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0445 \u043a\u043e\u043f\u0438\u0439 \u0438 \u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0435\u043d\u0438\u044f \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0440\u0430\u0431\u043e\u0447\u0438\u0445 \u0441\u0442\u0430\u043d\u0446\u0438\u0439 \u0438 \u043d\u043e\u0443\u0442\u0431\u0443\u043a\u043e\u0432 \u0432 \u0430\u0432\u0430\u0440\u0438\u0439\u043d\u044b\u0445 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u044f\u0445, \u0447\u0442\u043e \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043c\u0438\u043d\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432\u0440\u0435\u043c\u044f \u043f\u0440\u043e\u0441\u0442\u043e\u044f \u0438 \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u0432\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f \u043a \u0440\u0435\u0448\u0435\u043d\u0438\u044e \u0440\u0430\u0431\u043e\u0447\u0438\u0445 \u0437\u0430\u0434\u0430\u0447.\r\n\r\n\u0422\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u044f Restore Anyware, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c\u0430\u044f \u0432 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0435, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u043c \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430\u043c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e \u0440\u0435\u0448\u0430\u0442\u044c \u0432\u043e\u043f\u0440\u043e\u0441 \u043e \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0438 \u0442\u043e\u0433\u043e, \u0447\u0435\u0433\u043e \u043d\u0443\u0436\u043d\u043e, \u0432 \u043d\u0443\u0436\u043d\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0438 \u0432 \u043d\u0443\u0436\u043d\u043e\u043c \u043c\u0435\u0441\u0442\u0435. \u0414\u0430\u043d\u043d\u0430\u044f \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u044f \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0444\u0430\u0439\u043b\u044b, \u043f\u0430\u043f\u043a\u0438 \u0438 \u043e\u0431\u044a\u0435\u043a\u0442\u044b \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439, \u043d\u043e \u0438 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u0446\u0435\u043b\u0438\u043a\u043e\u043c, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044f \u0442\u043e \u0436\u0435 \u0441\u0430\u043c\u043e\u0435 \u0438\u043b\u0438 \u043d\u043e\u0432\u043e\u0435 \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435.",
+      "short_description": "",
+      "producer": "Symantec",
+      "image": "products/2017/05/26/thumb_1401701995.png",
+      "discount": 0,
+      "stock": 5,
+      "category": 5,
+      "product_class": 2,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 89,
+   "fields": {
+      "name": "Microsoft Windows 10 Professional GetGenuine",
+      "slug": "microsoft-windows-10-professional-getgenuine",
+      "price": "12300.00",
+      "points": "1230.00",
+      "description": "Get Gunuine Windows Agreement GGWA \u2013 \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u0434\u043b\u044f \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043a\u043e\u043f\u0438\u0439 \u041e\u0421 Windows, \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044b\u0445 \u0440\u0430\u043d\u0435\u0435 \u0431\u0435\u0437 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u0438. \u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u043f\u0440\u0435\u0434\u043f\u043e\u043b\u0430\u0433\u0430\u0435\u0442 \u043e\u0442 5 \u0438 \u0431\u043e\u043b\u0435\u0435 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u0439 \u0438 \u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u043d\u0430 \u043d\u0430 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439.",
+      "short_description": "",
+      "producer": "Microsoft",
+      "image": "products/2017/05/26/thumb_1438765887.jpg",
+      "discount": 0,
+      "stock": 2,
+      "category": 6,
+      "product_class": 5,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 90,
+   "fields": {
+      "name": "PERFEXPERT",
+      "slug": "perfexpert",
+      "price": "50000.00",
+      "points": "5000.00",
+      "description": "\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430, \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044f, \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0438 \u0440\u0430\u0431\u043e\u0442\u044b \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 24\u04257. \u041e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u043c\u0438 \u0438\u043d\u0446\u0438\u0434\u0435\u043d\u0442\u0430\u043c\u0438 \u0431\u0438\u0437\u043d\u0435\u0441 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f, \u0438 \u0442\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0430\u043c\u0438 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0438 \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u0438 \u0440\u0430\u0431\u043e\u0442\u044b \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0439 \u0431\u0438\u0437\u043d\u0435\u0441 \u0441\u0438\u0441\u0442\u0435\u043c\u044b. PERFEXPERT \u043d\u043e\u0432\u044b\u0439 \u0443\u0440\u043e\u0432\u0435\u043d\u044c \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0430 \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432\u0441\u0435\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0439 \u0431\u0438\u0437\u043d\u0435\u0441 \u0441\u0438\u0441\u0442\u0435\u043c\u044b.",
+      "short_description": "",
+      "producer": "SOFTPOINT",
+      "image": "products/2017/05/26/thumb_1424247372.png",
+      "discount": 0,
+      "stock": 5,
+      "category": 7,
+      "product_class": 4,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.product",
+   "pk": 91,
+   "fields": {
+      "name": "Office 365 Business Open",
+      "slug": "office-365-business-open",
+      "price": "5700.00",
+      "points": "570.00",
+      "description": "\u041f\u043b\u0430\u043d Office 365 \u0411\u0438\u0437\u043d\u0435\u0441 \u0432\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u0432 \u0441\u0435\u0431\u044f \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u0438 \u0446\u0435\u043d\u043e\u0432\u044b\u0435 \u043e\u0440\u0438\u0435\u043d\u0442\u0438\u0440\u044b, \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0435 \u0434\u043b\u044f \u0443\u0434\u043e\u0432\u043b\u0435\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u044f \u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0435\u0439 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u043c\u0430\u043b\u043e\u0433\u043e \u0438 \u0441\u0440\u0435\u0434\u043d\u0435\u0433\u043e \u0431\u0438\u0437\u043d\u0435\u0441\u0430 \u2013 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439 \u0440\u0430\u0437\u043c\u0435\u0440\u043e\u043c \u043e\u0442 1 \u0434\u043e 300 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432.",
+      "short_description": "",
+      "producer": "Microsoft",
+      "image": "products/2017/05/26/office.png",
+      "discount": 5,
+      "stock": 13,
+      "category": 8,
+      "product_class": 3,
+      "is_active": true,
+      "is_hit": false,
+      "is_new": false,
+      "created": "2017-05-26",
+      "updated": "2017-07-07"
+   }
+},
+{
+   "model": "products.offer",
+   "pk": 30,
+   "fields": {
+      "product": 85,
+      "name": "Kaspersky-New-One-year",
+      "price": "1730.00",
+      "points": "0.00",
+      "attributes": "{\"License type\": \"New\", \"License term\": \"One year\"}"
+   }
+},
+{
+   "model": "products.offer",
+   "pk": 31,
+   "fields": {
+      "product": 85,
+      "name": "Kaspersky-New-One-year",
+      "price": "2600.00",
+      "points": "0.00",
+      "attributes": "{\"License type\": \"New\", \"License term\": \"Two years\"}"
+   }
+},
+{
+   "model": "products.offer",
+   "pk": 32,
+   "fields": {
+      "product": 85,
+      "name": "Kaspersky-Prolongation-One-year",
+      "price": "1200.00",
+      "points": "0.00",
+      "attributes": "{\"License type\": \"Prolongation\", \"License term\": \"One year\"}"
+   }
+},
+{
+   "model": "products.offer",
+   "pk": 33,
+   "fields": {
+      "product": 85,
+      "name": "Kaspersky-Migration-One-year",
+      "price": "1900.00",
+      "points": "0.00",
+      "attributes": "{\"License type\": \"Migration\", \"License term\": \"One year\"}"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 1,
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 2,
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 3,
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 4,
+   "fields": {
+      "name": "Can add group",
+      "content_type": 2,
+      "codename": "add_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 5,
+   "fields": {
+      "name": "Can change group",
+      "content_type": 2,
+      "codename": "change_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 6,
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 2,
+      "codename": "delete_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 7,
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 3,
+      "codename": "add_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 8,
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 3,
+      "codename": "change_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 9,
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 3,
+      "codename": "delete_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 10,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 11,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 12,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 13,
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 14,
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 15,
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 16,
+   "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 17,
+   "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 18,
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 19,
+   "fields": {
+      "name": "Can add MySubsciber",
+      "content_type": 7,
+      "codename": "add_subscriber"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 20,
+   "fields": {
+      "name": "Can change MySubsciber",
+      "content_type": 7,
+      "codename": "change_subscriber"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 21,
+   "fields": {
+      "name": "Can delete MySubsciber",
+      "content_type": 7,
+      "codename": "delete_subscriber"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 22,
+   "fields": {
+      "name": "Can add Order",
+      "content_type": 8,
+      "codename": "add_order"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 23,
+   "fields": {
+      "name": "Can change Order",
+      "content_type": 8,
+      "codename": "change_order"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 24,
+   "fields": {
+      "name": "Can delete Order",
+      "content_type": 8,
+      "codename": "delete_order"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 25,
+   "fields": {
+      "name": "Can add Product in Cart",
+      "content_type": 9,
+      "codename": "add_productsinbasket"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 26,
+   "fields": {
+      "name": "Can change Product in Cart",
+      "content_type": 9,
+      "codename": "change_productsinbasket"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 27,
+   "fields": {
+      "name": "Can delete Product in Cart",
+      "content_type": 9,
+      "codename": "delete_productsinbasket"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 28,
+   "fields": {
+      "name": "Can add State of order",
+      "content_type": 10,
+      "codename": "add_status"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 29,
+   "fields": {
+      "name": "Can change State of order",
+      "content_type": 10,
+      "codename": "change_status"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 30,
+   "fields": {
+      "name": "Can delete State of order",
+      "content_type": 10,
+      "codename": "delete_status"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 31,
+   "fields": {
+      "name": "Can add Product in Order",
+      "content_type": 11,
+      "codename": "add_productsinorder"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 32,
+   "fields": {
+      "name": "Can change Product in Order",
+      "content_type": 11,
+      "codename": "change_productsinorder"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 33,
+   "fields": {
+      "name": "Can delete Product in Order",
+      "content_type": 11,
+      "codename": "delete_productsinorder"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 34,
+   "fields": {
+      "name": "Can add user profile",
+      "content_type": 12,
+      "codename": "add_userprofile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 35,
+   "fields": {
+      "name": "Can change user profile",
+      "content_type": 12,
+      "codename": "change_userprofile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 36,
+   "fields": {
+      "name": "Can delete user profile",
+      "content_type": 12,
+      "codename": "delete_userprofile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 37,
+   "fields": {
+      "name": "Can add product class",
+      "content_type": 13,
+      "codename": "add_productclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 38,
+   "fields": {
+      "name": "Can change product class",
+      "content_type": 13,
+      "codename": "change_productclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 39,
+   "fields": {
+      "name": "Can delete product class",
+      "content_type": 13,
+      "codename": "delete_productclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 40,
+   "fields": {
+      "name": "Can add Products category",
+      "content_type": 14,
+      "codename": "add_productcategory"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 41,
+   "fields": {
+      "name": "Can change Products category",
+      "content_type": 14,
+      "codename": "change_productcategory"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 42,
+   "fields": {
+      "name": "Can delete Products category",
+      "content_type": 14,
+      "codename": "delete_productcategory"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 43,
+   "fields": {
+      "name": "Can add Product",
+      "content_type": 15,
+      "codename": "add_product"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 44,
+   "fields": {
+      "name": "Can change Product",
+      "content_type": 15,
+      "codename": "change_product"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 45,
+   "fields": {
+      "name": "Can delete Product",
+      "content_type": 15,
+      "codename": "delete_product"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 46,
+   "fields": {
+      "name": "Can add Photo",
+      "content_type": 16,
+      "codename": "add_productimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 47,
+   "fields": {
+      "name": "Can change Photo",
+      "content_type": 16,
+      "codename": "change_productimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 48,
+   "fields": {
+      "name": "Can delete Photo",
+      "content_type": 16,
+      "codename": "delete_productimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 49,
+   "fields": {
+      "name": "Can add Product attribute",
+      "content_type": 17,
+      "codename": "add_productattribute"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 50,
+   "fields": {
+      "name": "Can change Product attribute",
+      "content_type": 17,
+      "codename": "change_productattribute"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 51,
+   "fields": {
+      "name": "Can delete Product attribute",
+      "content_type": 17,
+      "codename": "delete_productattribute"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 52,
+   "fields": {
+      "name": "Can add Offer",
+      "content_type": 18,
+      "codename": "add_offer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 53,
+   "fields": {
+      "name": "Can change Offer",
+      "content_type": 18,
+      "codename": "change_offer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 54,
+   "fields": {
+      "name": "Can delete Offer",
+      "content_type": 18,
+      "codename": "delete_offer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 55,
+   "fields": {
+      "name": "Can add attribute choices value",
+      "content_type": 19,
+      "codename": "add_attributechoicevalue"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 56,
+   "fields": {
+      "name": "Can change attribute choices value",
+      "content_type": 19,
+      "codename": "change_attributechoicevalue"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 57,
+   "fields": {
+      "name": "Can delete attribute choices value",
+      "content_type": 19,
+      "codename": "delete_attributechoicevalue"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 58,
+   "fields": {
+      "name": "Can add PayPal IPN",
+      "content_type": 20,
+      "codename": "add_paypalipn"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 59,
+   "fields": {
+      "name": "Can change PayPal IPN",
+      "content_type": 20,
+      "codename": "change_paypalipn"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 60,
+   "fields": {
+      "name": "Can delete PayPal IPN",
+      "content_type": 20,
+      "codename": "delete_paypalipn"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 61,
+   "fields": {
+      "name": "Can add discount",
+      "content_type": 21,
+      "codename": "add_discount"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 62,
+   "fields": {
+      "name": "Can change discount",
+      "content_type": 21,
+      "codename": "change_discount"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 63,
+   "fields": {
+      "name": "Can delete discount",
+      "content_type": 21,
+      "codename": "delete_discount"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 64,
+   "fields": {
+      "name": "Can add PickUpRequest",
+      "content_type": 22,
+      "codename": "add_pickuprequest"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 65,
+   "fields": {
+      "name": "Can change PickUpRequest",
+      "content_type": 22,
+      "codename": "change_pickuprequest"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 66,
+   "fields": {
+      "name": "Can delete PickUpRequest",
+      "content_type": 22,
+      "codename": "delete_pickuprequest"
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 1,
+   "fields": {
+      "password": "pbkdf2_sha256$30000$ZEsyRnfJTqPV$Gszx4riOl4npoc0USa2ECMgMejhu1C1gErFJsM4JdBI=",
+      "last_login": "2017-07-19T12:48:00.647Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "bda2291@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-05-26T07:03:30.087Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 2,
+   "fields": {
+      "password": "pbkdf2_sha256$30000$xjHRaa2j9tiU$MUPQThfblXHcYb03MuIixPherJx41Rz6Nrd6k+x0zeM=",
+      "last_login": "2017-07-06T17:28:00.936Z",
+      "is_superuser": false,
+      "username": "Denis",
+      "first_name": "",
+      "last_name": "",
+      "email": "bda2291@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2017-05-26T11:54:35.780Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 33,
+   "fields": {
+      "password": "pbkdf2_sha256$30000$DGbPnhSYnrtW$LwO9H3g7knLeeZ6YG6yjBzcjXI62bV5KRUfz/iLaVhM=",
+      "last_login": "2017-07-19T12:49:18.673Z",
+      "is_superuser": false,
+      "username": "Boba",
+      "first_name": "",
+      "last_name": "",
+      "email": "boba@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2017-07-05T13:09:24.524Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "userprofile.userprofile",
+   "pk": 1,
+   "fields": {
+      "user": 1,
+      "description": "",
+      "city": "",
+      "phone": "+NoneNone",
+      "user_points": "0.00",
+      "parent": null
+   }
+},
+{
+   "model": "userprofile.userprofile",
+   "pk": 2,
+   "fields": {
+      "user": 2,
+      "description": "Hello World!",
+      "city": "Moscow",
+      "phone": "+79255311852",
+      "user_points": "0.00",
+      "parent": null
+   }
+},
+{
+   "model": "userprofile.userprofile",
+   "pk": 29,
+   "fields": {
+      "user": 33,
+      "description": "Hello World!",
+      "city": "Moscow",
+      "phone": "",
+      "user_points": "0.00",
+      "parent": 2
+   }
+},
+{
+   "model": "userprofile.pickuprequest",
+   "pk": 9,
+   "fields": {
+      "user": 33,
+      "points": "100.00",
+      "requisites": "12"
+   }
+},
+{
+   "model": "userprofile.pickuprequest",
+   "pk": 10,
+   "fields": {
+      "user": 33,
+      "points": "100.00",
+      "requisites": "12345"
+   }
+},
+{
+   "model": "discount.discount",
+   "pk": 1,
+   "fields": {
+      "user": 1,
+      "code": "fe49e4b1-3e38-4b36-b981-c91076b9ca9b",
+      "valid_from": "2017-07-04T15:38:02.197Z",
+      "valid_to": "2017-07-11T15:38:02.197Z",
+      "discount": 10,
+      "active": true
+   }
+},
+{
+   "model": "discount.discount",
+   "pk": 2,
+   "fields": {
+      "user": 2,
+      "code": "496963d9-ddc4-4333-98cf-17a3d3a3128a",
+      "valid_from": "2017-05-26T11:54:52.120Z",
+      "valid_to": "2017-06-02T11:54:52.120Z",
+      "discount": 10,
+      "active": true
+   }
+},
+{
+   "model": "discount.discount",
+   "pk": 33,
+   "fields": {
+      "user": 33,
+      "code": "73af9d3e-6d1a-4f41-9081-5f2a0b3b59dd",
+      "valid_from": "2017-07-06T11:26:58.021Z",
+      "valid_to": "2017-07-13T11:26:58.021Z",
+      "discount": 10,
+      "active": true
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 1,
+   "fields": {
+      "action_time": "2017-05-26T08:15:07.530Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Information security",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 2,
+   "fields": {
+      "action_time": "2017-05-26T08:16:18.843Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Document manipulation",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 3,
+   "fields": {
+      "action_time": "2017-05-26T08:16:45.606Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "System software",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 4,
+   "fields": {
+      "action_time": "2017-05-26T08:17:29.603Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "Anti-virus software",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 5,
+   "fields": {
+      "action_time": "2017-05-26T08:18:04.909Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "Data recovery",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 6,
+   "fields": {
+      "action_time": "2017-05-26T08:18:31.462Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "6",
+      "object_repr": "OS",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 7,
+   "fields": {
+      "action_time": "2017-05-26T08:18:51.627Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "7",
+      "object_repr": "DB",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 8,
+   "fields": {
+      "action_time": "2017-05-26T08:19:22.030Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "8",
+      "object_repr": "Microsoft Office",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 9,
+   "fields": {
+      "action_time": "2017-05-26T08:22:13.343Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "License type",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"New\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"Prolongation\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"Migration\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 10,
+   "fields": {
+      "action_time": "2017-05-26T08:23:29.521Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "2",
+      "object_repr": "License term",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"One year\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"Two years\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 11,
+   "fields": {
+      "action_time": "2017-05-26T08:25:46.448Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "3",
+      "object_repr": "technical support",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"Standard AAS\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"Extended AAP\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 12,
+   "fields": {
+      "action_time": "2017-05-26T08:28:53.880Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "4",
+      "object_repr": "Number users",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"from 1 to 49\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"from 50 to 99\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"from 100 to 299\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 13,
+   "fields": {
+      "action_time": "2017-05-26T08:29:39.956Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "License type",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"attribute choices value\", \"object\": \"Version Upgrade\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 14,
+   "fields": {
+      "action_time": "2017-05-26T08:31:53.037Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "5",
+      "object_repr": "Type of organization",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"commercial\"}}, {\"added\": {\"name\": \"attribute choices value\", \"object\": \"educational\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 15,
+   "fields": {
+      "action_time": "2017-05-26T08:32:06.851Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "3",
+      "object_repr": "Technical support",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 16,
+   "fields": {
+      "action_time": "2017-05-26T08:33:59.088Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Antivirus software",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 17,
+   "fields": {
+      "action_time": "2017-05-26T08:35:12.007Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Antivirus software class",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 18,
+   "fields": {
+      "action_time": "2017-05-26T08:36:11.118Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Data recovery class",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 19,
+   "fields": {
+      "action_time": "2017-05-26T08:36:45.061Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "Document manipulation class",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 20,
+   "fields": {
+      "action_time": "2017-05-26T08:37:17.314Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "DB class",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 21,
+   "fields": {
+      "action_time": "2017-05-26T08:37:41.879Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "OS class",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 22,
+   "fields": {
+      "action_time": "2017-05-26T09:52:12.904Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 23,
+   "fields": {
+      "action_time": "2017-05-26T09:52:12.976Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "86",
+      "object_repr": "ESET NOD32 Antivirus Business Edition",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 24,
+   "fields": {
+      "action_time": "2017-05-26T09:52:13.137Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "87",
+      "object_repr": "Acronis Backup 12 Workstation License",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 25,
+   "fields": {
+      "action_time": "2017-05-26T09:52:13.278Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "88",
+      "object_repr": "Symantec System Recovery Desktop",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 26,
+   "fields": {
+      "action_time": "2017-05-26T09:52:13.562Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "89",
+      "object_repr": "Microsoft Windows 10 Professional GetGenuine",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 27,
+   "fields": {
+      "action_time": "2017-05-26T09:52:13.600Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "90",
+      "object_repr": "PERFEXPERT",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 28,
+   "fields": {
+      "action_time": "2017-05-26T09:52:13.625Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "91",
+      "object_repr": "Office 365 Business Open",
+      "action_flag": 1,
+      "change_message": "new through import_export"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 29,
+   "fields": {
+      "action_time": "2017-05-26T09:55:06.073Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 30,
+   "fields": {
+      "action_time": "2017-05-26T09:55:31.258Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "86",
+      "object_repr": "ESET NOD32 Antivirus Business Edition",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 31,
+   "fields": {
+      "action_time": "2017-05-26T09:55:48.017Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "87",
+      "object_repr": "Acronis Backup 12 Workstation License",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"description\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 32,
+   "fields": {
+      "action_time": "2017-05-26T09:56:13.147Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "88",
+      "object_repr": "Symantec System Recovery Desktop",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"description\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 33,
+   "fields": {
+      "action_time": "2017-05-26T09:56:35.778Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "89",
+      "object_repr": "Microsoft Windows 10 Professional GetGenuine",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 34,
+   "fields": {
+      "action_time": "2017-05-26T09:57:12.477Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "90",
+      "object_repr": "PERFEXPERT",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 35,
+   "fields": {
+      "action_time": "2017-05-26T09:57:29.585Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "91",
+      "object_repr": "Office 365 Business Open",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\", \"product_class\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 36,
+   "fields": {
+      "action_time": "2017-05-26T09:59:44.396Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 37,
+   "fields": {
+      "action_time": "2017-05-26T11:43:14.056Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}, {\"added\": {\"name\": \"Offer\", \"object\": \"Kaspersky-New-One-year\"}}, {\"added\": {\"name\": \"Offer\", \"object\": \"Kaspersky-New-One-year\"}}, {\"added\": {\"name\": \"Offer\", \"object\": \"Kaspersky-Prolongation-One-year\"}}, {\"added\": {\"name\": \"Offer\", \"object\": \"Kaspersky-Migration-One-year\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 38,
+   "fields": {
+      "action_time": "2017-05-26T11:43:35.828Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "86",
+      "object_repr": "ESET NOD32 Antivirus Business Edition",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 39,
+   "fields": {
+      "action_time": "2017-05-26T11:43:59.323Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "87",
+      "object_repr": "Acronis Backup 12 Workstation License",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 40,
+   "fields": {
+      "action_time": "2017-05-26T11:44:16.241Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "88",
+      "object_repr": "Symantec System Recovery Desktop",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 41,
+   "fields": {
+      "action_time": "2017-05-26T11:44:34.651Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "89",
+      "object_repr": "Microsoft Windows 10 Professional GetGenuine",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 42,
+   "fields": {
+      "action_time": "2017-05-26T11:45:20.186Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "90",
+      "object_repr": "PERFEXPERT",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 43,
+   "fields": {
+      "action_time": "2017-05-26T11:45:35.494Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "91",
+      "object_repr": "Office 365 Business Open",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 44,
+   "fields": {
+      "action_time": "2017-05-26T11:48:12.658Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"Offer\", \"object\": \"Kaspersky-New-One-year\", \"fields\": [\"price\"]}}, {\"changed\": {\"name\": \"Offer\", \"object\": \"Kaspersky-New-One-year\", \"fields\": [\"price\"]}}, {\"changed\": {\"name\": \"Offer\", \"object\": \"Kaspersky-Prolongation-One-year\", \"fields\": [\"price\"]}}, {\"changed\": {\"name\": \"Offer\", \"object\": \"Kaspersky-Migration-One-year\", \"fields\": [\"price\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 45,
+   "fields": {
+      "action_time": "2017-07-04T18:56:48.426Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "5",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 46,
+   "fields": {
+      "action_time": "2017-07-04T18:56:48.481Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 47,
+   "fields": {
+      "action_time": "2017-07-04T18:56:48.494Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 48,
+   "fields": {
+      "action_time": "2017-07-05T08:07:12.532Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 49,
+   "fields": {
+      "action_time": "2017-07-05T08:07:12.586Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 50,
+   "fields": {
+      "action_time": "2017-07-05T08:07:12.599Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "5",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 51,
+   "fields": {
+      "action_time": "2017-07-05T08:12:04.423Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "6",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 52,
+   "fields": {
+      "action_time": "2017-07-05T08:18:58.523Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 53,
+   "fields": {
+      "action_time": "2017-07-05T10:10:59.779Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 54,
+   "fields": {
+      "action_time": "2017-07-05T10:26:24.997Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 55,
+   "fields": {
+      "action_time": "2017-07-05T10:32:52.034Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "10",
+      "object_repr": "Boba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\", \"city\", \"parent\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 56,
+   "fields": {
+      "action_time": "2017-07-05T10:33:10.841Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "10",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 57,
+   "fields": {
+      "action_time": "2017-07-05T10:34:38.964Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "11",
+      "object_repr": "Boba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\", \"city\", \"parent\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 58,
+   "fields": {
+      "action_time": "2017-07-05T10:36:30.607Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "11",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 59,
+   "fields": {
+      "action_time": "2017-07-05T10:55:27.985Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "12",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 60,
+   "fields": {
+      "action_time": "2017-07-05T11:21:59.350Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "13",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 61,
+   "fields": {
+      "action_time": "2017-07-05T11:21:59.403Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "14",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 62,
+   "fields": {
+      "action_time": "2017-07-05T11:48:01.640Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "15",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 63,
+   "fields": {
+      "action_time": "2017-07-05T11:48:01.667Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "16",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 64,
+   "fields": {
+      "action_time": "2017-07-05T11:48:01.676Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "17",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 65,
+   "fields": {
+      "action_time": "2017-07-05T11:55:43.299Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "18",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 66,
+   "fields": {
+      "action_time": "2017-07-05T11:55:43.327Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "19",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 67,
+   "fields": {
+      "action_time": "2017-07-05T11:55:43.335Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "20",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 68,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.274Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "21",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 69,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.345Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "22",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 70,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.382Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "23",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 71,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.401Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "24",
+      "object_repr": "test3",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 72,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.410Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "25",
+      "object_repr": "test4",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 73,
+   "fields": {
+      "action_time": "2017-07-05T12:19:43.414Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "26",
+      "object_repr": "test5",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 74,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.577Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "27",
+      "object_repr": "Boba",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 75,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.654Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "28",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 76,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.664Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "29",
+      "object_repr": "test2",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 77,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.668Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "30",
+      "object_repr": "test3",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 78,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.673Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "31",
+      "object_repr": "test4",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 79,
+   "fields": {
+      "action_time": "2017-07-05T13:06:56.677Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "32",
+      "object_repr": "test5",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 80,
+   "fields": {
+      "action_time": "2017-07-05T18:22:28.862Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "29",
+      "object_repr": "Boba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\", \"city\", \"user_points\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 81,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.464Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Order 15 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 82,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.533Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Order 14 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 83,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.548Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Order 13 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 84,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.556Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Order 12 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 85,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.565Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Order 11 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 86,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.570Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Order 10 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 87,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.576Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Order 9 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 88,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.585Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Order 8 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 89,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.589Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Order 7 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 90,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.593Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Order 6 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 91,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.600Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Order 5 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 92,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.609Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Order 4 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 93,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.617Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Order 3 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 94,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.626Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Order 2 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 95,
+   "fields": {
+      "action_time": "2017-07-06T17:27:25.635Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Order 1 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 96,
+   "fields": {
+      "action_time": "2017-07-06T18:24:06.928Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Order 18 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 97,
+   "fields": {
+      "action_time": "2017-07-06T18:24:06.944Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Order 17 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 98,
+   "fields": {
+      "action_time": "2017-07-06T18:24:06.950Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Order 16 has status None: ",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 99,
+   "fields": {
+      "action_time": "2017-07-07T09:00:09.727Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "85",
+      "object_repr": "Kaspersky Endpoint Security \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430 CLOUD",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 100,
+   "fields": {
+      "action_time": "2017-07-07T09:00:44.562Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "86",
+      "object_repr": "ESET NOD32 Antivirus Business Edition",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 101,
+   "fields": {
+      "action_time": "2017-07-07T09:00:57.193Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "87",
+      "object_repr": "Acronis Backup 12 Workstation License",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 102,
+   "fields": {
+      "action_time": "2017-07-07T09:01:09.669Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "88",
+      "object_repr": "Symantec System Recovery Desktop",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 103,
+   "fields": {
+      "action_time": "2017-07-07T09:01:22.992Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "89",
+      "object_repr": "Microsoft Windows 10 Professional GetGenuine",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 104,
+   "fields": {
+      "action_time": "2017-07-07T09:01:36.288Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "90",
+      "object_repr": "PERFEXPERT",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 105,
+   "fields": {
+      "action_time": "2017-07-07T09:01:48.206Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "91",
+      "object_repr": "Office 365 Business Open",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 106,
+   "fields": {
+      "action_time": "2017-07-19T12:34:44.614Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "4",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 107,
+   "fields": {
+      "action_time": "2017-07-19T12:34:44.649Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "3",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 108,
+   "fields": {
+      "action_time": "2017-07-19T12:34:44.659Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "2",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 109,
+   "fields": {
+      "action_time": "2017-07-19T12:34:44.663Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "1",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 110,
+   "fields": {
+      "action_time": "2017-07-19T12:48:20.278Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "8",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 111,
+   "fields": {
+      "action_time": "2017-07-19T12:48:20.300Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "7",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 112,
+   "fields": {
+      "action_time": "2017-07-19T12:48:20.306Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "6",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 113,
+   "fields": {
+      "action_time": "2017-07-19T12:48:20.311Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "5",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 114,
+   "fields": {
+      "action_time": "2017-07-19T12:48:38.927Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "29",
+      "object_repr": "Boba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"user_points\"]}}]"
+   }
+}
+]

@@ -11,6 +11,13 @@ from .forms import DiscountApllyForm
 
 
 @require_POST
+@login_required
+@csrf_exempt
+def PointsApply(request):
+    request.session['points'] = True
+    return redirect('cart:CartDetail')
+
+@require_POST
 def DiscountApply(request):
     now = datetime.now()
     form = DiscountApllyForm(request.POST)

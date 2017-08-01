@@ -34,6 +34,7 @@ class Order(models.Model):
     paid = models.BooleanField(default=False)
     discount = models.ForeignKey(Discount, related_name='orders', null=True, blank=True)
     discount_value = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    points_quant = models.IntegerField(default=0)
 
     def __str__(self):
         return "Order {!s} has status {}: ".format(self.id, self.status)
@@ -98,6 +99,8 @@ def product_in_order_post_save(instance,**kwargs):
     all_products_in_order = ProductsInOrder.objects.filter(order=order, is_active=True)
 
     order_total_price = sum(item.total_price for item in all_products_in_order)
-
-    order.total_price = order_total_price * (order.discount_value / Decimal('100'))
+    if order.discount:
+        order.total_price = order_total_price * (order.discount_value / Decimal('100'))
+    if order.points_quant:
+        order.total_price = order_total_price - order.points_quant
     order.save(force_update=True)

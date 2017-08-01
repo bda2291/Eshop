@@ -14,15 +14,21 @@
         <p>Phone: {{ profile.phone }}</p>
         <p>Site: {{ profile.website }}</p>
         <p>City: {{ profile.city }}</p>
-        <p>Points: {{ profile.user_points }}</p>
-        <div class="discount_code">
-            <p>Discount code: {{ discount.code }}</p>
-            <form action="{% url 'discount:create' %}" method="post">{% csrf_token %}
-                <input type="submit" name="discount" value="GetDC" />
+        <p>Parent: {{ profile.parent.username }}</p>
+        <!--<div class="discount_code">-->
+            <!--<p>Discount code: {{ discount.code }}</p>-->
+            <!--<form action="{% url 'discount:create' %}" method="post">{% csrf_token %}-->
+                <!--<input type="submit" name="discount" value="GetDC" />-->
+            <!--</form>-->
+        <!--</div>-->
+        <div class="user_profile_points">
+            <p>Points: {{ profile.user_points }}</p>
+            <form action="{% url 'profile:pick_up_points' %}">
+                    <input type="submit" name="pick_up_points" value="Pick Up Points" />
             </form>
         </div>
-        <form action="{% url 'profile:update_profile' %}">{% csrf_token %}
-                <input type="submit" name="update_profile" value="UP" />
+        <form action="{% url 'profile:update_profile' %}">
+                <input type="submit" name="update_profile" value="Update Profile" />
         </form>
     </div>
 

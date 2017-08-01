@@ -15,6 +15,9 @@
       {% for cat in categories %}
         <li {% if category.slug == cat.slug %} class="selected" {% endif %}>
           <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+            {% for child in cat.get_children %}
+                <a href="{{ child.get_absolute_url }}">{{ child.name }}</a>
+            {% endfor %}
         </li>
       {% endfor %}
     </ul>
@@ -36,7 +39,10 @@
             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'static_dev/no-image.jpg' %} {% endif %}" class="img-responsive">
           </a>
           <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-          <h4 class="text-center"><span class="label label-info">{{ product.price }} rub.</span></h4>
+          <h4 class="product-price">
+              <span class="label label-info">{{ product.price }} rub.</span>
+              <span class="label label-success">{{ product.points }} pts.</span>
+          </h4>
         </div>
       {% endfor %}
     </div>

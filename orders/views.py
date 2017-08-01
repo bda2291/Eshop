@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, render_to_response
 from django.conf import settings
 from django.contrib import auth
 from django.http import HttpResponse
@@ -47,8 +47,8 @@ def basket_remove(request):
 
 def OrderCreate(request):
     cart = Cart(request)
-    username = auth.get_user(request).username
-    if not username:
+    user = auth.get_user(request)
+    if not user.username:
         return redirect('auth:login')
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
@@ -58,6 +58,10 @@ def OrderCreate(request):
             if cart.discount:
                 order.discount = cart.discount
                 order.discount_value = cart.discount.discount
+
+            if cart.points:
+                order.points_quant = cart.points_quant
+
             order.save()
 
             for item in cart:
@@ -66,15 +70,17 @@ def OrderCreate(request):
                                          number=item['quantity'])
             cart.clear()
 
-            # Asinc mail sending
-            OrderCreated.delay(order.id)
+            # # Asinc mail sending
+            # OrderCreated.delay(order.id)
             request.session['order_id'] = order.id
 
             return redirect(reverse('payment:process'))
             #return render(request, 'orders/created.html', {'order': order})
+        else:
+            return render_to_response('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
 
     form = OrderCreateForm()
-    return render(request, 'orders/create.html', {'username': username, 'cart': cart, 'form': form})
+    return render(request, 'orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
 
 @staff_member_required
 def AdminOrderDetail(request, order_id):

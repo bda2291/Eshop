@@ -99,3 +99,7 @@ html, body{
     z-index: 10;
     padding: 10px;
 }
+
+.product-price{
+    text-align: right;
+}

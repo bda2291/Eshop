@@ -4,7 +4,6 @@ from haystack.forms import FacetedSearchForm
 class FacetedProductSearchForm(FacetedSearchForm):
     def __init__(self, *args, **kwargs):
         data = dict(kwargs.get("data", []))
-        print(kwargs)
         self.categories = data.get('category', [])
         self.producers = data.get('producer', [])
         super(FacetedProductSearchForm, self).__init__(*args, **kwargs)

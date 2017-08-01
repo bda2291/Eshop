@@ -20,12 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5bad1g&sjplz#xd@kz0d=ej%xw(n&_6ng#)()np9(vl)lw_h8u'
+SECRET_KEY = eval(os.environ.get('SOME_SECRET_KEY', '5bad1g&sjplz#xd@kz0d=ej%xw(n&_6ng#)()np9(vl)lw_h8u'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = eval(os.environ.get('DEBUG_MODE', 'True'))
 
-ALLOWED_HOSTS = []
+TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = [] if DEBUG else ['*']
 
 
 # Application definition
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
 
     'import_export',
     'mptt',
@@ -48,11 +51,9 @@ INSTALLED_APPS = [
     'haystack',
     'products',
     'cart',
-    'paypal.standard.ipn',
-    'payment',
+    # 'paypal.standard.ipn',
+    # 'payment',
     'discount',
-
-
 
 ]
 
@@ -93,16 +94,29 @@ MPTT_ADMIN_LEVEL_INDENT = 20
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shop_db',
-        'USER': 'denis',
-        'PASSWORD': '12345678',
-        'HOST': 'localhost',
-        'PORT': '',
+
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'eshop_db',
+            'USER': 'denis',
+            'PASSWORD': '12345678',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'bd1',
+            'USER': 'django_shop',
+            'PASSWORD': '12345',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 
 # Password validation
@@ -159,11 +173,6 @@ CART_SESSION_ID = 'cart'
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-# Paypal
-
-PAYPAL_RECEIVER_EMAIL = 'bda2291@mail.ru'
-PAYPAL_TEST = True
 
 # for import-export excel data
 IMPORT_EXPORT_USE_TRANSACTIONS = True

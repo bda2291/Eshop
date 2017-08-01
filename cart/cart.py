@@ -1,5 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
+from django.contrib import auth
 from products.models import Product
 from discount.models import Discount
 
@@ -7,6 +8,9 @@ class Cart(object):
     def __init__(self, request):
         self.session = request.session
         self.discount_id = self.session.get('discount_id')
+        if request.user.is_authenticated():
+            self.points = self.session.get('points')
+            self.points_quant = auth.get_user(request).profile.user_points
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
@@ -68,4 +72,7 @@ class Cart(object):
 
     def get_total_price_after_discount(self):
         return self.get_total_price() - self.get_discount()
+
+    def get_total_deduct_points(self):
+        return self.get_total_price() - Decimal(self.points_quant)
 

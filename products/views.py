@@ -20,6 +20,10 @@ def productlist(request, category_slug=None):
     username = auth.get_user(request).username
     category = None
     categories = ProductCategory.objects.filter(level__lte=0)
+    # categories = ProductCategory.objects.filter(is_active=True)
+    # for category in categories:
+    #     print(type(category))
+    #     print(type(category.get_children()[0]))
     products = Product.objects.filter(is_active=True)
     if category_slug:
         category = get_object_or_404(ProductCategory, slug=category_slug)
@@ -28,15 +32,11 @@ def productlist(request, category_slug=None):
 
 def product(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, is_active=True)
+    print(product.price, product.points)
     username = auth.get_user(request).username
     cart_product_form = CartAddProductForm()
     variant_picker_data = get_variant_picker_data(product)
     show_variant_picker = all([v.attributes for v in product.variants.all()])
-    for variant in variant_picker_data['variants']:
-        print(variant)
-    print()
-    for atribute in variant_picker_data['variants']:
-        print(atribute)
     # session_key = request.session.session_key
     # if not session_key:
     #     request.session.cycle_key()

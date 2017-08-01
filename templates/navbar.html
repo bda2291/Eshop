@@ -38,7 +38,11 @@
                   {% if cart|length > 0 %}
                     Your Cart:
                     <a href="{% url 'cart:CartDetail' %}">
-                      {{ total_items }} pc. {{ cart.get_total_price }} rub.
+                      {% if cart.points %}
+                        {{ total_items }} pc. {{ cart.get_total_deduct_points }} rub.
+                      {% else %}
+                        {{ total_items }} pc. {{ cart.get_total_price }} rub.
+                      {% endif %}
                     </a>
                   {% else %}
                     Cart is empty

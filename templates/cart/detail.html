@@ -60,16 +60,32 @@
         <tr class="total">
           <td>Total</td>
           <td colspan="4"></td>
-          <td class="num">{{ cart.get_total_price_after_discount|floatformat:"2" }} RUB.</td>
+          <td class="num">{{ cart.get_total_price_after_discount|floatformat:"2" }} RUB.
+            {% if cart.points %}
+              <tr>
+                <td colspan="5"></td>
+                <td>- {{ user.profile.user_points }} pts.</td>
+              </tr>
+              <tr>
+                <td colspan="5"></td>
+                <td>{{ cart.get_total_deduct_points }} RUB.</td>
+              </tr>
+            {% endif %}
+          </td>
         </tr>
     </tbody>
   </table>
 
-  <p>Apply Discount</p>
-  <form action="{% url 'discount:apply' %}" method="post" class="add">
-    {% csrf_token %}
-    {{ discount_apply_form }}
-    <input type="submit" value="Apply">
+  <!--<p>Apply Discount</p>-->
+  <!--<form action="{% url 'discount:apply' %}" method="post" class="add">-->
+    <!--{% csrf_token %}-->
+    <!--{{ discount_apply_form }}-->
+    <!--<input type="submit" value="Apply">-->
+  <!--</form>-->
+
+  <p>Use {{ user.profile.user_points }} points</p>
+  <form action="{% url 'discount:points' %}" method="post">{% csrf_token %}
+    <input type="submit" name="points" value="GO" />
   </form>
 
   <p class="text-right">

@@ -25,7 +25,7 @@ def CartRemove(request, product_id):
     return redirect('cart:CartDetail')
 
 def CartDetail(request):
-    username = auth.get_user(request).username
+    user = auth.get_user(request)
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(
@@ -34,5 +34,5 @@ def CartDetail(request):
                                             'update': True
                                         })
     discount_apply_form = DiscountApllyForm()
-    return render(request, 'cart/detail.html', {'username': username,'cart': cart,
+    return render(request, 'cart/detail.html', {'username': user.username,'cart': cart,
                                                 'discount_apply_form': discount_apply_form})

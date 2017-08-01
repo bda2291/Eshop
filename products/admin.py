@@ -82,6 +82,12 @@ class ProductResource(resources.ModelResource):
                                default=None,
                                widget=widgets.CharWidget(),
                                )
+
+    producer = fields.Field(column_name='producer', attribute='producer',
+                        default=None,
+                        widget=widgets.CharWidget(),
+                        )
+
     discount = fields.Field(column_name='discount', attribute='discount',
                             default=0,
                             widget=widgets.IntegerWidget(),
@@ -93,6 +99,11 @@ class ProductResource(resources.ModelResource):
     category = fields.Field(column_name='category', attribute='category',
                             widget=widgets.ForeignKeyWidget(ProductCategory, 'name'),
                             )
+
+    product_class = fields.Field(column_name='product_class', attribute='product_class',
+                            widget=widgets.ForeignKeyWidget(ProductClass, 'name'),
+                            )
+
     is_active = fields.Field(column_name='is_active', attribute='is_active',
                            default=1,
                            widget=widgets.BooleanWidget())
@@ -113,7 +124,6 @@ class ProductResource(resources.ModelResource):
         model = Product
         exclude = ('slug', 'short_description', 'image', 'is_active', 'created', 'updated')
         # import_id_fields = ('name', 'price', 'description', 'discount', 'stock', 'category', 'delete')
-        model = Offer
 
 class ProductAdmin(ImportExportModelAdmin):
     list_display = ['id', 'name', 'price', 'category', 'discount','stock', 'is_active']
