@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b2fc67-3750-43c5-9a1d-518eecbf3669" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0002_auto_20170511_1158.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0003_auto_20170517_0808.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0004_auto_20170517_1237.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0005_auto_20170517_1403.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0006_auto_20170518_1231.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0007_auto_20170519_0556.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0008_auto_20170519_0859.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0009_auto_20170521_1410.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0010_auto_20170521_1626.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0011_auto_20170521_1657.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0012_auto_20170521_1658.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0013_auto_20170522_0754.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0014_auto_20170522_0803.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0015_auto_20170522_0813.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/discount/migrations/0016_auto_20170522_1327.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/0002_auto_20170426_0824.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/0003_auto_20170426_0901.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/0004_auto_20170506_0953.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/0005_auto_20170507_0717.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orders/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/signals.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payment/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0002_auto_20170424_1848.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0003_auto_20170425_1258.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0004_auto_20170517_1237.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0005_auto_20170517_1403.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0006_auto_20170519_0556.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0007_auto_20170519_0859.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0008_auto_20170521_1410.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0009_auto_20170522_0754.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0010_offer_attributes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0011_auto_20170522_0813.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/0012_auto_20170522_1327.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/payment/canceled.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/payment/done.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/payment/process.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userprofile/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userprofile/migrations/0002_auto_20170511_1155.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userprofile/migrations/__init__.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Product-2017-05-17.xls" afterPath="$PROJECT_DIR$/Product-2017-05-17.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eshop/settings.py" afterPath="$PROJECT_DIR$/Eshop/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eshop/urls.py" afterPath="$PROJECT_DIR$/Eshop/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eshop/wsgi.py" afterPath="$PROJECT_DIR$/Eshop/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/cart.py" afterPath="$PROJECT_DIR$/cart/cart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/views.py" afterPath="$PROJECT_DIR$/cart/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/discount/urls.py" afterPath="$PROJECT_DIR$/discount/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/discount/views.py" afterPath="$PROJECT_DIR$/discount/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginsys/forms.py" afterPath="$PROJECT_DIR$/loginsys/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/models.py" afterPath="$PROJECT_DIR$/orders/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/views.py" afterPath="$PROJECT_DIR$/orders/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/admin.py" afterPath="$PROJECT_DIR$/products/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/forms.py" afterPath="$PROJECT_DIR$/products/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/models.py" afterPath="$PROJECT_DIR$/products/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/views.py" afterPath="$PROJECT_DIR$/products/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/static_dev/css/style.css" afterPath="$PROJECT_DIR$/static/static_dev/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cart/detail.html" afterPath="$PROJECT_DIR$/templates/cart/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/navbar.html" afterPath="$PROJECT_DIR$/templates/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/orders/create.html" afterPath="$PROJECT_DIR$/templates/orders/create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/products/list.html" afterPath="$PROJECT_DIR$/templates/products/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/userprofile/profile.html" afterPath="$PROJECT_DIR$/templates/userprofile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/admin.py" afterPath="$PROJECT_DIR$/userprofile/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/forms.py" afterPath="$PROJECT_DIR$/userprofile/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/models.py" afterPath="$PROJECT_DIR$/userprofile/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/urls.py" afterPath="$PROJECT_DIR$/userprofile/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/views.py" afterPath="$PROJECT_DIR$/userprofile/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +17,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gunicorn_start" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gunicorn_start" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deployment/gunicorn_start">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,8 +109,8 @@
         <option value="$PROJECT_DIR$/Eshop/urls.py" />
         <option value="$PROJECT_DIR$/deployment/deploy.sh" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/Eshop/settings.py" />
         <option value="$PROJECT_DIR$/deployment/gunicorn_start" />
+        <option value="$PROJECT_DIR$/Eshop/settings.py" />
       </list>
     </option>
   </component>
@@ -254,7 +189,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.settings">
     <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,6 +220,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Eshop" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Eshop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Eshop" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eshop/settings.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -423,14 +375,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.views" />
       <item index="1" class="java.lang.String" itemvalue="Python.train" />
+      <item index="2" class="java.lang.String" itemvalue="Python.settings" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.train" />
-        <item index="1" class="java.lang.String" itemvalue="Python.views" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.settings" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train" />
+        <item index="2" class="java.lang.String" itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -827,14 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eshop/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -849,6 +795,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
