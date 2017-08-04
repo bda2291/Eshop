@@ -12,11 +12,11 @@ from .models import PickUpRequest
 def user_profile(request):
     user = auth.get_user(request)
     profile = user.profile
-    discount = user.discount
+    # discount = user.discount
 
     args = {}
     args['profile'] = profile
-    args['discount'] = discount
+    # args['discount'] = discount
     args['user_id'] = user.id
     args['username'] = user.username
     args['user'] = user

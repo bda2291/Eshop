@@ -20,7 +20,7 @@ def create_discount(sender, **kwargs):
     if kwargs['created']:
         user_discount = Discount.objects.create(user=kwargs['instance'])
 
-post_save.connect(create_discount, sender=User)
+# post_save.connect(create_discount, sender=User)
 
 User.discount = property(lambda u: Discount.objects.get_or_create(user=u)[0])
 

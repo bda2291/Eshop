@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SOME_SECRET_KEY', '5bad1g&sjplz#xd@kz0d=ej%xw(n&_6ng#)()np9(vl)lw_h8u')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG_MODE', 'True')
+DEBUG = eval(os.environ.get('DEBUG_MODE', 'True'))
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -83,7 +83,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 #'orders.context_processors.getting_basket_info',
-                'cart.context_processors.cart',
+                #'cart.context_processors.cart',
             ],
         },
     },

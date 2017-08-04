@@ -13,7 +13,8 @@ class RegistrationForm(UserCreationForm):
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
-        user.parent = User.objects.get(username=self.cleaned_data['parent'])
+        if self.cleaned_data.get('parent'):
+            user.parent = User.objects.get(username=self.cleaned_data['parent'])
         user.set_password(self.cleaned_data['password1'])
 
         if commit:
