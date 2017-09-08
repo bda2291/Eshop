@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Products Page
+{% endblock %}
+
+{% block content %}
+    <div id="main" class="product_list col-sm-9">
+      <form class="search-form-container" action="/find/" method="get" >
+          <div class="form-group">
+              <div class="icon-addon addon-lg">
+                  <input type="text" placeholder="what are you looking for ?" class="form-control" name="q" id="q" autocomplete="on">
+                  <div id="selction-ajax"></div>
+              </div>
+          </div>
+      </form>
+      <h1>Products</h1>
+    <div class="items row">
+      {% for product in products %}
+        <div class="item col-sm-4">
+          <a href="{{ product.get_absolute_url }}">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'static_dev/no-image.jpg' %} {% endif %}" class="img-responsive">
+          </a>
+          <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+          <h4 class="product-price">
+              <span class="label label-info">{{ product.price }} rub.</span>
+              <span class="label label-success">{{ product.points }} pts.</span>
+          </h4>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

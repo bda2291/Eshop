@@ -1,10 +1,11 @@
 from django.db import models
 from django.db.models.signals import post_save
+from django.contrib.auth.models import User
 from django.dispatch import receiver
-from discount.models import Discount
+# from discount.models import Discount
 from decimal import Decimal
 from django.core.validators import MinValueValidator, MaxValueValidator
-from products.models import Product
+from products.models import Product, Offer
 
 
 class Status(models.Model):
@@ -21,6 +22,7 @@ class Status(models.Model):
         verbose_name_plural = 'States'
 
 class Order(models.Model):
+    user = models.ForeignKey(User, blank=True, null=True, default=None)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     customer_name = models.CharField(max_length=64, blank=True, null=True, default=None)
     customer_email = models.EmailField(blank=True, null=True, default=None)
@@ -32,8 +34,8 @@ class Order(models.Model):
     created = models.DateField(auto_now_add=True, auto_now=False)
     updated = models.DateField(auto_now_add=False, auto_now=True)
     paid = models.BooleanField(default=False)
-    discount = models.ForeignKey(Discount, related_name='orders', null=True, blank=True)
-    discount_value = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    # discount = models.ForeignKey(Discount, related_name='orders', null=True, blank=True)
+    # discount_value = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
     points_quant = models.IntegerField(default=0)
 
     def __str__(self):
@@ -50,7 +52,7 @@ class Order(models.Model):
 
 class ProductsInOrder(models.Model):
     order = models.ForeignKey(Order, blank=True, null=True, default=None, related_name='items')
-    product = models.ForeignKey(Product, blank=True, null=True, default=None)
+    product = models.ForeignKey(Offer, blank=True, null=True, default=None)
     number = models.PositiveIntegerField(default=1)
     price_per_itom = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
@@ -66,7 +68,7 @@ class ProductsInOrder(models.Model):
         verbose_name_plural = 'Products in Order'
 
     def save(self, *args, **kwargs):
-        self.price_per_itom = self.product.price
+        # self.price_per_itom = self.product.price
         self.total_price = self.number * self.price_per_itom
         super(ProductsInOrder, self).save(*args, **kwargs)
 
@@ -103,4 +105,6 @@ def product_in_order_post_save(instance,**kwargs):
         order.total_price = order_total_price * (order.discount_value / Decimal('100'))
     if order.points_quant:
         order.total_price = order_total_price - order.points_quant
+    else:
+        order.total_price = order_total_price
     order.save(force_update=True)

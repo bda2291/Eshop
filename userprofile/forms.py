@@ -5,7 +5,7 @@ from .models import UserProfile, PickUpRequest
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('description', 'city', 'phone')
+        fields = ('city', 'phone')
 
 class UserForm(forms.ModelForm):
     class Meta:

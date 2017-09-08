@@ -8,94 +8,69 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
 
-            <div class="col-lg-4">
-                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no-image.jpg'%}{% endif %}" class="img-responsive">
-            </div>
+<div class="boxlink">
+    <div class="link150">
+        <div class="blocktov">
 
-            <div class="col-lg-8">
-                <h1>{{ product.name }}</h1>
-                <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+            <div class="greenline">
 
-                <div class="ishopProdBlockAttrsList" style="min-height: 0px;">
-                    <ul class="prodAttrsList">
-                        <li id="attrBlock_form">
-                            <div>
-                                {% for atribute in variant_picker_data.variantAttributes %}
-                                    <label> {{ atribute.name }} </label>
-                                    <select name="" onchange="javascript:ishopButtonRequest('ishopBasketAddRefresh', '', '', '')">
-                                        {% for value in atribute.values %}
-                                            <option> {{ value.name }} </option>
-                                        {% endfor %}
-                                    </select>
-                                {% endfor %}
-                            </div>
-                            <!--<ul class="prodAttrsList">-->
-                                <!--<li id="attrBlock_form">-->
-                                    <!--<div>-->
-                                        <!--<label for=""> License_term </label>-->
-                                        <!--<select name="" onchange="javascript:ishopButtonRequest('ishopBasketAddRefresh', '', '', '')">-->
-                                            <!--<option></option>-->
-                                            <!--<option></option>-->
-                                            <!--<option></option>-->
-                                        <!--</select>-->
-                                    <!--</div>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        </li>
-                    </ul>
+
+                <p>{{ product.name }}</p>
+
+
+                <div class="textproduct">
+                    <p>{{ product.description }}</p>
                 </div>
 
-                <div class="ishopProdInfoBlock" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                    <span class="ishopProdInfoLabel"></span>
-                    <span id="" class="ishopProdInfoParam ishopProductPrice" itemprop="price"></span>
-                </div>
 
-                <h4 class="price">
-                    Price: {{ product.price }} rub.
-                </h4>
-
-                <div class="">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation" class="active">
-                          <a href="#description" data-toggle="tab">
-                              Description
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#dellivery" data-toggle="tab">
-                              Delivery
-                          </a>
-                      </li>
-                      <li role="presentation"><a href="#messages" data-toggle="tab">Сообщения</a></li>
-                      <li role="presentation"><a href="#settings" data-toggle="tab">Настройки</a></li>
-                    </ul>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content product-description-tabs">
-                      <div role="tabpanel" class="tab-pane active" id="description">
-                          {{ product.description }}
-                      </div>
-                      <div role="tabpanel" class="tab-pane" id="dellivery">
-                          <h3>How we're make delivery!</h3>
-                      </div>
-                      <div role="tabpanel" class="tab-pane" id="messages">...</div>
-                      <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                <div class="calcblock">
+                    <input type="hidden" id="variants" name="variants" value="{{ variant_picker_data.variants }}">
+                    <input type="hidden" id="discount_policy" name="discount_policy" value="{{ variant_picker_data.discount_policy }}">
+                    <input type="hidden" id="variant_length" name="variant_length" value="{{ variant_picker_data.variantAttributes|length }}">
+                    {% for atribute in variant_picker_data.variantAttributes %}
+                    <div class="buy">
+                        <label> {{ atribute.name }} </label>
+                        <select id="id_{{ forloop.counter0 }}" name="{{ atribute.name }}"
+                                onchange="calculate()">
+                            {% for value in atribute.values %}
+                            <option value="{{ value }}"
+                                    {% if value == atribute.values.0 %} selected="selected"{% endif %}>
+                                {{ value.name }}
+                            </option>
+                            {% endfor %}
+                        </select>
                     </div>
-                </div>
+                    {% endfor %}
 
-                <div>
-                    <form class="add" action="{% url 'cart:CartAdd' product.id %}" method="post">
-                        {% csrf_token %}
-                        {{ form }}
-                        <input type="submit" value="Add to cart">
-                    </form>
+                    <div class="itog">Cash-back:<br><span id="erw">0</span> руб.</div>
+	                    <p class="bonussumm" > <span id="result_itog">0</span></p>
+
+                    <div>
+                        <form class="add" action="{% url 'cart:CartAdd'%}" method="post">
+                            {% csrf_token %}
+                            {{ form }}
+                            <!--<label for="quantity">Quantity: </label>-->
+                            <!--<input type="number" id="quantity" name="quantity" value="0"-->
+                                   <!--onchange="calculate()">-->
+                            <!--<input type="hidden" id="product_slug" name="product_slug">-->
+                            <!--<input type="hidden" id="price_per_itom" name="price_per_itom">-->
+                            <input type="submit" value="Add to cart">
+                        </form>
+                    </div>
+
                 </div>
 
             </div>
+
+            <div class="blocktovleft">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no-image.jpg'%}{% endif %}">
+                <div class="bonusblock">
+                    <p class="bonussumm" > <span id="result"></span></p>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
 {% endblock content %}

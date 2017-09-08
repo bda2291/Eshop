@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.postgres',
 
     'import_export',
+    'djcelery_email',
     'mptt',
     'landing',
     'orders',
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     'cart',
     # 'paypal.standard.ipn',
     # 'payment',
-    'discount',
+    # 'discount',
 
 ]
 
@@ -142,7 +143,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
+
+DATE_FORMAT = 'd E Y'
 
 TIME_ZONE = 'UTC'
 
@@ -162,7 +165,7 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, "static", "static_dev"),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")#, "static_prod")
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")#, "static_dev")
 
 MEDIA_URL = '/media/'
 
@@ -173,7 +176,20 @@ AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 CART_SESSION_ID = 'cart'
 
 # Email
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ADMINS = (
+    ('Denis Balyasnikov', 'bda2291@mail.ru'),
+)
+
+MANAGERS = ADMINS
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'balyasnikovdenis22@gmail.com'
+EMAIL_HOST_PASSWORD = 'ltybcbrhbcnbyf22'
+
+FROM_EMAIL = 'notreply@russianprograms'
+EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
 # for import-export excel data
 IMPORT_EXPORT_USE_TRANSACTIONS = True
@@ -194,4 +210,4 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

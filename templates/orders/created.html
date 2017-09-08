@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Thank you for your order
+  Спасибо за заказ
 {% endblock %}
 
 {% block content %}
-  <h1>Thank you for your order</h1>
-  <p>Your order number: {{ order.id }}</p>
+  <h1>Благодарим Вас за заказ!</h1>
+  <h1>На указанную Вами почту было отправлено платежное поручение, заказ будет принят в работу после оплаты.</h1>
+  <p>Номер Вашего заказа: {{ order.id }}</p>
+  <p class="text-right">
+    <a href="{% url 'products:ProductList'%}" class="btn btn-success">На главную страницу</a>
+  </p>
 {% endblock %}

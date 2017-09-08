@@ -1,46 +1,121 @@
+{% load static %}
+
 <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 5px;
+          text-align: left;
+      }
+
+      td#h01, td#h03 {
+        border: 0px;
+        font-weight:bold;
+      }
+
+      td#h02, td#h04 {
+        border-top: 0px;
+        font-size: x-small;
+      }
+
+      td#t01, td#t02, td#t03 {
+        text-align: right;
+        font-weight:bold;
+      }
+    </style>
+  </head>
+
   <body>
-    <h1>E-shop</h1>
-    <p>
-      Order's number: <b>{{ order.id }}</b> <br>
-      <span class="secondary">
-        {{ order.created }}
-      </span>
-    </p>
-    <h3>Customer</h3>
-    <p>
-      {{ order.customer_name }}<br>
-      {{ order.customer_email }} <br>
-      {{ order.customer_phone }} <br>
-      {{ order.city }}, {{ order.customer_address }}
-    </p>
-    <h3>Buying products</h3>
+    <!--<h3>-->
+      <!--ВНИМАНИЕ! В ПЛАТЕЖНОМ ПОРУЧЕНИИ УКАЗЫВАТЬ ПОЛНОЕ НАИМЕНОВАНИЕ-->
+      <!--ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РУССКИЕ ПРОГРАММЫ".-->
+    <!--</h3>-->
+    <div><img src="file:///home/denis/Eshop/Eshop/static/img/payment_header.jpg"></div>
+    <table class="table">
+      <tr>
+        <td id="h01">{{ bank }}</td>
+        <td>БИК</td>
+        <td>{{ BIK }}</td>
+      </tr>
+      <tr>
+        <td id="h02">Банк получателя</td>
+        <td>Сч. №</td>
+        <td>{{ bank_acc }}</td>
+      </tr>
+      <tr>
+        <td rowspan="2" id="h03">{{ name }}</td>
+        <td>ИНН</td>
+        <td>{{ INN }}</td>
+      </tr>
+      <tr>
+        <td>КПП</td>
+        <td>{{ KPP }}</td>
+      </tr>
+      <tr>
+        <td id="h04">Получатель</td>
+        <td>Сч. №</td>
+        <td>{{ acc }}</td>
+      </tr>
+    </table>
+    <h3>
+      <b><u>Счет на оплату № {{ order.id }} от {{ order.created }}</u></b>
+    </h3>
+    <table class="table">
+      <tr>
+        <th>Поставщик:</th>
+        <td>{{ sup_info }}</td>
+      </tr>
+      <tr>
+        <th>Покупатель:</th>
+        <td>{{ order.customer_name }}</td>
+      </tr>
+    </table>
     <table class="table">
       <thead>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total Price</th>
+          <th>№</th>
+          <th>Товары(работы/услуги)</th>
+          <th>Кол-во</th>
+          <th>Ед.</th>
+          <th>Цена</th>
+          <th>Сумма</th>
         </tr>
       </thead>
       <tbody>
         {% for item in order.items.all %}
           <tr class="row{% cycle '1' '2' %}">
+            <td>{{ forloop.counter }}</td>
             <td>{{ item.product.name }}</td>
-            <td>{{ item.price_per_itom }}</td>
             <td>{{ item.number }}</td>
+            <td>шт</td>
+            <td>{{ item.price_per_itom }}</td>
             <td>{{ item.total_price }}</td>
           </tr>
         {% endfor %}
-        <tr class="total">
-          <td colspan="3">Total:</td>
+        <tr>
+          <td colspan="5" id="t01">Итого:</td>
+          <td class="num">{{ order.total_price }}</td>
+        </tr>
+        <tr>
+          <td colspan="5" id="t02">Без налога (НДС)</td>
+          <td class="num">-</td>
+        </tr>
+        <tr>
+          <td colspan="5" id="t03">Всего к оплате:</td>
           <td class="num">{{ order.total_price }}</td>
         </tr>
       </tbody>
     </table>
-    <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
-      {% if order.paid %}Paid{% else %}Not Paid{% endif %}
-    </span>
+    <p>Всего наименований {{ order.items.count }} на сумму {{ order.total_price }} руб.</p>
+    <p>{{ verb_price }} {{ verb_cur }} 00 копеек</p>
+    <img src="file:///home/denis/Eshop/Eshop/static/img/Payment_foot.jpg">
   </body>
 </html>

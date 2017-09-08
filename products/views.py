@@ -4,7 +4,7 @@ from django.http import JsonResponse
 import json
 import decimal
 from cart.forms import CartAddProductForm
-from .utils import get_variant_picker_data
+from .utils import *
 from django.template.response import TemplateResponse
 from .models import *
 from .forms import FacetedProductSearchForm
@@ -16,24 +16,34 @@ def serialize_decimal(obj):
         return str(obj)
     return json.JSONEncoder.default(obj)
 
-def productlist(request, category_slug=None):
+def producerslist(request):
     username = auth.get_user(request).username
-    category = None
-    categories = ProductCategory.objects.filter(level__lte=0)
-    # categories = ProductCategory.objects.filter(is_active=True)
-    # for category in categories:
-    #     print(type(category))
-    #     print(type(category.get_children()[0]))
-    products = Product.objects.filter(is_active=True)
-    if category_slug:
-        category = get_object_or_404(ProductCategory, slug=category_slug)
-        products = products.filter(category__in=category.get_descendants(include_self=True))
+    # category = None
+    # categories = ProductCategory.objects.filter(level__lte=0)
+    # products = Product.objects.filter(is_active=True)
+    producers = Producer.objects.filter(is_active=True)
+    # if category_slug:
+    #     category = get_object_or_404(ProductCategory, slug=category_slug)
+    #     products = products.filter(category__in=category.get_descendants(include_self=True))
     return render(request, 'products/list.html', locals())
 
-def product(request, id, slug):
-    product = get_object_or_404(Product, id=id, slug=slug, is_active=True)
-    print(product.price, product.points)
+def categorieslist(request, producer_slug):
     username = auth.get_user(request).username
+    producer = Producer.objects.get(slug=producer_slug)
+    _categories = ProductCategory.objects.filter(is_active=True, producer=producer)
+    categories, products = expand_categories(_categories)
+    return render(request, 'products/categorieslist.html', {'username': username, 'categories':categories,
+                                                            'products': products})
+
+def productslist(request, producer_slug, category_slug):
+    username = auth.get_user(request).username
+    category = ProductCategory.objects.get(slug=category_slug)
+    products = Product.objects.filter(is_active=True, category=category)
+    return render(request, 'products/productslist.html', locals())
+
+def product(request, product_slug):
+    username = auth.get_user(request).username
+    product = get_object_or_404(Product, slug=product_slug, is_active=True)
     cart_product_form = CartAddProductForm()
     variant_picker_data = get_variant_picker_data(product)
     show_variant_picker = all([v.attributes for v in product.variants.all()])

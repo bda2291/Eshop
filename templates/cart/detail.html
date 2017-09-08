@@ -20,23 +20,23 @@
     </thead>
     <tbody>
       {% for item in cart %}
-        {% with product=item.product %}
+        {% with offer=item.offer %}
           <tr>
             <td class="cart-img">
-              <a href="{{ product.get_absolute_url }}">
-                <img src="{{ product.image.url }}" alt="" />
+              <a href="{{ offer.get_absolute_url }}">
+                <img src="{{ offer.product.image.url }}" alt="" />
               </a>
             </td>
-            <td>{{ product.name }}</td>
+            <td>{{ offer.name }}</td>
             <td>
-            <form action="{% url 'cart:CartAdd' product.id %}" method="post" class="add">
+            <form action="{% url 'cart:CartAdd' %}" method="post" class="add">
+              {% csrf_token %}
               {{ item.update_quantity_form.quantity }}
               {{ item.update_quantity_form.update }}
-              {% csrf_token %}
               <input type="submit" value="Update">
             </form>
             </td>
-            <td><a href="{% url 'cart:CartRemove' product.id %}">Delete</a></td>
+            <td><a href="{% url 'cart:CartRemove' offer.slug %}">Delete</a></td>
             <td class="num">{{ item.price }} rub.</td>
             <td class="num">{{ item.total_price }} rub.</td>
           </tr>

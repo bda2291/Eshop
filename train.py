@@ -1,3 +1,4 @@
-A = {'a': 1, 'b': 2}
 
-print(A.get('c'))
+a = eval("{'ARG': 'BUGAGA'}")
+
+print(a)

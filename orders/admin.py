@@ -2,8 +2,11 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from django.utils.html import format_html
+from decimal import Decimal
 import csv
 import datetime
+from django.contrib.auth.models import User
+from userprofile.models import UserProfile
 from .models import *
 
 def OrderDetail(obj):
@@ -49,13 +52,23 @@ class StatusAdmin(admin.ModelAdmin):
     class Meta:
         model = Status
 
+def delete_model(modeladmin, request, queryset):
+    for obj in queryset:
+        print(obj.user)
+        user_profile = obj.user.profile
+        parent_profile = user_profile.parent.profile
+        parent_profile.user_points += round(obj.total_price * Decimal(0.05))
+        parent_profile.save()
+        obj.delete()
+delete_model.short_description = "Удалить как завершенные"
+
 class OrderAdmin (admin.ModelAdmin):
     list_display = ['id', 'customer_name', 'customer_email', 'customer_phone', 'city', 'customer_address',
                     'paid', 'status', 'created', 'updated', OrderDetail, OrderPDF]
 
     list_filter = ['paid', 'created', 'updated']
     inlines = [ProductsInOrderInline]
-    actions = [ExportToCSV]
+    actions = [ExportToCSV, delete_model]
 
     class Meta:
         model = Order

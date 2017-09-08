@@ -2,26 +2,26 @@
 {% load static %}
 
 {% block title %}
-  {% if category %} {{ category.name }} {% else %} Products Page {% endif %}
+  Producers Page
 {% endblock %}
 
 {% block content %}
-  <div id="sidebar" class="col-sm-3">
-    <h3>Categories</h3>
-    <ul>
-      <li {% if not category %} class="selected" {% endif %}>
-        <a href="{% url 'products:ProductList' %}">All</a>
-      </li>
-      {% for cat in categories %}
-        <li {% if category.slug == cat.slug %} class="selected" {% endif %}>
-          <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
-            {% for child in cat.get_children %}
-                <a href="{{ child.get_absolute_url }}">{{ child.name }}</a>
-            {% endfor %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <!--<div id="sidebar" class="col-sm-3">-->
+    <!--<h3>Categories</h3>-->
+    <!--<ul>-->
+      <!--<li {% if not category %} class="selected" {% endif %}>-->
+        <!--<a href="{% url 'products:ProductList' %}">All</a>-->
+      <!--</li>-->
+      <!--{% for cat in categories %}-->
+        <!--<li {% if category.slug == cat.slug %} class="selected" {% endif %}>-->
+          <!--<a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>-->
+            <!--{% for child in cat.get_children %}-->
+                <!--<a href="{{ child.get_absolute_url }}">{{ child.name }}</a>-->
+            <!--{% endfor %}-->
+        <!--</li>-->
+      <!--{% endfor %}-->
+    <!--</ul>-->
+  <!--</div>-->
   <div id="main" class="product_list col-sm-9">
       <form class="search-form-container" action="/find/" method="get" >
           <div class="form-group">
@@ -31,18 +31,19 @@
               </div>
           </div>
       </form>
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
+    <!--<h1>{% if category %}{{ category.name }}{% else %}Producers{% endif %}</h1>-->
+      <h1>Producers</h1>
     <div class="items row">
-      {% for product in products %}
+      {% for producer in producers %}
         <div class="item col-sm-4">
-          <a href="{{ product.get_absolute_url }}">
-            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'static_dev/no-image.jpg' %} {% endif %}" class="img-responsive">
+          <a href="{{ producer.get_absolute_url }}">
+            <img src="{% if producer.image %}{{ producer.image.url }}{% else %}{% static 'img/no-image.jpg' %} {% endif %}" class="img-responsive">
           </a>
-          <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-          <h4 class="product-price">
-              <span class="label label-info">{{ product.price }} rub.</span>
-              <span class="label label-success">{{ product.points }} pts.</span>
-          </h4>
+          <!--<a href="{{ producer.get_absolute_url }}">{{ producer.name }}</a><br>-->
+          <!--<h4 class="product-price">-->
+              <!--<span class="label label-info">{{ product.price }} rub.</span>-->
+              <!--<span class="label label-success">{{ product.points }} pts.</span>-->
+          <!--</h4>-->
         </div>
       {% endfor %}
     </div>

@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404, render_to_resp
 from django.conf import settings
 from django.contrib import auth
 from django.http import HttpResponse
-from django.template.loader import render_to_string
+from django.template.loader import render_to_string, get_template
 import weasyprint
+import pytils
 from django.core.urlresolvers import reverse
 from django.http import JsonResponse
 from django.contrib.admin.views.decorators import staff_member_required
@@ -11,6 +12,13 @@ from .models import ProductsInBasket, ProductsInOrder, Order
 from .forms import OrderCreateForm
 from .tasks import OrderCreated
 from cart.cart import Cart
+
+SUPPLIER_INFO = '''ООО "Русские Программы", ИНН 7713409230, КПП 771301001,
+                127411, Москва г, Дмитровское ш., дом № 157, корпус 7, тел.: +74957258950'''
+
+requisites = {'name': 'ООО "Русские Программы"', 'bank': 'АО "СМП БАНК" Г. МОСКВА', 'INN': '7713409230',
+              'KPP': '771301001', 'BIK': '44525503', 'bank_acc': '30101810545250000503', 'acc': '40702810300750000177',
+              'sup_info': SUPPLIER_INFO}
 
 def basket_adding(request):
     return_dict = {}
@@ -39,22 +47,25 @@ def basket_adding(request):
 
     return JsonResponse(return_dict)
 
+
 def basket_remove(request):
     return_dict = {}
     session_key = request.session.session_key
     data = request.POST
     product_id = data.get("product_id")
 
+
 def OrderCreate(request):
     cart = Cart(request)
     user = auth.get_user(request)
+    profile = user.profile
     if not user.username:
         return redirect('auth:login')
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
-
             order = form.save(commit=False)
+            order.user = user
             if cart.discount:
                 order.discount = cart.discount
                 order.discount_value = cart.discount.discount
@@ -65,34 +76,41 @@ def OrderCreate(request):
             order.save()
 
             for item in cart:
-                ProductsInOrder.objects.create(order=order, product=item['product'],
+                ProductsInOrder.objects.create(order=order, product=item['offer'],
                                          price_per_itom=item['price'],
                                          number=item['quantity'])
             cart.clear()
 
-            # # Asinc mail sending
-            # OrderCreated.delay(order.id)
+            # Asinc mail sending
+            OrderCreated.delay(order.id)
             request.session['order_id'] = order.id
 
-            return redirect(reverse('payment:process'))
-            #return render(request, 'orders/created.html', {'order': order})
+            # return redirect(reverse('payment:process'))
+            return render(request, 'orders/created.html', {'username': user.username, 'order': order})
         else:
             return render_to_response('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
 
-    form = OrderCreateForm()
+    form = OrderCreateForm(instance=profile)
     return render(request, 'orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
+
 
 @staff_member_required
 def AdminOrderDetail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
     return render(request, 'admin/orders/detail.html', {'order': order})
 
+
 @staff_member_required
 def AdminOrderPDF(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    html = render_to_string('orders/pdf.html', {'order': order})
+    verb_price = pytils.numeral.in_words(round(order.total_price))
+    verb_cur = pytils.numeral.choose_plural(round(order.total_price), ("рубль", "рубля", "рублей"))
+    html = render_to_string('orders/pdf.html', {**requisites, 'order': order,
+                                                'verb_cur': verb_cur, 'verb_price': verb_price})
+    rendered_html = html.encode(encoding="UTF-8")
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'filename=order_{}.pdf'.format(order.id)
-    weasyprint.HTML(string=html).write_pdf(response,
-                        stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + 'static_dev/css/bootstrap.min.css')])
+    print(request.build_absolute_uri())
+    weasyprint.HTML(string=rendered_html, base_url=request.build_absolute_uri()).write_pdf(response,
+                        stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + '/css/bootstrap.min.css')])
     return response

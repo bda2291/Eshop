@@ -14,14 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from .views import FacetedSearchView, autocomplete, productlist, product
+from .views import FacetedSearchView, autocomplete, productslist, product, categorieslist, producerslist
 
 
 urlpatterns = [
     #url(r'^product/(?P<product_id>\w+)/$', views.product, name='product'),
-    url(r'^$', productlist, name='ProductList'),
+    url(r'^$', producerslist, name='ProductList'),
     url(r'^autocomplete/$', autocomplete),
     url(r'^find/$', FacetedSearchView.as_view(), name='haystack_search'),
-    url(r'^(?P<category_slug>[-\w]+)/$', productlist, name='ProductListByCategory'),
-    url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', product, name='Product'),
+    url(r'^product/(?P<product_slug>[-\w]+)/$', product, name='Product'),
+    url(r'^(?P<producer_slug>[-\w]+)/$', categorieslist, name='CategoriesListByProducer'),
+    url(r'^(?P<producer_slug>[-\w]+)/(?P<category_slug>[-\w]+)/$', productslist, name='ProductListByCategory')
 ]

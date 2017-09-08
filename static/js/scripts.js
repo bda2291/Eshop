@@ -1,6 +1,5 @@
 $(document).ready(function(){
     var form = $('#form-buying-product');
-    console.log(form);
     form.on('submit', function(e){
         e.preventDefault();
         $('#number').val();
@@ -9,7 +8,6 @@ $(document).ready(function(){
         var product_id = submit_btn.data('product-id');
         var product_name = submit_btn.data('product-name');
         var product_price = submit_btn.data('product-price');
-        console.log(product_id, product_name);
 
         var data = {};
         data.product_id = product_id;
@@ -25,7 +23,6 @@ $(document).ready(function(){
             cache: true,
             success: function (data) {
                 console.log("OK");
-                console.log(data.products_total_nmb);
                 if (data.products_total_nmb){
                     $('#basket_total_nmb').text('('+data.products_total_nmb+')');
                     $('.basket-items ul').html("");
@@ -55,12 +52,49 @@ $(document).ready(function(){
          showingBasket();
      });
 
-     //$('.basket-container').mouseout(function(){
-     //    showingBasket();
-     //});
+     $('.basket-container').mouseout(function(){
+         showingBasket();
+     });
 
      $(document).on('click', '.delete-item', function(e){
          e.preventDefault();
          $(this).closest('li').remove();
      })
 });
+
+function showOrHide(cb, cat) {
+    cb = document.getElementById(cb);
+    cat = document.getElementById(cat);
+    if (cb.checked) cat.style.display = "block";
+    else cat.style.display = "none";
+}
+
+function calculate(count){
+    if (count > 1) {
+        var quant0 = document.getElementById("id_0");
+        var quant1 = document.getElementById("id_1");
+        var res = document.getElementById("result");
+        var variants = JSON.parse(document.getElementById("variants").value.replace(/'/g, '"'));
+        var discount_policy = JSON.parse(document.getElementById("discount_policy").value.replace(/'/g, '"'));
+        var quant0_val = JSON.parse(quant0.value.replace(/'/g, '"'));
+        var quant1_val = JSON.parse(quant1.value.replace(/'/g, '"'));
+        for (var i = 0, len = variants.length; i < len; i++) {
+            if (variants[i]['attributes'][quant0.name] == quant0_val['name'] &&
+                variants[i]['attributes'][quant1.name] == quant1_val['name']) {
+                    result.innerHTML = variants[i]['price'];
+                }
+        }
+    }
+    else {
+        var quant0 = document.getElementById("id_0");
+        var res = document.getElementById("result");
+        var variants = JSON.parse(document.getElementById("variants").value.replace(/'/g, '"'));
+        var discount_policy = JSON.parse(document.getElementById("discount_policy").value.replace(/'/g, '"'));
+        var quant0_val = JSON.parse(quant0.value.replace(/'/g, '"'));
+        for (var i = 0, len = variants.length; i < len; i++) {
+            if (variants[i]['attributes'][quant0.name] == quant0_val['name']) {
+                    result.innerHTML = variants[i]['price'];
+                }
+        }
+    }
+}
