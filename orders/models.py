@@ -101,8 +101,8 @@ def product_in_order_post_save(instance,**kwargs):
     all_products_in_order = ProductsInOrder.objects.filter(order=order, is_active=True)
 
     order_total_price = sum(item.total_price for item in all_products_in_order)
-    if order.discount:
-        order.total_price = order_total_price * (order.discount_value / Decimal('100'))
+    # if order.discount:
+    #     order.total_price = order_total_price * (order.discount_value / Decimal('100'))
     if order.points_quant:
         order.total_price = order_total_price - order.points_quant
     else:

@@ -7,5 +7,10 @@ class PickUpRequestAdmin(admin.ModelAdmin):
     class Meta:
         model = PickUpRequest
 
-admin.site.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in UserProfile._meta.fields]
+    class Meta:
+        model = UserProfile
+
+admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(PickUpRequest, PickUpRequestAdmin)

@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render, render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib import auth
@@ -20,7 +20,7 @@ def user_profile(request):
     args['user_id'] = user.id
     args['username'] = user.username
     args['user'] = user
-    return render_to_response('userprofile/profile.html', args)
+    return render(request, 'userprofile/profile.html', args)
 
 @login_required
 @csrf_exempt
@@ -53,10 +53,8 @@ def pick_up_points(request):
             PickUpRequest.objects.create(user=user, points=user.profile.user_points, requisites=requisites)
             profile.user_points = Decimal('0')
             profile.save()
-            print(profile.user_points)
             return redirect('profile:user_profile')
     else:
-        print(user.profile.user_points > 100)
         form = PickUpPointsForm()
         return render_to_response('userprofile/pick_up_points.html', {'user': user, 'form': form})
 

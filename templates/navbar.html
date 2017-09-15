@@ -11,41 +11,41 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Русские программы</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <!--<li class="active"><a href="/">Home</a></li>-->
+            <!--<li><a href="#about">About</a></li>-->
+            <li><a href="#contact">Контакты</a></li>
+            <!--<li class="dropdown">-->
+              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Дополнительно<span class="caret"></span></a>-->
+              <!--<ul class="dropdown-menu">-->
+                <!--<li><a href="#">Action</a></li>-->
+                <!--<li><a href="#">Another action</a></li>-->
+                <!--<li><a href="#">Something else here</a></li>-->
+                <!--<li role="separator" class="divider"></li>-->
+                <!--<li class="dropdown-header">Nav header</li>-->
+                <!--<li><a href="#">Separated link</a></li>-->
+                <!--<li><a href="#">One more separated link</a></li>-->
+              <!--</ul>-->
+            <!--</li>-->
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="basket-container">
                 {% with total_items=cart|length %}
                   {% if cart|length > 0 %}
-                    Your Cart:
+                    Ваша корзина:
                     <a href="{% url 'cart:CartDetail' %}">
                       {% if cart.points %}
-                        {{ total_items }} pc. {{ cart.get_total_deduct_points }} rub.
+                        {{ total_items }} шт. {{ cart.get_total_deduct_points }} руб.
                       {% else %}
-                        {{ total_items }} pc. {{ cart.get_total_price }} rub.
+                        {{ total_items }} шт. {{ cart.get_total_price }} руб.
                       {% endif %}
                     </a>
                   {% else %}
-                    Cart is empty
+                    Корзина пуста
                   {% endif %}
                 {% endwith %}
                 <div class="basket-items hidden">
@@ -62,11 +62,11 @@
                 <ul class="">
                   {% if username %}
                     <li>
-                      <a href="/auth/logout/" class="btn btn-success" role="button" >Logout ({{ username }})</a>
-                      <a href="/accounts/profile/" class="btn btn-success" role="button" >Profile</a>
+                      <a href="/auth/logout/" class="btn btn-success" role="button" >Выйти ({{ username }})</a>
+                      <a href="/accounts/profile/" class="btn btn-success" role="button" >Личный кабинет</a>
                     </li>
                   {% else %}
-                    <li><a href="/auth/login/" class="btn btn-success" role="button">Login</a></li>
+                    <li><a href="/auth/login/" class="btn btn-success" role="button">Войти</a></li>
                   {% endif %}
                 </ul>
               </div>

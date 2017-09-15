@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'cart',
     # 'paypal.standard.ipn',
     # 'payment',
-    # 'discount',
+    'discount',
 
 ]
 
@@ -82,9 +82,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-                #'orders.context_processors.getting_basket_info',
-                #'cart.context_processors.cart',
+                'cart.context_processors.cart',
+                # 'orders.context_processors.getting_basket_info',
             ],
         },
     },

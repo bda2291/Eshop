@@ -5,7 +5,7 @@ import json
 import decimal
 from cart.forms import CartAddProductForm
 from .utils import *
-from django.template.response import TemplateResponse
+from cart.cart import Cart
 from .models import *
 from .forms import FacetedProductSearchForm
 from haystack.generic_views import FacetedSearchView as BaseFacetedSearchView

@@ -66,13 +66,15 @@ def OrderCreate(request):
         if form.is_valid():
             order = form.save(commit=False)
             order.user = user
-            if cart.discount:
-                order.discount = cart.discount
-                order.discount_value = cart.discount.discount
+            # if cart.discount:
+            #     order.discount = cart.discount
+            #     order.discount_value = cart.discount.discount
 
             if cart.points:
+                print(cart.points_quant)
                 order.points_quant = cart.points_quant
-
+                profile.user_points -= cart.points_quant
+            profile.save()
             order.save()
 
             for item in cart:
@@ -88,7 +90,7 @@ def OrderCreate(request):
             # return redirect(reverse('payment:process'))
             return render(request, 'orders/created.html', {'username': user.username, 'order': order})
         else:
-            return render_to_response('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
+            return render('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
 
     form = OrderCreateForm(instance=profile)
     return render(request, 'orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
@@ -110,7 +112,6 @@ def AdminOrderPDF(request, order_id):
     rendered_html = html.encode(encoding="UTF-8")
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'filename=order_{}.pdf'.format(order.id)
-    print(request.build_absolute_uri())
     weasyprint.HTML(string=rendered_html, base_url=request.build_absolute_uri()).write_pdf(response,
                         stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + '/css/bootstrap.min.css')])
     return response

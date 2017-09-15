@@ -13,6 +13,7 @@ class Cart(object):
             self.points_quant = auth.get_user(request).profile.user_points
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
+            request.session['points'] = False
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
@@ -74,5 +75,12 @@ class Cart(object):
     #     return self.get_total_price() - self.get_discount()
 
     def get_total_deduct_points(self):
-        return self.get_total_price() - Decimal(self.points_quant)
+        total_price = self.get_total_price()
+        print(total_price, self.points_quant)
+        if total_price <= self.points_quant:
+            print('Less')
+            self.points_quant = self.points_quant - total_price + 1
+            return 1
+        print('More')
+        return total_price - self.points_quant
 

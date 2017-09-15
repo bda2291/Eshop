@@ -53,26 +53,26 @@
             "{{ cart.discount.code }}" discount for ({{ cart.discount.discount }} %)
           </td>
           <td colspan="4"></td>
-          <td class="num discount">- {{ cart.get_discount|floatformat:"2" }} RUB.</td>
+          <td class="num discount">- {{ cart.get_discount|floatformat:"2" }} руб.</td>
         </tr>
       {% endif %}
 
-        <tr class="total">
-          <td>Total</td>
-          <td colspan="4"></td>
-          <td class="num">{{ cart.get_total_price_after_discount|floatformat:"2" }} RUB.
-            {% if cart.points %}
-              <tr>
-                <td colspan="5"></td>
-                <td>- {{ user.profile.user_points }} pts.</td>
-              </tr>
-              <tr>
-                <td colspan="5"></td>
-                <td>{{ cart.get_total_deduct_points }} RUB.</td>
-              </tr>
-            {% endif %}
-          </td>
-        </tr>
+      <tr class="total">
+        <td>Total</td>
+        <td colspan="4"></td>
+        <td class="num">{{ cart.get_total_price|floatformat:"2" }} руб.
+          {% if cart.points %}
+          <tr>
+            <td colspan="5"></td>
+            <td>- {{ user.profile.user_points }} бал.</td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+            <td>{{ cart.get_total_deduct_points }} руб.</td>
+          </tr>
+          {% endif %}
+        </td>
+      </tr>
     </tbody>
   </table>
 
@@ -83,13 +83,13 @@
     <!--<input type="submit" value="Apply">-->
   <!--</form>-->
 
-  <p>Use {{ user.profile.user_points }} points</p>
+  <p>Использовать баллы: {{ user.profile.user_points }}</p>
   <form action="{% url 'discount:points' %}" method="post">{% csrf_token %}
     <input type="submit" name="points" value="GO" />
   </form>
 
   <p class="text-right">
-    <a href="{% url 'products:ProductList'%}" class="btn btn-success">Continue shopping</a>
-    <a href="{% url 'orders:OrderCreate' %}" class="btn btn-success">Place an order</a>
+    <a href="{% url 'products:ProductList'%}" class="btn btn-success">Добавить товар</a>
+    <a href="{% url 'orders:OrderCreate' %}" class="btn btn-success">Оформить заказ</a>
   </p>
 {% endblock %}

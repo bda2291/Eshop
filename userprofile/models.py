@@ -37,7 +37,6 @@ class PickUpRequest(models.Model):
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     parent = instance.__dict__.get('parent')
-    print(parent)
     if created:
         UserProfile.objects.create(user=instance, parent=parent)
 
