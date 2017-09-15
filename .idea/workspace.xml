@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66b2fc67-3750-43c5-9a1d-518eecbf3669" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eshop/settings.py" afterPath="$PROJECT_DIR$/Eshop/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/cart.py" afterPath="$PROJECT_DIR$/cart/cart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/views.py" afterPath="$PROJECT_DIR$/cart/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/models.py" afterPath="$PROJECT_DIR$/orders/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/views.py" afterPath="$PROJECT_DIR$/orders/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/views.py" afterPath="$PROJECT_DIR$/products/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cart/detail.html" afterPath="$PROJECT_DIR$/templates/cart/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/navbar.html" afterPath="$PROJECT_DIR$/templates/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/admin.py" afterPath="$PROJECT_DIR$/userprofile/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/models.py" afterPath="$PROJECT_DIR$/userprofile/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/views.py" afterPath="$PROJECT_DIR$/userprofile/views.py" />
-    </list>
+    <list default="true" id="66b2fc67-3750-43c5-9a1d-518eecbf3669" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +25,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/discount/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            <state relative-caret-position="50">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -224,49 +221,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discount" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -889,14 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userprofile/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1007,11 +954,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/discount/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        <state relative-caret-position="50">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

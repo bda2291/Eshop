@@ -113,7 +113,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'db1',
             'USER': 'django_shop',
-            'PASSWORD': '12345',
+            'PASSWORD': 'django_shop12345',
             'HOST': 'localhost',
             'PORT': '',
         }
