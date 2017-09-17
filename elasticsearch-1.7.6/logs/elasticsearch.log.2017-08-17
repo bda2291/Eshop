@@ -1,0 +1,16 @@
+[2017-08-17 13:50:21,513][INFO ][node                     ] [Wraith] version[1.7.6], pid[9679], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-17 13:50:21,522][INFO ][node                     ] [Wraith] initializing ...
+[2017-08-17 13:50:22,320][INFO ][plugins                  ] [Wraith] loaded [], sites []
+[2017-08-17 13:50:22,670][INFO ][env                      ] [Wraith] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.1gb], net total_space [15.6gb], types [ext4]
+[2017-08-17 13:50:42,180][INFO ][node                     ] [Wraith] initialized
+[2017-08-17 13:50:42,194][INFO ][node                     ] [Wraith] starting ...
+[2017-08-17 13:50:43,313][INFO ][transport                ] [Wraith] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-17 13:50:43,558][INFO ][discovery                ] [Wraith] elasticsearch/LDs7nq_zQeeUYQnix3pQ3g
+[2017-08-17 13:50:47,595][INFO ][cluster.service          ] [Wraith] new_master [Wraith][LDs7nq_zQeeUYQnix3pQ3g][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-17 13:50:47,909][INFO ][http                     ] [Wraith] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-17 13:50:47,913][INFO ][node                     ] [Wraith] started
+[2017-08-17 13:50:48,453][INFO ][gateway                  ] [Wraith] recovered [1] indices into cluster_state
+[2017-08-17 21:56:52,733][INFO ][node                     ] [Wraith] stopping ...
+[2017-08-17 21:56:53,608][INFO ][node                     ] [Wraith] stopped
+[2017-08-17 21:56:53,609][INFO ][node                     ] [Wraith] closing ...
+[2017-08-17 21:56:53,654][INFO ][node                     ] [Wraith] closed

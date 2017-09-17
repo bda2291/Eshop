@@ -1,0 +1,16 @@
+[2017-09-07 09:37:35,115][INFO ][node                     ] [Crystal] version[1.7.6], pid[18821], build[c730b59/2016-11-18T15:21:16Z]
+[2017-09-07 09:37:35,206][INFO ][node                     ] [Crystal] initializing ...
+[2017-09-07 09:37:36,131][INFO ][plugins                  ] [Crystal] loaded [], sites []
+[2017-09-07 09:37:36,576][INFO ][env                      ] [Crystal] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [8.7gb], net total_space [15.6gb], types [ext4]
+[2017-09-07 09:38:10,529][INFO ][node                     ] [Crystal] initialized
+[2017-09-07 09:38:10,544][INFO ][node                     ] [Crystal] starting ...
+[2017-09-07 09:38:11,801][INFO ][transport                ] [Crystal] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-09-07 09:38:12,255][INFO ][discovery                ] [Crystal] elasticsearch/ODWveRO0QriOYfQF_0rTWg
+[2017-09-07 09:38:16,625][INFO ][cluster.service          ] [Crystal] new_master [Crystal][ODWveRO0QriOYfQF_0rTWg][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-09-07 09:38:17,080][INFO ][http                     ] [Crystal] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-09-07 09:38:17,112][INFO ][node                     ] [Crystal] started
+[2017-09-07 09:38:17,962][INFO ][gateway                  ] [Crystal] recovered [1] indices into cluster_state
+[2017-09-07 18:40:50,244][INFO ][node                     ] [Crystal] stopping ...
+[2017-09-07 18:40:50,546][INFO ][node                     ] [Crystal] stopped
+[2017-09-07 18:40:50,547][INFO ][node                     ] [Crystal] closing ...
+[2017-09-07 18:40:50,589][INFO ][node                     ] [Crystal] closed

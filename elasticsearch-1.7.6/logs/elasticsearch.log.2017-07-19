@@ -1,0 +1,1 @@
+[2017-07-19 15:29:29,020][WARN ][monitor.jvm              ] [Bentley Wittman] [gc][young][14006][5] duration [1s], collections [1]/[2.3s], total [1s]/[1.4s], memory [97.9mb]->[32.6mb]/[1015.6mb], all_pools {[young] [66.5mb]->[572.3kb]/[66.5mb]}{[survivor] [6.3mb]->[3.6mb]/[8.3mb]}{[old] [25mb]->[28.4mb]/[940.8mb]}

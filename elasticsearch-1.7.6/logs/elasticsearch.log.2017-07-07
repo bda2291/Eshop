@@ -1,0 +1,12 @@
+[2017-07-07 11:58:51,311][INFO ][node                     ] [Bentley Wittman] version[1.7.6], pid[20877], build[c730b59/2016-11-18T15:21:16Z]
+[2017-07-07 11:58:51,315][INFO ][node                     ] [Bentley Wittman] initializing ...
+[2017-07-07 11:58:51,868][INFO ][plugins                  ] [Bentley Wittman] loaded [], sites []
+[2017-07-07 11:58:52,228][INFO ][env                      ] [Bentley Wittman] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.2gb], net total_space [15.6gb], types [ext4]
+[2017-07-07 11:59:07,933][INFO ][node                     ] [Bentley Wittman] initialized
+[2017-07-07 11:59:07,935][INFO ][node                     ] [Bentley Wittman] starting ...
+[2017-07-07 11:59:09,450][INFO ][transport                ] [Bentley Wittman] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-07-07 11:59:09,673][INFO ][discovery                ] [Bentley Wittman] elasticsearch/6JSNOrSOQ5u-Tj8SGLxJSw
+[2017-07-07 11:59:13,693][INFO ][cluster.service          ] [Bentley Wittman] new_master [Bentley Wittman][6JSNOrSOQ5u-Tj8SGLxJSw][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-07-07 11:59:13,874][INFO ][http                     ] [Bentley Wittman] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-07-07 11:59:13,877][INFO ][node                     ] [Bentley Wittman] started
+[2017-07-07 11:59:14,214][INFO ][gateway                  ] [Bentley Wittman] recovered [1] indices into cluster_state

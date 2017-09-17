@@ -1,0 +1,16 @@
+[2017-09-15 13:30:53,362][INFO ][node                     ] [Enchantress] version[1.7.6], pid[19353], build[c730b59/2016-11-18T15:21:16Z]
+[2017-09-15 13:30:53,367][INFO ][node                     ] [Enchantress] initializing ...
+[2017-09-15 13:30:53,735][INFO ][plugins                  ] [Enchantress] loaded [], sites []
+[2017-09-15 13:30:53,966][INFO ][env                      ] [Enchantress] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [8.8gb], net total_space [15.6gb], types [ext4]
+[2017-09-15 13:31:08,990][INFO ][node                     ] [Enchantress] initialized
+[2017-09-15 13:31:08,993][INFO ][node                     ] [Enchantress] starting ...
+[2017-09-15 13:31:09,751][INFO ][transport                ] [Enchantress] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-09-15 13:31:10,052][INFO ][discovery                ] [Enchantress] elasticsearch/NQLstRpfTzmbii0pNYvQOQ
+[2017-09-15 13:31:14,014][INFO ][cluster.service          ] [Enchantress] new_master [Enchantress][NQLstRpfTzmbii0pNYvQOQ][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-09-15 13:31:14,237][INFO ][http                     ] [Enchantress] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-09-15 13:31:14,238][INFO ][node                     ] [Enchantress] started
+[2017-09-15 13:31:14,559][INFO ][gateway                  ] [Enchantress] recovered [1] indices into cluster_state
+[2017-09-15 15:17:23,213][INFO ][node                     ] [Enchantress] stopping ...
+[2017-09-15 15:17:23,605][INFO ][node                     ] [Enchantress] stopped
+[2017-09-15 15:17:23,605][INFO ][node                     ] [Enchantress] closing ...
+[2017-09-15 15:17:23,642][INFO ][node                     ] [Enchantress] closed

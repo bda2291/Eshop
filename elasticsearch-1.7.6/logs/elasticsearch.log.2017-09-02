@@ -1,0 +1,12 @@
+[2017-09-02 09:40:46,310][INFO ][node                     ] [Deborah Ritter] version[1.7.6], pid[20471], build[c730b59/2016-11-18T15:21:16Z]
+[2017-09-02 09:40:46,317][INFO ][node                     ] [Deborah Ritter] initializing ...
+[2017-09-02 09:40:46,778][INFO ][plugins                  ] [Deborah Ritter] loaded [], sites []
+[2017-09-02 09:40:47,002][INFO ][env                      ] [Deborah Ritter] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [8.7gb], net total_space [15.6gb], types [ext4]
+[2017-09-02 09:41:02,184][INFO ][node                     ] [Deborah Ritter] initialized
+[2017-09-02 09:41:02,194][INFO ][node                     ] [Deborah Ritter] starting ...
+[2017-09-02 09:41:03,023][INFO ][transport                ] [Deborah Ritter] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-09-02 09:41:03,294][INFO ][discovery                ] [Deborah Ritter] elasticsearch/BDgYqKwgQaiWDjCyPvQypA
+[2017-09-02 09:41:07,327][INFO ][cluster.service          ] [Deborah Ritter] new_master [Deborah Ritter][BDgYqKwgQaiWDjCyPvQypA][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-09-02 09:41:07,561][INFO ][http                     ] [Deborah Ritter] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-09-02 09:41:07,574][INFO ][node                     ] [Deborah Ritter] started
+[2017-09-02 09:41:08,085][INFO ][gateway                  ] [Deborah Ritter] recovered [1] indices into cluster_state

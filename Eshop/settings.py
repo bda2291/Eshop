@@ -28,7 +28,7 @@ DEBUG = eval(os.environ.get('DEBUG_MODE', 'True'))
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = [] if DEBUG else ['*']
+ALLOWED_HOSTS = [] if DEBUG else ['78.155.219.170']
 
 
 # Application definition

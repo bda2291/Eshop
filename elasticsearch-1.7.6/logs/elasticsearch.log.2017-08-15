@@ -1,0 +1,32 @@
+[2017-08-15 13:38:51,674][INFO ][node                     ] [Quentin Beck] version[1.7.6], pid[28446], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-15 13:38:51,678][INFO ][node                     ] [Quentin Beck] initializing ...
+[2017-08-15 13:38:52,206][INFO ][plugins                  ] [Quentin Beck] loaded [], sites []
+[2017-08-15 13:38:52,559][INFO ][env                      ] [Quentin Beck] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.2gb], net total_space [15.6gb], types [ext4]
+[2017-08-15 13:39:14,039][INFO ][node                     ] [Quentin Beck] initialized
+[2017-08-15 13:39:14,045][INFO ][node                     ] [Quentin Beck] starting ...
+[2017-08-15 13:39:14,881][INFO ][transport                ] [Quentin Beck] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-15 13:39:15,158][INFO ][discovery                ] [Quentin Beck] elasticsearch/HhNRRNq4RQGxhQtyerTtJg
+[2017-08-15 13:39:19,157][INFO ][cluster.service          ] [Quentin Beck] new_master [Quentin Beck][HhNRRNq4RQGxhQtyerTtJg][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-15 13:39:19,336][INFO ][http                     ] [Quentin Beck] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-15 13:39:19,339][INFO ][node                     ] [Quentin Beck] started
+[2017-08-15 13:39:19,771][INFO ][gateway                  ] [Quentin Beck] recovered [1] indices into cluster_state
+[2017-08-15 13:40:43,547][INFO ][node                     ] [Quentin Beck] stopping ...
+[2017-08-15 13:40:43,809][INFO ][node                     ] [Quentin Beck] stopped
+[2017-08-15 13:40:43,810][INFO ][node                     ] [Quentin Beck] closing ...
+[2017-08-15 13:40:43,849][INFO ][node                     ] [Quentin Beck] closed
+[2017-08-15 14:56:57,495][INFO ][node                     ] [Quincy Harker] version[1.7.6], pid[29345], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-15 14:56:57,504][INFO ][node                     ] [Quincy Harker] initializing ...
+[2017-08-15 14:56:58,011][INFO ][plugins                  ] [Quincy Harker] loaded [], sites []
+[2017-08-15 14:56:58,312][INFO ][env                      ] [Quincy Harker] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.2gb], net total_space [15.6gb], types [ext4]
+[2017-08-15 14:57:21,644][INFO ][node                     ] [Quincy Harker] initialized
+[2017-08-15 14:57:21,645][INFO ][node                     ] [Quincy Harker] starting ...
+[2017-08-15 14:57:22,543][INFO ][transport                ] [Quincy Harker] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-15 14:57:22,768][INFO ][discovery                ] [Quincy Harker] elasticsearch/6iS2w1EOSjKeYUdStM2r9A
+[2017-08-15 14:57:26,751][INFO ][cluster.service          ] [Quincy Harker] new_master [Quincy Harker][6iS2w1EOSjKeYUdStM2r9A][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-15 14:57:26,980][INFO ][http                     ] [Quincy Harker] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-15 14:57:26,989][INFO ][node                     ] [Quincy Harker] started
+[2017-08-15 14:57:27,546][INFO ][gateway                  ] [Quincy Harker] recovered [1] indices into cluster_state
+[2017-08-15 21:49:55,880][INFO ][node                     ] [Quincy Harker] stopping ...
+[2017-08-15 21:49:56,205][INFO ][node                     ] [Quincy Harker] stopped
+[2017-08-15 21:49:56,207][INFO ][node                     ] [Quincy Harker] closing ...
+[2017-08-15 21:49:56,257][INFO ][node                     ] [Quincy Harker] closed

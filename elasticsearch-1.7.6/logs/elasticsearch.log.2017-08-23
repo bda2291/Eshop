@@ -1,0 +1,16 @@
+[2017-08-23 08:49:52,348][INFO ][node                     ] [Al MacKenzie] version[1.7.6], pid[27703], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-23 08:49:52,355][INFO ][node                     ] [Al MacKenzie] initializing ...
+[2017-08-23 08:49:53,361][INFO ][plugins                  ] [Al MacKenzie] loaded [], sites []
+[2017-08-23 08:49:53,968][INFO ][env                      ] [Al MacKenzie] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.1gb], net total_space [15.6gb], types [ext4]
+[2017-08-23 08:50:34,920][INFO ][node                     ] [Al MacKenzie] initialized
+[2017-08-23 08:50:34,921][INFO ][node                     ] [Al MacKenzie] starting ...
+[2017-08-23 08:50:36,244][INFO ][transport                ] [Al MacKenzie] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-23 08:50:36,682][INFO ][discovery                ] [Al MacKenzie] elasticsearch/yZpEcrFeR8WdLtPOqnhytA
+[2017-08-23 08:50:40,853][INFO ][cluster.service          ] [Al MacKenzie] new_master [Al MacKenzie][yZpEcrFeR8WdLtPOqnhytA][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-23 08:50:41,203][INFO ][http                     ] [Al MacKenzie] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-23 08:50:41,207][INFO ][node                     ] [Al MacKenzie] started
+[2017-08-23 08:50:41,686][INFO ][gateway                  ] [Al MacKenzie] recovered [1] indices into cluster_state
+[2017-08-23 20:41:57,691][INFO ][node                     ] [Al MacKenzie] stopping ...
+[2017-08-23 20:41:58,153][INFO ][node                     ] [Al MacKenzie] stopped
+[2017-08-23 20:41:58,154][INFO ][node                     ] [Al MacKenzie] closing ...
+[2017-08-23 20:41:58,218][INFO ][node                     ] [Al MacKenzie] closed

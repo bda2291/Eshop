@@ -1,0 +1,16 @@
+[2017-08-16 17:32:58,036][INFO ][node                     ] [Mass Master] version[1.7.6], pid[4428], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-16 17:32:58,038][INFO ][node                     ] [Mass Master] initializing ...
+[2017-08-16 17:32:58,489][INFO ][plugins                  ] [Mass Master] loaded [], sites []
+[2017-08-16 17:32:58,724][INFO ][env                      ] [Mass Master] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.1gb], net total_space [15.6gb], types [ext4]
+[2017-08-16 17:33:08,102][INFO ][node                     ] [Mass Master] initialized
+[2017-08-16 17:33:08,107][INFO ][node                     ] [Mass Master] starting ...
+[2017-08-16 17:33:08,665][INFO ][transport                ] [Mass Master] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-16 17:33:08,925][INFO ][discovery                ] [Mass Master] elasticsearch/RyELkcIZQWew44bd7iKbbg
+[2017-08-16 17:33:13,026][INFO ][cluster.service          ] [Mass Master] new_master [Mass Master][RyELkcIZQWew44bd7iKbbg][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-16 17:33:13,228][INFO ][http                     ] [Mass Master] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-16 17:33:13,230][INFO ][node                     ] [Mass Master] started
+[2017-08-16 17:33:13,539][INFO ][gateway                  ] [Mass Master] recovered [1] indices into cluster_state
+[2017-08-16 22:06:00,926][INFO ][node                     ] [Mass Master] stopping ...
+[2017-08-16 22:06:01,233][INFO ][node                     ] [Mass Master] stopped
+[2017-08-16 22:06:01,234][INFO ][node                     ] [Mass Master] closing ...
+[2017-08-16 22:06:01,303][INFO ][node                     ] [Mass Master] closed

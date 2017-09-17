@@ -1,0 +1,12 @@
+[2017-08-31 18:11:19,877][INFO ][node                     ] [Conrad Josten] version[1.7.6], pid[2484], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-31 18:11:19,879][INFO ][node                     ] [Conrad Josten] initializing ...
+[2017-08-31 18:11:20,629][INFO ][plugins                  ] [Conrad Josten] loaded [], sites []
+[2017-08-31 18:11:20,959][INFO ][env                      ] [Conrad Josten] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [8.7gb], net total_space [15.6gb], types [ext4]
+[2017-08-31 18:11:39,557][INFO ][node                     ] [Conrad Josten] initialized
+[2017-08-31 18:11:39,570][INFO ][node                     ] [Conrad Josten] starting ...
+[2017-08-31 18:11:40,276][INFO ][transport                ] [Conrad Josten] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-31 18:11:40,466][INFO ][discovery                ] [Conrad Josten] elasticsearch/YJkKc29eRMyPIbQUSuqj6g
+[2017-08-31 18:11:44,385][INFO ][cluster.service          ] [Conrad Josten] new_master [Conrad Josten][YJkKc29eRMyPIbQUSuqj6g][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-31 18:11:44,579][INFO ][http                     ] [Conrad Josten] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-31 18:11:44,598][INFO ][node                     ] [Conrad Josten] started
+[2017-08-31 18:11:45,045][INFO ][gateway                  ] [Conrad Josten] recovered [1] indices into cluster_state

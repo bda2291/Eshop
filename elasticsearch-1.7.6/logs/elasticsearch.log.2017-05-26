@@ -1,0 +1,19 @@
+[2017-05-26 12:47:37,459][INFO ][node                     ] [Arclight] version[1.7.6], pid[20177], build[c730b59/2016-11-18T15:21:16Z]
+[2017-05-26 12:47:37,460][INFO ][node                     ] [Arclight] initializing ...
+[2017-05-26 12:47:37,727][INFO ][plugins                  ] [Arclight] loaded [], sites []
+[2017-05-26 12:47:37,946][INFO ][env                      ] [Arclight] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [9.4gb], net total_space [15.6gb], types [ext4]
+[2017-05-26 12:47:45,422][INFO ][node                     ] [Arclight] initialized
+[2017-05-26 12:47:45,423][INFO ][node                     ] [Arclight] starting ...
+[2017-05-26 12:47:45,908][INFO ][transport                ] [Arclight] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-05-26 12:47:46,128][INFO ][discovery                ] [Arclight] elasticsearch/8dGBD5QkRIixHI9QPyxgvA
+[2017-05-26 12:47:50,020][INFO ][cluster.service          ] [Arclight] new_master [Arclight][8dGBD5QkRIixHI9QPyxgvA][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-05-26 12:47:50,098][INFO ][http                     ] [Arclight] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-05-26 12:47:50,099][INFO ][node                     ] [Arclight] started
+[2017-05-26 12:47:50,255][INFO ][gateway                  ] [Arclight] recovered [0] indices into cluster_state
+[2017-05-26 12:51:25,957][INFO ][cluster.metadata         ] [Arclight] [haystack] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2017-05-26 12:51:28,548][INFO ][cluster.metadata         ] [Arclight] [haystack] create_mapping [modelresult]
+[2017-05-26 12:51:29,477][INFO ][cluster.metadata         ] [Arclight] [haystack] update_mapping [modelresult] (dynamic)
+[2017-05-26 14:51:08,029][INFO ][cluster.metadata         ] [Arclight] [haystack] deleting index
+[2017-05-26 14:51:08,528][INFO ][cluster.metadata         ] [Arclight] [haystack] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2017-05-26 14:51:09,024][INFO ][cluster.metadata         ] [Arclight] [haystack] create_mapping [modelresult]
+[2017-05-26 14:51:09,223][INFO ][cluster.metadata         ] [Arclight] [haystack] update_mapping [modelresult] (dynamic)

@@ -1,0 +1,16 @@
+[2017-08-30 10:57:02,860][INFO ][node                     ] [Letha] version[1.7.6], pid[17344], build[c730b59/2016-11-18T15:21:16Z]
+[2017-08-30 10:57:02,897][INFO ][node                     ] [Letha] initializing ...
+[2017-08-30 10:57:03,683][INFO ][plugins                  ] [Letha] loaded [], sites []
+[2017-08-30 10:57:04,116][INFO ][env                      ] [Letha] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [8.9gb], net total_space [15.6gb], types [ext4]
+[2017-08-30 10:57:21,785][INFO ][node                     ] [Letha] initialized
+[2017-08-30 10:57:21,792][INFO ][node                     ] [Letha] starting ...
+[2017-08-30 10:57:22,658][INFO ][transport                ] [Letha] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2017-08-30 10:57:22,905][INFO ][discovery                ] [Letha] elasticsearch/iBVu0AsHS5-1ZCU1c1io1w
+[2017-08-30 10:57:26,871][INFO ][cluster.service          ] [Letha] new_master [Letha][iBVu0AsHS5-1ZCU1c1io1w][denis-VirtualBox][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2017-08-30 10:57:27,060][INFO ][http                     ] [Letha] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2017-08-30 10:57:27,061][INFO ][node                     ] [Letha] started
+[2017-08-30 10:57:27,700][INFO ][gateway                  ] [Letha] recovered [1] indices into cluster_state
+[2017-08-30 17:33:36,181][INFO ][node                     ] [Letha] stopping ...
+[2017-08-30 17:33:39,847][INFO ][node                     ] [Letha] stopped
+[2017-08-30 17:33:39,848][INFO ][node                     ] [Letha] closing ...
+[2017-08-30 17:33:40,057][INFO ][node                     ] [Letha] closed
