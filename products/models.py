@@ -121,9 +121,6 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('products:Product', args=[self.slug])
 
-    def save(self, *args, **kwargs):
-        self.points = self.price * decimal.Decimal('0.1')
-        super(Product, self).save(*args, **kwargs)
     # def save(self, *args, **kwargs):
     #     if self.category:
     #         super(Product, self).save(*args, **kwargs)
