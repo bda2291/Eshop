@@ -35,6 +35,7 @@
       <h1>Producers</h1>
     <div class="items row">
       {% for producer in producers %}
+        <p>{{ producer.name }}</p>
         <div class="item col-sm-4">
           <a href="{{ producer.get_absolute_url }}">
             <img src="{% if producer.image %}{{ producer.image.url }}{% else %}{% static 'img/no-image.jpg' %} {% endif %}" class="img-responsive">

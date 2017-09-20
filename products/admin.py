@@ -95,10 +95,10 @@ class ProductResource(CustomModelResource):
                         default=None,
                         widget=widgets.CharWidget(),
                         )
-    price = fields.Field(column_name='price', attribute='price',
-                         default=0,
-                         widget=widgets.DecimalWidget(),
-                         )
+    # price = fields.Field(column_name='price', attribute='price',
+    #                      default=0,
+    #                      widget=widgets.DecimalWidget(),
+    #                      )
     description = fields.Field(column_name='description', attribute='description',
                                default=None,
                                widget=widgets.CharWidget(),
@@ -138,8 +138,8 @@ class ProductResource(CustomModelResource):
 
     class Meta:
         model = Product
-        fields = ('id', 'name', 'price', 'description', 'producer', 'category', 'is_active', 'attributes', 'discount_policy')
-        export_order = ('id', 'name', 'price', 'producer', 'is_active', 'category', 'attributes', 'description', 'discount_policy')
+        fields = ('id', 'name', 'description', 'producer', 'category', 'is_active', 'attributes', 'discount_policy')
+        export_order = ('id', 'name', 'producer', 'is_active', 'category', 'attributes', 'description', 'discount_policy')
         # import_id_fields = ('name',)
 
     def dehydrate_str_choices(self, obj):
@@ -147,10 +147,10 @@ class ProductResource(CustomModelResource):
             return obj.str_choices()
 
 class ProductAdmin(ImportExportModelAdmin):
-    list_display = ['id', 'name', 'price', 'category', 'producer', 'is_active']
+    list_display = ['id', 'name', 'category', 'producer', 'is_active']
     inlines = [OfferInline]
     list_filter = ['is_active', 'created', 'updated', 'category']
-    list_editable = ['price', 'is_active']
+    list_editable = ['is_active']
     # prepopulated_fields = {'slug': ('name',)}
     search_fields = ['name', 'id']
 
