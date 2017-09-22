@@ -5,12 +5,18 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Ordering</h1>
   <div class="col-sm-4">
-    <h2>Fill the form</h2>
+    <h2>Пожалуйста введите информацию о заказе.</h2>
     <form class="order-form" action="." method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+      <label for="customer_name"></label>
+        <input id="customer_name" type="text" name="customer_name" maxlength="64">
+      <label for="customer_phone"></label>
+        <input id="customer_phone" type="text" name="customer_phone" maxlength="64">
+      <label for="customer_email"></label>
+        <input id="customer_email" type="text" name="customer_email" maxlength="64">
+      <label for="city"></label>
+        <input id="city" type="text" name="city" maxlength="100">
       <input type="submit" value="Submit">
     </form>
   </div>

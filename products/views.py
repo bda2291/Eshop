@@ -7,9 +7,12 @@ from cart.forms import CartAddProductForm
 from .utils import *
 from cart.cart import Cart
 from .models import *
-from .forms import FacetedProductSearchForm
-from haystack.generic_views import FacetedSearchView as BaseFacetedSearchView
-from haystack.query import SearchQuerySet
+
+# Uncomment for elasticsearch
+
+# from .forms import FacetedProductSearchForm
+# from haystack.generic_views import FacetedSearchView as BaseFacetedSearchView
+# from haystack.query import SearchQuerySet
 
 def serialize_decimal(obj):
     if isinstance(obj, decimal.Decimal):
@@ -56,19 +59,21 @@ def product(request, product_slug):
                                                      'variant_picker_data': variant_picker_data,
                                                      })
 
-def autocomplete(request):
-    sqs = SearchQuerySet().autocomplete(content_auto=request.GET.get('query', ''))[:5]
-    s = []
-    for result in sqs:
-        print(result)
-        d = {"value": result.name, "data": result.object.slug}
-        s.append(d)
-    output = {'suggestions': s}
-    return JsonResponse(output)
+# Uncomment for elasticsearch
 
-class FacetedSearchView(BaseFacetedSearchView):
-    form_class = FacetedProductSearchForm
-    facet_fields = ['category', 'producer']
-    template_name = 'search/search.html'
-    paginate_by = 3
-    context_object_name = 'object_list'
+# def autocomplete(request):
+#     sqs = SearchQuerySet().autocomplete(content_auto=request.GET.get('query', ''))[:5]
+#     s = []
+#     for result in sqs:
+#         print(result)
+#         d = {"value": result.name, "data": result.object.slug}
+#         s.append(d)
+#     output = {'suggestions': s}
+#     return JsonResponse(output)
+#
+# class FacetedSearchView(BaseFacetedSearchView):
+#     form_class = FacetedProductSearchForm
+#     facet_fields = ['category', 'producer']
+#     template_name = 'search/search.html'
+#     paginate_by = 3
+#     context_object_name = 'object_list'
