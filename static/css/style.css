@@ -962,3 +962,25 @@ border-radius: 5px;
 	position: relative;
 	margin-top: 200px;
 }
+
+.ItemsRow { border-collapse: separate; border-spacing: 10px; width: 100%; }
+.ItemsRow tr {vertical-align: middle; }
+.ItemsRow td {
+	position: relative;
+	border: 1px solid #DFDFDF;
+	background: #F8F8F8;
+	padding: 7px;
+	text-align: center;
+	vertical-align: middle;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: inset 0px 0px 0px 1px #fff, 0 2px 8px -5px black;
+	-moz-box-shadow: inset 0px 0px 0px 1px #fff, 0 2px 8px -5px black;
+	box-shadow: inset 0px 0px 0px 1px #fff, 0 2px 8px -5px black;
+}
+.ishopBrandsShowBlockWrap td:hover { background: #FAFAFA; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.ishopBrandsShowBlockWrap td a { display: inline-block; width: 115px; padding: 0; margin: 0; line-height: 1; }
+.ishopBrandsShowBlockWrap td:hover a { opacity: 0.75; filter: alpha(opacity=75); /* For IE8 and earlier */ }
+.ishopBrandsShowBlockWrap td img { width: 100%; }

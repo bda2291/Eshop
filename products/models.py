@@ -89,7 +89,7 @@ mptt.register(ProductCategory, order_insertion_py=['name'])
 class Product(models.Model):
     name = models.CharField(max_length=64, db_index=True, blank=True, null=True, default=None)
     slug = AutoSlugField(populate_from='name')
-    # price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     # points = models.DecimalField(max_digits=8, decimal_places=2, null=True, default=0.00)
     description = models.TextField(db_index=True, blank=True, null=True, default=None)
     # short_description = models.TextField(blank=True, null=True, default=None)
