@@ -31,7 +31,7 @@ urlpatterns = [
 
     url(r'^product/(?P<product_slug>[-\w]+)/$', product, name='Product'),
     url(r'^(?P<producer_slug>[-\w]+)/(?P<path>.*)',
-        mptt_urls.view(model=ProductCategory, view=categorieslist),
+        mptt_urls.view(model=ProductCategory, view=categorieslist, slug_field='slug'),
         name='CategoriesListByProducer'),
     # url(r'^(?P<producer_slug>[-\w]+)/$', categorieslist, name='CategoriesListByProducer'),
     url(r'^(?P<producer_slug>[-\w]+)/(?P<category_slug>[-\w]+)/$', productslist, name='ProductListByCategory')
