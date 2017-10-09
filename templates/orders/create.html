@@ -9,37 +9,38 @@
     <h2>Пожалуйста введите информацию о заказе.</h2>
     <form class="order-form" action="." method="post">
       {% csrf_token %}
-      <label for="customer_name"></label>
-        <input id="customer_name" type="text" name="customer_name" maxlength="64">
-      <label for="customer_phone"></label>
-        <input id="customer_phone" type="text" name="customer_phone" maxlength="64">
-      <label for="customer_email"></label>
-        <input id="customer_email" type="text" name="customer_email" maxlength="64">
-      <label for="city"></label>
-        <input id="city" type="text" name="city" maxlength="100">
+      {{ form.as_p }}
+      <!--<label for="customer_name"></label>-->
+        <!--<input id="customer_name" type="text" name="customer_name" maxlength="64">-->
+      <!--<label for="customer_phone"></label>-->
+        <!--<input id="customer_phone" type="text" name="customer_phone" maxlength="64">-->
+      <!--<label for="customer_email"></label>-->
+        <!--<input id="customer_email" type="text" name="customer_email" maxlength="64">-->
+      <!--<label for="city"></label>-->
+        <!--<input id="city" type="text" name="city" maxlength="100">-->
       <input type="submit" value="Submit">
     </form>
   </div>
 
   <div class="order-info col-sm-8">
-    <h2>Your Order</h2>
+    <h2>Ваш заказ</h2>
     <ul>
       {% for item in cart  %}
         <li>
-          {{ item.product.name }} | Quantity: {{ item.quantity }} | Total price: {{ item.total_price }}
+          {{ item.offer.name }} | Количество: {{ item.quantity }} | Стоимость: {{ item.total_price }} руб.
         </li>
       {% endfor %}
       {% if cart.discount %}
         <li>
           "{{ cart.discount.code }}" ({{ cart.discount.discount }}% less)
-          <span> - {{ cart.get_discount|floatformat:"2"}} RUB.</span>
+          <span> - {{ cart.get_discount|floatformat:"2"}} руб.</span>
         </li>
       {% endif %}
     </ul>
-    {% if cart.points %}
-      <p><strong>Total:</strong> {{ cart.get_total_deduct_points|floatformat:"2"}} RUB.</p>
+    {% if request.session.points %}
+      <p><strong>Всего:</strong> {{ cart.get_total_deduct_points|floatformat:"2"}} руб.</p>
     {% else %}
-      <p><strong>Total:</strong> {{ cart.get_total_price_after_discount|floatformat:"2"}} RUB.</p>
+      <p><strong>Всего:</strong> {{ cart.get_total_price|floatformat:"2"}} руб.</p>
     {% endif %}
   </div>
 {% endblock %}

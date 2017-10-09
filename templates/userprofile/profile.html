@@ -22,13 +22,20 @@
             <!--</form>-->
         <!--</div>-->
         <div class="user_profile_points">
-            <p>Points: {{ profile.user_points }}</p>
+            <p>Баллы: {{ profile.user_points }}</p>
+            {% if points_error %}
+                <label class="error">{{ points_error }}</label>
+            {% endif %}
             <form action="{% url 'profile:pick_up_points' %}">
-                    <input type="submit" name="pick_up_points" value="Pick Up Points" />
+                {% if profile.user_points != 0 %}
+                    <button type="submit">Запросить баллы</button>
+                {% else %}
+                    <button type="submit" disabled>Запросить баллы</button>
+                {% endif %}
             </form>
         </div>
         <form action="{% url 'profile:update_profile' %}">
-                <input type="submit" name="update_profile" value="Update Profile" />
+            <button type="submit">Редактировать профиль</button>
         </form>
     </div>
 

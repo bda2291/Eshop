@@ -1,20 +1,19 @@
 from django import forms
 
-#PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(1, 21)]
-
 class CartAddProductForm(forms.Form):
-    #quantity = forms.TypedChoiceField(choices=PRODUCT_QUANTITY_CHOICES, coerce=int)
-    quantity = forms.CharField(required=True, widget=forms.TextInput(attrs={
+    quantity = forms.CharField(widget=forms.TextInput(attrs={
                                                         'id': 'quantity',
                                                         'name': 'quantity',
                                                         'type': 'number',
-                                                        'value': '0',
+                                                        'min': '1',
+                                                        'max': '1000',
+                                                        'value': '1',
                                                         'onchange': 'calculate()'}))
-    product_slug = forms.CharField(label="product_slug", widget=forms.TextInput(attrs={
+    product_slug = forms.CharField(widget=forms.TextInput(attrs={
                                                         'id': 'product_slug',
                                                         'name': 'product_slug',
-                                                       'type': 'hidden'}))
-    price_per_itom = forms.IntegerField(label="price_per_itom", widget=forms.TextInput(attrs={
+                                                        'type': 'hidden'}))
+    price_per_itom = forms.IntegerField(widget=forms.TextInput(attrs={
                                                         'id': 'price_per_itom',
                                                         'name': 'price_per_itom',
                                                         'type': 'hidden'}))

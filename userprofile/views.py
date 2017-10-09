@@ -17,7 +17,7 @@ def user_profile(request):
     args = {}
     args['profile'] = profile
     # args['discount'] = discount
-    args['user_id'] = user.id
+    # args['user_id'] = user.id
     args['username'] = user.username
     args['user'] = user
     return render(request, 'userprofile/profile.html', args)
@@ -46,16 +46,18 @@ def update_profile(request):
 def pick_up_points(request):
     user = auth.get_user(request)
     profile = user.profile
+    args = {}
     if request.method == 'POST':
         form = PickUpPointsForm(request.POST)
         if form.is_valid():
             requisites = form.cleaned_data['requisites']
             PickUpRequest.objects.create(user=user, points=user.profile.user_points, requisites=requisites)
-            profile.user_points = Decimal('0')
-            profile.save()
+            # profile.user_points = Decimal('0')
+            # profile.save()
             return redirect('profile:user_profile')
     else:
-        form = PickUpPointsForm()
-        return render_to_response('userprofile/pick_up_points.html', {'user': user, 'form': form})
+        args['user'] = user
+        args['form'] = PickUpPointsForm()
+        return render_to_response('userprofile/pick_up_points.html', args)
 
 

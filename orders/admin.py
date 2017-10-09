@@ -54,13 +54,15 @@ class StatusAdmin(admin.ModelAdmin):
 
 def delete_model(modeladmin, request, queryset):
     for obj in queryset:
-        print(obj.user)
         user_profile = obj.user.profile
-        parent_profile = user_profile.parent.profile
-        parent_profile.user_points += round(obj.total_price * Decimal(0.05))
-        parent_profile.save()
-        obj.delete()
-delete_model.short_description = "Удалить как завершенные"
+        if user_profile.parent:
+            parent_profile = user_profile.parent.profile
+            parent_profile.user_points += round(obj.total_price * Decimal(0.01))
+            parent_profile.save()
+        obj.paid = True
+        obj.save()
+
+delete_model.short_description = "Отметить как оплаченный"
 
 class OrderAdmin (admin.ModelAdmin):
     list_display = ['id', 'customer_name', 'customer_email', 'customer_phone', 'city', 'customer_address',

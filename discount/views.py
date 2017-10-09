@@ -13,8 +13,15 @@ from .forms import DiscountApllyForm
 @require_POST
 @csrf_exempt
 def PointsApply(request):
-    # request.session['points'] = True
-    return redirect('cart:CartDetail', points=True)
+    request.session['points'] = True
+    return redirect('cart:CartDetail')
+
+@login_required
+@require_POST
+@csrf_exempt
+def PointsRevoke(request):
+    request.session.pop('points', None)
+    return redirect('cart:CartDetail')
 
 @require_POST
 def DiscountApply(request):

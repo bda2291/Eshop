@@ -14,7 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+import mptt_urls
 from .views import productslist, product, categorieslist, producerslist
+from .models import ProductCategory
 
 
 urlpatterns = [
@@ -28,6 +30,9 @@ urlpatterns = [
 
 
     url(r'^product/(?P<product_slug>[-\w]+)/$', product, name='Product'),
-    url(r'^(?P<producer_slug>[-\w]+)/$', categorieslist, name='CategoriesListByProducer'),
+    url(r'^(?P<producer_slug>[-\w]+)/(?P<path>.*)',
+        mptt_urls.view(model=ProductCategory, view=categorieslist),
+        name='CategoriesListByProducer'),
+    # url(r'^(?P<producer_slug>[-\w]+)/$', categorieslist, name='CategoriesListByProducer'),
     url(r'^(?P<producer_slug>[-\w]+)/(?P<category_slug>[-\w]+)/$', productslist, name='ProductListByCategory')
 ]

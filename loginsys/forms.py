@@ -1,4 +1,5 @@
 from django import forms
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -13,8 +14,11 @@ class RegistrationForm(UserCreationForm):
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
-        if self.cleaned_data.get('parent'):
-            user.parent = User.objects.get(username=self.cleaned_data['parent'])
+        if self.cleaned_data.get('parent', None):
+            try:
+                user.parent = User.objects.get(username=self.cleaned_data['parent'])
+            except ObjectDoesNotExist:
+                user.parent = None
         user.set_password(self.cleaned_data['password1'])
 
         if commit:

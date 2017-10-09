@@ -1,6 +1,6 @@
-from django.shortcuts import render, render_to_response, get_object_or_404
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.contrib import auth
-from django.http import JsonResponse
+from django.http import Http404
 import json
 import decimal
 from cart.forms import CartAddProductForm
@@ -30,13 +30,38 @@ def producerslist(request):
     #     products = products.filter(category__in=category.get_descendants(include_self=True))
     return render(request, 'products/list.html', locals())
 
-def categorieslist(request, producer_slug):
+# def categorieslist(request, producer_slug, category_slug=None):
+#     username = auth.get_user(request).username
+#     producer = Producer.objects.get(slug=producer_slug)
+#     if category_slug:
+#         _categories = ProductCategory.objects.filter(is_active=True, parent=category_slug)
+#     else:
+#         _categories = ProductCategory.objects.filter(is_active=True, producer=producer, level__lte=0)
+#     categories, products = expand_categories(_categories)
+#     return render(request, 'products/categorieslist.html', {'username': username, 'categories':categories,
+#                                                             'products': products})
+
+def categorieslist(request, path, instance, producer_slug):
     username = auth.get_user(request).username
-    producer = Producer.objects.get(slug=producer_slug)
-    _categories = ProductCategory.objects.filter(is_active=True, producer=producer)
-    categories, products = expand_categories(_categories)
-    return render(request, 'products/categorieslist.html', {'username': username, 'categories':categories,
-                                                            'products': products})
+    if instance:
+        _categories = instance.get_children()
+    else:
+        _categories = get_list_or_404(ProductCategory, producer__slug=producer_slug, level__lte=0)
+    if _categories:
+        categories, products = expand_categories(_categories)
+    else:
+        return productslist(request, producer_slug, instance.slug)
+    return render(
+        request,
+        'products/categorieslist.html',
+        {
+            'username': username,
+            'instance': instance,
+            'categories': categories,
+            'producer_slug': producer_slug,
+            'products': products
+        }
+    )
 
 def productslist(request, producer_slug, category_slug):
     username = auth.get_user(request).username

@@ -22,7 +22,6 @@ $(document).ready(function(){
             data: data,
             cache: true,
             success: function (data) {
-                console.log("OK");
                 if (data.products_total_nmb){
                     $('#basket_total_nmb').text('('+data.products_total_nmb+')');
                     $('.basket-items ul').html("");

@@ -17,10 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT,}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT,}),
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('loginsys.urls', namespace='auth')),
     url(r'^accounts/', include('userprofile.urls', namespace='profile')),
@@ -28,9 +31,9 @@ urlpatterns = [
     url(r'^order/', include('orders.urls', namespace='orders')),
     url(r'^discount/', include('discount.urls', namespace='discount')),
     url(r'^search/', include('products.urls', namespace='products_search')),
-    url(r'^', include('products.urls', namespace='products')),
-    url(r'^', include('landing.urls')),
     url(r'^', include('orders.urls')),
+    url(r'^', include('products.urls', namespace='products')),
+    # url(r'^', include('landing.urls')),
 ]\
-        + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
-        + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

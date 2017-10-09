@@ -5,9 +5,10 @@ def get_variant_picker_data(product):
     variant_attributes = product.attributes.all()
     data = {'variants': [], 'variantAttributes': [], 'discount_policy': product.discount_policy}
 
-    for attribute in variant_attributes:
+    for attribute in sorted(variant_attributes, key=lambda x: x.main_attribute, reverse=True):
         data['variantAttributes'].append({
             'name': attribute.name,
+            'public_name': attribute.name.split('_')[1],
             'slug': attribute.slug,
             'values': [{'name': value.name, 'slug': value.slug} for value in attribute.values.all()]
         })

@@ -10,6 +10,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 class ProductAttribute(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True, default=None)
     slug = AutoSlugField(populate_from='name')
+    main_attribute = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -35,14 +36,15 @@ class AttributeChoiceValue(models.Model):
 class Producer(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True, default=None)
     slug = AutoSlugField(populate_from='name')
-    image = models.ImageField(upload_to='producers/%Y/%m/%d/', blank=True, verbose_name="image of producer")
+    image = models.ImageField(upload_to='producers', blank=True, verbose_name="image of producer")
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('products:CategoriesListByProducer', args=[self.slug])
+        # return reverse('products:CategoriesListByProducer', args=[self.slug])
+        return reverse('products:CategoriesListByProducer', kwargs={'producer_slug': self.slug,'path': ''})
 
     class Meta:
         verbose_name = 'Producer'
@@ -54,7 +56,7 @@ class ProductCategory(MPTTModel):
     is_active = models.BooleanField(default=True)
     producer = models.ForeignKey(Producer, null=True, blank=True, related_name='categories')
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
-    image = models.ImageField(upload_to='categories/%Y/%m/%d/', blank=True, verbose_name="image of category")
+    image = models.ImageField(upload_to='categories', blank=True, verbose_name="image of category")
     # category_attributes = models.ManyToManyField(ProductAttribute, related_name='categories', blank=True)
 
     def __str__(self):
@@ -69,22 +71,10 @@ class ProductCategory(MPTTModel):
         order_insertion_by = ['name']
 
     def get_absolute_url(self):
-        return reverse('products:ProductListByCategory', args=[self.producer.slug, self.slug])
+        return reverse('products:CategoriesListByProducer', kwargs={'producer_slug': self.producer.slug, 'path': self.get_path()})
+        # return reverse('products:ProductListByCategory', args=[self.producer.slug, self.slug])
 
 mptt.register(ProductCategory, order_insertion_py=['name'])
-
-# class ProductClass(models.Model):
-#     name = models.CharField(max_length=64, blank=True, null=True, default=None)
-#     has_variants = models.BooleanField(default=True)
-#     # product_attributes = models.ManyToManyField(ProductAttribute, related_name='products_class', blank=True)
-#     variant_attributes = models.ManyToManyField(ProductAttribute, related_name='variants_class', blank=True)
-#
-#     def __str__(self):
-#         return self.name
-#
-#     class Meta:
-#         verbose_name = 'product class'
-#         verbose_name_plural = 'product classes'
 
 class Product(models.Model):
     name = models.CharField(max_length=64, db_index=True, blank=True, null=True, default=None)
@@ -94,9 +84,9 @@ class Product(models.Model):
     description = models.TextField(db_index=True, blank=True, null=True, default=None)
     # short_description = models.TextField(blank=True, null=True, default=None)
     producer = models.ForeignKey(Producer, on_delete=models.CASCADE, related_name='products')
-    image = models.ImageField(upload_to='products/%Y/%m/%d/', blank=True, verbose_name="image of product")
-    discount = models.IntegerField(blank=True, null=True, default=0)
-    stock = models.PositiveIntegerField(blank=True, null=True, default=0, verbose_name="In stock")
+    image = models.ImageField(upload_to='products', blank=True, verbose_name="image of product")
+    # discount = models.IntegerField(blank=True, null=True, default=0)
+    # stock = models.PositiveIntegerField(blank=True, null=True, default=0, verbose_name="In stock")
     # category = TreeForeignKey(ProductCategory, blank=True, null=True, default=None, related_name='products')
     category = models.ForeignKey(ProductCategory, default=None, related_name='products')
     attributes = models.ManyToManyField(ProductAttribute, related_name='categories', blank=True)

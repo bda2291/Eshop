@@ -7,14 +7,14 @@
         <div class="container top-container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1 class="title">To execute the transaction, we need to know your bank account!<br>
-                    Leave your requisites in the form</h1>
+                    <h1 class="title">Для совершения операции необходим расчетный счет получателя!<br>
+                    Пожалуйста, укажите номер счета для перевода.</h1>
                     <form action="" method="post" class="form-inline text-center"> {% csrf_token %}
                         <div class="form-group">
-                            <label>Your requisites: </label>
+                            <label>Ваши реквизиты: </label>
                             <input name="{{ form.requisites.name }}" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-orange">Send</button>
+                        <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
                     </form>
                 </div>
             </div>

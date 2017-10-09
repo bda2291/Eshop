@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Your Cart</h1>
+  <h1>Ваша корзина</h1>
   <table class="table-cart" border="1px">
     <thead>
       <tr>
@@ -32,11 +32,13 @@
             <form action="{% url 'cart:CartAdd' %}" method="post" class="add">
               {% csrf_token %}
               {{ item.update_quantity_form.quantity }}
+              {{ item.update_quantity_form.product_slug }}
+              {{ item.update_quantity_form.price_per_itom }}
               {{ item.update_quantity_form.update }}
-              <input type="submit" value="Update">
+              <input type="submit" value="Изменить">
             </form>
             </td>
-            <td><a href="{% url 'cart:CartRemove' offer.slug %}">Delete</a></td>
+            <td><a href="{% url 'cart:CartRemove' offer.slug %}">Удалить</a></td>
             <td class="num">{{ item.price }} rub.</td>
             <td class="num">{{ item.total_price }} rub.</td>
           </tr>
@@ -58,13 +60,12 @@
       {% endif %}
 
       <tr class="total">
-        <td>Total</td>
-        <td colspan="4"></td>
+        <td colspan="5">Всего</td>
         <td class="num">{{ cart.get_total_price|floatformat:"2" }} руб.
-          {% if cart.points %}
+          {% if request.session.points %}
           <tr>
             <td colspan="5"></td>
-            <td>- {{ user.profile.user_points }} бал.</td>
+            <td>- {{ cart.get_max }} бал.</td>
           </tr>
           <tr>
             <td colspan="5"></td>
@@ -83,9 +84,13 @@
     <!--<input type="submit" value="Apply">-->
   <!--</form>-->
 
-  <p>Использовать баллы: {{ user.profile.user_points }}</p>
+  <p>Доступные баллы: {{ user.profile.user_points }}</p>
   <form action="{% url 'discount:points' %}" method="post">{% csrf_token %}
-    <input type="submit" name="points" value="GO" />
+    <input type="submit" name="points" value="Использовать" />
+  </form>
+
+  <form action="{% url 'discount:revoke_points' %}" method="post">{% csrf_token %}
+    <input type="submit" name="points" value="Отменить" />
   </form>
 
   <p class="text-right">

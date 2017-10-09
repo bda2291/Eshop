@@ -3,6 +3,7 @@ from django.conf import settings
 from django.contrib import auth
 from django.http import HttpResponse
 from django.template.loader import render_to_string, get_template
+from django.views.decorators.csrf import csrf_exempt
 import weasyprint
 import pytils
 from django.core.urlresolvers import reverse
@@ -54,7 +55,7 @@ def basket_remove(request):
     data = request.POST
     product_id = data.get("product_id")
 
-
+@csrf_exempt
 def OrderCreate(request):
     cart = Cart(request)
     user = auth.get_user(request)
@@ -70,10 +71,10 @@ def OrderCreate(request):
             #     order.discount = cart.discount
             #     order.discount_value = cart.discount.discount
 
-            if cart.points:
-                print(cart.points_quant)
-                order.points_quant = cart.points_quant
-                profile.user_points -= cart.points_quant
+            if request.session.get('points'):
+                order.points_quant = cart.get_max()
+                profile.user_points -= cart.get_max()
+                del request.session['points']
             profile.save()
             order.save()
 
@@ -90,7 +91,7 @@ def OrderCreate(request):
             # return redirect(reverse('payment:process'))
             return render(request, 'orders/created.html', {'username': user.username, 'order': order})
         else:
-            return render('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
+            return render_to_response('orders/create.html', {'username': user.username, 'cart': cart, 'form': form})
 
     form = OrderCreateForm(instance=profile)
     return render(request, 'orders/create.html', {'username': user.username, 'cart': cart, 'form': form})

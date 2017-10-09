@@ -83,20 +83,32 @@ function _discount(quantity, discount_policy){
 
 function calculate(){
     var count = document.getElementById("variant_length").value;
+    var quantity = document.getElementById("quantity").value;
+    var result = document.getElementById("result");
+    var price_per_itom = document.getElementById("price_per_itom");
+    var erw = document.getElementById("erw");
+    var variants = JSON.parse(document.getElementById("variants").value.replace(/'/g, '"'));
+    var discount_policy = JSON.parse(document.getElementById("discount_policy").value.replace(/'/g, '"'));
+    var product_slug = document.getElementById("product_slug");
+    var result_itog = document.getElementById("result_itog");
+    var tmp_price = 0;
+
+
+    if (count == 0) {
+        tmp_price = Math.round(variants[0]['price'] * _discount(quantity, discount_policy));
+        result.innerHTML = tmp_price;
+        price_per_itom.value = tmp_price;
+        tmp_price = tmp_price * quantity;
+        result_itog.innerHTML = tmp_price;
+        erw.innerHTML = Math.round(tmp_price * 0.05);
+        product_slug.value = variants[0].slug;
+    }
+
     if (count > 1) {
         var quant0 = document.getElementById("id_0");
         var quant1 = document.getElementById("id_1");
-        var quantity = document.getElementById("quantity").value;
-        var result = document.getElementById("result");
-        var price_per_itom = document.getElementById("price_per_itom");
-        var erw = document.getElementById("erw");
-        var product_slug = document.getElementById("product_slug");
-        var result_itog = document.getElementById("result_itog");
-        var variants = JSON.parse(document.getElementById("variants").value.replace(/'/g, '"'));
-        var discount_policy = JSON.parse(document.getElementById("discount_policy").value.replace(/'/g, '"'));
         var quant0_val = JSON.parse(quant0.value.replace(/'/g, '"'));
         var quant1_val = JSON.parse(quant1.value.replace(/'/g, '"'));
-        var tmp_price = 0;
         for (var i = 0, len = variants.length; i < len; i++) {
             if (variants[i]['attributes'][quant0.name] == quant0_val['name'] &&
                 variants[i]['attributes'][quant1.name] == quant1_val['name']) {
@@ -112,15 +124,7 @@ function calculate(){
     }
     else {
         var quant0 = document.getElementById("id_0");
-        var result = document.getElementById("result");
-        var price_per_itom = document.getElementById("price_per_itom");
-        var erw = document.getElementById("erw");
-        var product_slug = document.getElementById("product_slug");
-        var result_itog = document.getElementById("result_itog");
-        var variants = JSON.parse(document.getElementById("variants").value.replace(/'/g, '"'));
-        var discount_policy = JSON.parse(document.getElementById("discount_policy").value.replace(/'/g, '"'));
         var quant0_val = JSON.parse(quant0.value.replace(/'/g, '"'));
-        var tmp_price = 0;
         for (var i = 0, len = variants.length; i < len; i++) {
             if (variants[i]['attributes'][quant0.name] == quant0_val['name']) {
                     tmp_price = Math.round(variants[i]['price'] * _discount(quantity, discount_policy));

@@ -37,6 +37,7 @@ def register(request):
             auth.login(request, newuser)
             return redirect('/')
         else:
+            args['login_error'] = "User is not found"
             args['form'] = newuser_form
     return render_to_response('login/register.html', args)
 
