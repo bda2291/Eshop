@@ -10,6 +10,7 @@ from .forms import CartAddProductForm
 
 @csrf_exempt
 @require_POST
+@login_required(login_url='auth:login')
 def CartAdd(request):
     cart = Cart(request)
     form = CartAddProductForm(request.POST)
@@ -23,6 +24,8 @@ def CartAdd(request):
         request.session.pop('points', None)
     return redirect('cart:CartDetail')
 
+@csrf_exempt
+@login_required(login_url='auth:login')
 def CartRemove(request, offer_slug):
     cart = Cart(request)
     # offer = get_object_or_404(Offer, slug=offer_slug)
@@ -30,11 +33,10 @@ def CartRemove(request, offer_slug):
     request.session.pop('points', None)
     return redirect('cart:CartDetail')
 
-
+@csrf_exempt
+@login_required(login_url='auth:login')
 def CartDetail(request):
     user = auth.get_user(request)
-    if not user.is_authenticated():
-        return redirect('auth:login')
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(

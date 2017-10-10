@@ -24,7 +24,7 @@
           <tr>
             <td class="cart-img">
               <a href="{{ offer.get_absolute_url }}">
-                <img src="{{ offer.product.image.url }}" alt="" />
+                <img src="{% if offer.product.image %}{{ offer.product.image.url }}{% else %}{% static 'img/no-image.jpg'%}{% endif %}">
               </a>
             </td>
             <td>{{ offer.name }}</td>
