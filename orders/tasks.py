@@ -22,9 +22,9 @@ def OrderCreated(order_id):
     order = Order.objects.get(id=order_id)
     verb_price = pytils.numeral.in_words(round(order.total_price))
     verb_cur = pytils.numeral.choose_plural(round(order.total_price), ("рубль", "рубля", "рублей"))
-    subject = 'Order {}'.format(order.id)
-    message = 'Dear, {}, You have successfully placed an order.\
-                   Your order number {}'.format(order.customer_name, order.id)
+    subject = 'Заказ № {}'.format(order.id)
+    message = 'Уважаемый, {}, номер Вашего заказа {}. \
+        Пожалуйста, совешите платеж по поручению в приложении к этому письму в течение 14 дней.'.format(order.customer_name, order.id)
     mail_send = EmailMessage(subject, message, 'admin@myshop.ru', [order.customer_email, 'bda2291@mail.ru'])
 
     # html = render_to_string('orders:AdminOrderPDF', args=[order_id])

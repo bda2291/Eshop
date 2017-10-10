@@ -190,6 +190,13 @@ EMAIL_HOST_PASSWORD = 'ltybcbrhbcnbyf22'
 FROM_EMAIL = 'notreply@russianprograms'
 EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
+# CELERY SETTINGS
+if DEBUG:
+    BROKER_URL = 'amqp://localhost'
+else:
+    BROKER_URL = 'amqp://78.155.219.170'
+BROKER_PORT = 5672
+
 # for import-export excel data
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
