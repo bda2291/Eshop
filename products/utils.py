@@ -31,11 +31,9 @@ def get_variant_picker_data(product):
 
 def expand_categories(categories):
     products = None
-    new_categories = categories
     for e in categories:
         if e.name.startswith('None'):
             products = Product.objects.filter(category=e)
-            new_categories = categories.exclude(pk=e.pk)
-    return new_categories, products
+    return [x for x in categories if not x.name.startswith('None')], products
 
 

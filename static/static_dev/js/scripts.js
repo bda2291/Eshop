@@ -71,11 +71,16 @@ function showOrHide(cb, cat) {
 }
 
 function _discount(quantity, discount_policy){
-    var keys = Object.keys(discount_policy);
-    for (var i = 0, len = keys.length; i < len; i++) {
-        var split_entry = keys[i].split('-');
-        if (parseInt(split_entry[0]) <= quantity && quantity < parseFloat(split_entry[1])){
-            return parseFloat(discount_policy[keys[i]]);
+    if (isNaN(discount_policy)) {
+        return 1
+    }
+    else {
+        var keys = Object.keys(discount_policy);
+        for (var i = 0, len = keys.length; i < len; i++) {
+            var split_entry = keys[i].split('-');
+            if (parseInt(split_entry[0]) <= quantity && quantity < parseFloat(split_entry[1])){
+                return parseFloat(discount_policy[keys[i]]);
+            }
         }
     }
 
